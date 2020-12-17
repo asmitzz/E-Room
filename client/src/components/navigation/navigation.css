@@ -1,0 +1,46 @@
+/* navigation */
+.nav{
+    background: black;
+    margin: 0;
+ }
+
+.nav-items{
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+.nav-bar{
+    text-align: right;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.active{
+    font-weight: bolder;
+}
+
+.signoutBtn{
+    background: black;
+    color: white;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.signoutBtn:hover{
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+
