@@ -6,25 +6,26 @@ class Nav extends Component{
   render(){
     return(
         <div> 
-           <nav className="nav">
-              <ul className="nav-bar">
-                 <li className="nav-items">
-                    <Link className="nav-link active" to='/'>Home</Link>
-                 </li>
-                 <li className="nav-items">
+           <nav className="navbar navbar-expand-sm p-3">
+
+              <Link className="navbar-brand" to='/'>Home</Link>
+    
+              <ul className="navbar-nav ml-auto">
+                 <li className="nav-item">
                     <Link className="nav-link" to='/about'>About</Link>
                  </li>
-                 <li className="nav-items">
-                    <Link className="nav-link" to='/work'>Work with us</Link>
+                 <li className="nav-item">
+                    <Link className="nav-link" to='/work'>Work With Us</Link>
                   </li>
-                  <li className="nav-items">
+                  <li className="nav-item">
                     <Link className="nav-link" to='/contact'>Contact</Link>
                   </li>
-                  <li className="nav-items">
-                    <button className="signoutBtn">Signout</button>
+                  <li className="nav-item">
+                    <button className="btn btn-purple mt-1"><h5 className="text-white">Signout</h5></button>
                   </li>
               </ul>
            </nav>
+           
         </div>
     );
   };

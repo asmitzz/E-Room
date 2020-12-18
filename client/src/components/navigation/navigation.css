@@ -1,46 +1,28 @@
-/* navigation */
-.nav{
-    background: black;
-    margin: 0;
- }
-
-.nav-items{
-    display: inline-block;
-    padding: 1rem 2rem;
+.navbar{
+   background: #563d7c;
 }
 
 .nav-link{
-    text-decoration: none;
     color: white;
+}
+
+.nav-link:hover{
+    color: grey;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.navbar-brand:hover{
+    color: grey;
+}
+
+.nav-item{
+    padding-left: 1rem;
     font-size: larger;
-    cursor: pointer;
 }
 
-.nav-bar{
-    text-align: right;
-    margin-block-start: 0;
-    margin-block-end: 0;
+.btn-purple{
+   background: #563d7c;
 }
-
-.active{
-    font-weight: bolder;
-}
-
-.signoutBtn{
-    background: black;
-    color: white;
-    padding: 1rem;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid white;
-    border-radius: 10px;
-}
-
-.signoutBtn:hover{
-    background: white;
-    color: black;
-    border: 1px solid black;
-}
-
-
-
