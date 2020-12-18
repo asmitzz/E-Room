@@ -1,0 +1,72 @@
+.section-2{
+    background: #C7D3D4FF;
+    height:14rem;
+}
+
+
+.btn-purple{
+    background: #704ca7;
+ }
+
+.section-3{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    width: 46%;
+    left: 2%;
+    top: 180px;
+    border-radius: 10px;
+} 
+.section-4{
+    background: white;
+    position: absolute;
+    width: 48%;
+    left: 50%;
+    top: 178px;
+    border-radius: 10px;
+}
+
+
+.section-5{
+    background:#563d7c;
+    height:45vh;
+}
+
+@media(max-width: 768px) and (min-width:415px) {
+
+    .section-3{
+        width: 96%;
+        left: 2%;
+        top: 330px;
+
+    } 
+    .section-4{
+        width: 96%;
+        left: 2%;
+        top: 670px;
+    }
+
+    .section-5{
+        background:#563d7c;
+        height:100vh;
+    }
+    
+}
+
+@media(max-width: 415px) and (min-width:340px) {
+    .section-3{
+        width: 96%;
+        left: 2%;
+        top: 330px;
+    } 
+    .section-4{
+        width: 96%;
+        left: 2%;
+        top: 720px;
+    }
+
+    .section-5{
+        background:#563d7c;
+        height:108vh;
+    }
+
+}

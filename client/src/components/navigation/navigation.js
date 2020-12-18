@@ -6,7 +6,7 @@ class Nav extends Component{
   render(){
     return(
         <div> 
-           <nav className="navbar navbar-expand-sm p-3">
+            <nav className="navbar navbar-expand-md p-3">
 
               <Link className="navbar-brand" to='/'>Home</Link>
     

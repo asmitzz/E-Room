@@ -6,13 +6,13 @@ class About extends Component{
   render(){
     return(
         <div> 
-           <nav className="navbar navbar-expand-sm p-3">
+            <nav className="navbar navbar-expand-md p-3">
 
            <Link className="navbar-brand" to='/'>Home</Link>
 
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-             <Link className="nav-link" to='/about'><strong>About</strong></Link>
+             <Link className="nav-link" to='/about'><h3>About</h3></Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to='/work'>Work With Us</Link>
@@ -25,7 +25,7 @@ class About extends Component{
           </li>
 </ul>
 </nav>
-
+       
         </div>
     );
   };
