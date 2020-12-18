@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+  
+  <style>
+      * {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  height: 300px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+      #phone {
+        position:absolute; 
+        bottom: 0; 
+        right: 0;
+      }
+      #email {
+        position:absolute; 
+        bottom: 0; 
+        right: 0;
+      }
+  </style>
+    </head>
+    <body>
+    <h4 align ="center">For Any Query Related To Our Website Contact Us Without Any Hesitation </h4>
+    
+<h1 align ="center">Get in touch</h1>
+<h4 align = "center">Want to get in touch? We'd love to hear from you. Here's how you can reach us...</h4>
+<div class="clearfix">
+    <div class="box" style="background-color:rgb(0, 225, 255)">
+    <h2 align ="center" height : 100%>CALL </h2>
+
+    <p width :50px>      Phone : +91 6232965440</p>
+    </div>
+    <div class="box" style="background-color:rgb(0, 217, 255)">
+    <h2 align ="center">EMAIL </h2>
+
+
+    <p><b>Email Us At : akshatmodijain@gmail.com</b></p>
+    <p></p>
+    <p></p>
+    </div>
+  </div>
+<div id="email">Email Us At : akshatmodijain@gmail.com</div>
+<div id="phone"> Phone : +91 6232965440</div>
+    </body>
+</html>
