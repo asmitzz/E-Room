@@ -1,0 +1,28 @@
+.container{
+   width: 60%;
+   margin: auto;
+   background: #f8f9fa;
+}
+
+.about-img{
+    width: 300px;
+}
+
+.quote{
+    border-left: 5px solid gray;
+    padding: 1.5rem;
+    background: rgb(230, 224, 224);
+}
+
+@media(max-width: 600px) and (min-width:340px) {
+.container{
+    width: 100%;
+}
+}
+
+@media(max-width: 768px) and (min-width:600px) {
+    .container{
+        width: 100%;
+    }
+
+}
