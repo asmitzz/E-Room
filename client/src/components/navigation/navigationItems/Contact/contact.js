@@ -45,7 +45,8 @@ class Contact extends Component{
                 <li className="list-group-item">Email: akash123@gmail.com</li>
              </ul>
            </div>
-         <div className="section-5"> </div>
+           <div className="section-5 text-center text-secondary p-2"> </div>
+         <div className="section-6"> </div>
  
 
         </div>

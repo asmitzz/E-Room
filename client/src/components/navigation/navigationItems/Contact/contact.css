@@ -11,62 +11,120 @@
 .section-3{
     background: rgb(255, 255, 255);
     position: absolute;
-    width: 46%;
-    left: 2%;
+    width: 28%;
+    left: 4%;
     top: 180px;
     border-radius: 10px;
+    border-top:0.5rem solid  rgb(1, 134, 187) ;
+
 } 
+
 .section-4{
     background: white;
     position: absolute;
-    width: 48%;
-    left: 50%;
+    width: 28%;
+    left: 36%;
     top: 178px;
     border-radius: 10px;
+    border-top:0.5rem solid  rgb(19, 156, 156) ;
+
+}
+
+.section-5{
+    background: white;
+    position: absolute;
+    width: 28%;
+    height: 340px;
+    left: 68%;
+    top: 178px;
+    border-radius: 10px;
+    border-top:0.5rem solid  #704ca7 ;
 }
 
 
-.section-5{
+
+.section-6{
     background:#563d7c;
     height:45vh;
 }
 
-@media(max-width: 768px) and (min-width:415px) {
+@media(max-width: 768px) and (min-width:728px) {
 
     .section-3{
-        width: 96%;
-        left: 2%;
+        width: 55%;
+        left: 20%;
         top: 330px;
 
     } 
     .section-4{
-        width: 96%;
-        left: 2%;
+        width: 55%;
+        left: 20%;
         top: 670px;
     }
 
-    .section-5{
+    .section-6{
         background:#563d7c;
-        height:100vh;
+        height:160vh;
+    }
+
+    .section-5{
+        width: 55%;
+        left: 20%;
+        top:1010px;
     }
     
 }
 
-@media(max-width: 415px) and (min-width:340px) {
+@media(max-width: 965px) and (min-width:768px) {
+     .section-6{
+         height: 65vh;
+     }
+}
+
+@media(max-width: 768px) and (min-width:600px) {
     .section-3{
-        width: 96%;
-        left: 2%;
+        width: 80%;
+        left: 10%;
         top: 330px;
     } 
     .section-4{
-        width: 96%;
-        left: 2%;
+        width: 80%;
+        left: 10%;
         top: 720px;
     }
-
     .section-5{
+        width: 80%;
+        left: 10%;
+        top: 1100px;
+    }
+
+    .section-6{
         background:#563d7c;
-        height:108vh;
+        height:180vh;
+    }
+}
+
+
+@media(max-width: 600px) and (min-width:340px) {
+    .section-3{
+        width: 91%;
+        left: 5%;
+        top: 330px;
+    } 
+    .section-4{
+        width: 91%;
+        left: 5%;
+        top: 720px;
+    }
+    .section-5{
+        width: 91%;
+        left: 5%;
+        top: 1100px;
+    }
+
+    .section-6{
+        background:#563d7c;
+        height:180vh;
     }
 
 }
