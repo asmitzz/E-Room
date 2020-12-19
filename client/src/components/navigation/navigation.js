@@ -21,7 +21,7 @@ class Nav extends Component{
                     <Link className="nav-link" to='/contact'>Contact</Link>
                   </li>
                   <li className="nav-item">
-                    <button className="btn btn-purple mt-1"><h5 className="text-white">Signout</h5></button>
+                    <button className="btn btn-color mt-1"><h5>Signout</h5></button>
                   </li>
               </ul>
            </nav>
