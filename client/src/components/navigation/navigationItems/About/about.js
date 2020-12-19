@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../../navigation/navigation.css';
-import AboutLogo from '../../../../assets/Images/undraw_apartment_rent_o0ut.svg'
+import AboutLogo from '../../../../assets/Images/about.jpg'
 import './about.css';
 class About extends Component{
   render(){
@@ -27,11 +27,11 @@ class About extends Component{
          </ul>
           </nav>
 
-
-              <div className="container pb-5"> 
-                  <div className="text-center">
+                 <div >
                      <img src={AboutLogo} alt="about" className="about-img"/>
                   </div>
+              <div className="container pb-5"> 
+                 
                   <h1 className="display-3 pt-5 text-center">About Us</h1>
                   <h2 className="mt-5">What is E-Room?</h2>
                   <p>
