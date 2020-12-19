@@ -1,9 +1,19 @@
-.navbar{
+/* .navbar{
    background: #563d7c;
-}
+} */
 
 .nav-link{
     color: white;
+}
+
+.btn-color{
+    background: #2C5364;
+    color: white;
+}
+
+.btn-color:hover{
+    background: white;
+    color: #0F2027;
 }
 
 .nav-link:hover{

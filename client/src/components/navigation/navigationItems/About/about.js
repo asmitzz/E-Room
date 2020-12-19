@@ -1,7 +1,6 @@
 import React,{ Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../../../navigation/navigation.css';
-import AboutLogo from '../../../../assets/Images/about.jpg'
 import './about.css';
 class About extends Component{
   render(){
@@ -22,16 +21,13 @@ class About extends Component{
            <Link className="nav-link" to='/contact'>Contact</Link>
           </li>
           <li className="nav-item">
-           <button className="btn btn-purple mt-1"><h5 className="text-white">Signout</h5></button>
+           <button className="btn btn-color mt-1"><h5>Signout</h5></button>
           </li>
          </ul>
           </nav>
 
-                 <div >
-                     <img src={AboutLogo} alt="about" className="about-img"/>
-                  </div>
-              <div className="container pb-5"> 
-                 
+              <div className="main pb-5"> 
+                  
                   <h1 className="display-3 pt-5 text-center">About Us</h1>
                   <h2 className="mt-5">What is E-Room?</h2>
                   <p>
