@@ -23,19 +23,19 @@ class Contact extends Component{
               <Link className="nav-link" to='/contact'><h3>Contact</h3></Link>
            </li>
            <li className="nav-item">
-              <button className="btn btn-purple"><h5 className="text-white">Signout</h5></button>
+              <button className="btn btn-color mt-1"><h5>Signout</h5></button>
            </li>
         </ul>
      </nav>
+          <div className="text-white">
 
-         <div className="section-2"> </div>
-           <div className="section-3 p-2 text-center text-secondary"> 
+           <div className="section-3 p-2 text-center"> 
 		         <h3><i className="fas fa-comments"></i></h3>
              <h5 className="pt-5 px-2 "> For Any Query Related To Our Website Contact Us Without Any Hesitation</h5>
              <h3 className="pt-3">Get in touch</h3>
              <h5 className="pt-4">Want to get in touch? We'd love to hear from you. Here's how you can reach us...</h5>
            </div>
-           <div className="section-4 text-center text-secondary p-2"> 
+           <div className="section-4 text-center p-2"> 
               <h2>Customer Support( 24x7 ) </h2>
               <h3><i className="fas fa-phone-alt"></i></h3>
              <ul className="list-group ">
@@ -45,11 +45,11 @@ class Contact extends Component{
                 <li className="list-group-item">Email: akash123@gmail.com</li>
              </ul>
            </div>
-           <div className="section-5 text-center text-secondary p-2"> </div>
-         <div className="section-6"> </div>
- 
+           <div className="section-5 text-center p-2"> </div>
+           </div>
+    
+      </div>
 
-        </div>
     );
   };
 };

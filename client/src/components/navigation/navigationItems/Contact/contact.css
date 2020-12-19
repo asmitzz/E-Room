@@ -1,3 +1,5 @@
+
+
 .section-2{
     background: #C7D3D4FF;
     height:14rem;
@@ -9,7 +11,10 @@
  }
 
 .section-3{
-    background: rgb(255, 255, 255);
+    background: #0f0c29;  
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+
     position: absolute;
     width: 28%;
     left: 4%;
@@ -20,7 +25,10 @@
 } 
 
 .section-4{
-    background: white;
+    background: #0f0c29;  
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+
     position: absolute;
     width: 28%;
     left: 36%;
@@ -31,7 +39,10 @@
 }
 
 .section-5{
-    background: white;
+    background: #0f0c29;  
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+
     position: absolute;
     width: 28%;
     height: 340px;
@@ -46,6 +57,12 @@
 .section-6{
     background:#563d7c;
     height:45vh;
+}
+
+.list-group-item{
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @media(max-width: 768px) and (min-width:728px) {
