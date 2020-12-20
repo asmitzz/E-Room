@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import { Link } from 'react-router-dom';
+import fire from '../../Authorization/auth';
 import './navigation.css';
 
 class Nav extends Component{
@@ -21,7 +22,7 @@ class Nav extends Component{
                     <Link className="nav-link" to='/contact'>Contact</Link>
                   </li>
                   <li className="nav-item">
-                    <button className="btn btn-color mt-1"><h5>Signout</h5></button>
+                    <button className="btn btn-color mt-1" onClick={()=>{fire.auth().signOut()}}><h5>Signout</h5></button>
                   </li>
               </ul>
            </nav>
