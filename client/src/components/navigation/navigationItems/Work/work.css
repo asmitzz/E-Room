@@ -1,0 +1,16 @@
+.main{
+    box-shadow: 2px 2px 2px 2px black;
+    padding: 1rem;
+    color: white;
+    width: 70%;
+    margin: auto;
+ }
+ 
+ .work-img{
+     text-align: center;
+ }
+
+ .img-1{
+    height: 400px;
+    width: 80%;
+ }
