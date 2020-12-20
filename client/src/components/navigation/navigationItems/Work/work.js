@@ -69,8 +69,8 @@ class Work extends Component{
                     <img src={Image3} alt="hotel" className="img-1 my-5" />
                 </div>
                 
+                <h1 className="pl-3">We are looking for people who are:</h1>
                 <p>
-                   <h1 className="pl-3">We are looking for people who are:</h1>
                    <ul className="pt-2">
                      <li>Self motivated</li>
                      <li>Happy and friendly</li>

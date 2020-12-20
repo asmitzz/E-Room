@@ -26,7 +26,7 @@ class About extends Component{
          </ul>
           </nav>
 
-              <div className="main pb-5"> 
+              <div className="main-div pb-5"> 
                   
                   <h1 className="display-3 pt-5 text-center">About Us</h1>
                   <h2 className="mt-5">What is E-Room?</h2>
