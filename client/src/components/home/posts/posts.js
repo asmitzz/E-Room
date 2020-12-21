@@ -23,7 +23,7 @@ class Posts extends Component{
                {
                Object.keys(this.state.posts).map( posts => {
                    return (
-                   <div className="card my-5 mx-4">
+                   <div className="card my-5 mx-4" key={this.state.posts[posts].Id}>
                            <img className="card-img-top" src={this.state.posts[posts].img} alt="Card"/>
                            <div>
                                <h4 className="text-center">{this.state.posts[posts].name}</h4>
