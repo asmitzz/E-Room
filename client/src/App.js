@@ -8,6 +8,8 @@ import Contact from './components/navigation/navigationItems/Contact/contact';
 import Login from './Authorization/login/login';
 import Signup from './Authorization/signup/signup';
 import fire from './Authorization/auth';
+import newPost from './components/home/newPost/newPost';
+
 
 
 class App extends Component{
@@ -35,6 +37,7 @@ class App extends Component{
              <Route path="/about" component={About}/>
              <Route path="/work" component={Work}/> 
              <Route path="/contact" component={Contact}/>
+             <Route path="/newpost" component={newPost}/>
        </Switch>
     );
     

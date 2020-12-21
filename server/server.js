@@ -37,4 +37,16 @@ app.get('/api/get',(req,res) => {
     }) 
 })
 
+app.use('/api/insert',(req,res) => {
+    const rent = req.body.rent;
+    const name = req.body.name;
+    const looking = req.body.LookingFor;
+    const img = req.body.img;
+    const location = req.body.location;
+
+    const Insert = "INSERT INTO posts ( rent,name,LookingFor,img,location ) VALUES (?,?,?,?,?)";
+
+    con.query(Insert,[rent,name,looking,img,location])
+})
+
 app.listen(port,() => console.log("server is running on :" ,port))
