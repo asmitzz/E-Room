@@ -53,7 +53,7 @@ class newPost extends Component{
                       <input type="text" onChange={this.locationHandler} className="form-control" placeholder="enter area"/>
                     </div>
                     <div className="form-group">
-                      <input type="file" onChange={this.fileHandler} className="form-control"/>
+                      <input type="text" onChange={this.fileHandler} placeholder="Enter the url of img" className="form-control"/>
                     </div>
                     <div className="form-group text-center">
                        <input type="submit" onClick={this.submitHandler} value="submit"/>
