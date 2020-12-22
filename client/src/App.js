@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { Switch,Route } from 'react-router-dom';
+import { Switch,Route} from 'react-router-dom';
 import './App.css';
 import Home from './components/home/home';
 import About from './components/navigation/navigationItems/About/about';
@@ -9,6 +9,7 @@ import Login from './Authorization/login/login';
 import Signup from './Authorization/signup/signup';
 import fire from './Authorization/auth';
 import newPost from './components/home/newPost/newPost';
+import FullPost from './components/home/posts/fullpost/fullpost';
 
 
 
@@ -38,6 +39,7 @@ class App extends Component{
              <Route path="/work" component={Work}/> 
              <Route path="/contact" component={Contact}/>
              <Route path="/newpost" component={newPost}/>
+             <Route path="/fullpost" component={FullPost}/>
        </Switch>
     );
     
