@@ -1,32 +1,14 @@
 import React,{ Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../../../navigation/navigation.css';
 import './contact.css';
-
-
+import Nav from '../../navigation';
 
 class Contact extends Component{
   render(){
     return(
         <div> 
-           <nav className="navbar navbar-expand-md p-3">
-          <Link className="navbar-brand" to='/'>Home</Link>
+           <Nav type="Contact"/>
 
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-               <Link className="nav-link" to='/about'>About</Link>
-             </li>
-           <li className="nav-item">
-               <Link className="nav-link" to='/work'>Work With Us</Link>
-           </li>
-           <li className="nav-item">
-              <Link className="nav-link" to='/contact'><h3>Contact</h3></Link>
-           </li>
-           <li className="nav-item">
-              <button className="btn btn-color mt-1"><h5>Signout</h5></button>
-           </li>
-        </ul>
-     </nav>
           <div className="text-white">
 
            <div className="section-3 p-2 text-center"> 

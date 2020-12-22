@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../../../navigation/navigation.css';
 import './work.css';
+import Nav from '../../navigation';
 import Image1 from '../../../../assets/Images/work-image-1.jpeg';
 import Image2 from '../../../../assets/Images/work-image-2.jpeg';
 import Image3 from '../../../../assets/Images/work-image-3.jpeg';
@@ -10,24 +10,9 @@ class Work extends Component{
   render(){
     return(
         <div> 
-              <nav className="navbar navbar-expand-md p-3">
-                    <Link className="navbar-brand" to='/'>Home</Link>
+             
+              <Nav type="Work"/>
 
-                  <ul className="navbar-nav ml-auto">
-                     <li className="nav-item">
-                        <Link className="nav-link" to='/about'>About</Link>
-                     </li>
-                     <li className="nav-item">
-                        <Link className="nav-link" to='/work'><h3>Work With Us</h3></Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to='/contact'>Contact</Link>
-                      </li>
-                      <li className="nav-item">
-                        <button className="btn btn-color mt-1"><h5>Signout</h5></button>
-                      </li>
-                  </ul>
-                </nav>
 
               <div className="main">
                  <h2 className="display-3 text-center pt-5">Work With Us</h2>

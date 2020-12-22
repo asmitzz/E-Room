@@ -13,13 +13,13 @@ class Nav extends Component{
     
               <ul className="navbar-nav ml-auto">
                  <li className="nav-item">
-                    <Link className="nav-link" to='/about'>About</Link>
+                    <Link className="nav-link" to='/about'>{this.props.type === 'About'? <h3>About</h3> : 'About' }</Link>
                  </li>
                  <li className="nav-item">
-                    <Link className="nav-link" to='/work'>Work With Us</Link>
+                    <Link className="nav-link" to='/work'>{this.props.type === 'Work'? <h3>Work With Us</h3> : 'Work with us' }</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to='/contact'>Contact</Link>
+                    <Link className="nav-link" to='/contact'>{this.props.type === 'Contact'? <h3>Contact</h3> : 'Contact' }</Link>
                   </li>
                   <li className="nav-item">
                     <button className="btn btn-color mt-1" onClick={()=>{fire.auth().signOut()}}><h5>Signout</h5></button>

@@ -1,0 +1,46 @@
+.mainDiv{
+   width: 70%;
+   margin-left: 2rem;
+   margin-top: 2rem;
+   text-align: center;
+   background: black;
+   border: 1px solid white;
+   border-radius:5px ;
+}
+
+.fullimg{
+    width: 40%;
+    height: 500px;
+}
+
+.details{
+    background: white;
+    width: 70%;
+    margin-left: 2rem;
+    margin-top: 1px;
+    border: 1px solid white;
+    border-radius:5px ;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+
+p.a{
+    word-spacing: 10rem;
+}
+p.b{
+    word-spacing: 10.6rem;
+}
+p.c{
+    word-spacing: 9.1rem;
+}
+p.d{
+    word-spacing: 7.3rem;
+}
+
+
+span{
+    color: black;
+    text-align: right;
+    word-spacing: 0;
+}

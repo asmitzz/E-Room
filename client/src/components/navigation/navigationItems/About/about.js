@@ -1,30 +1,12 @@
 import React,{ Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../../../navigation/navigation.css';
 import './about.css';
+import Nav from '../../navigation';
 class About extends Component{
   render(){
     return(
         <div> 
-            <nav className="navbar navbar-expand-md p-3">
-
-           <Link className="navbar-brand" to='/'>Home</Link>
-
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-             <Link className="nav-link" to='/about'><h3>About</h3></Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to='/work'>Work With Us</Link>
-          </li>
-          <li className="nav-item">
-           <Link className="nav-link" to='/contact'>Contact</Link>
-          </li>
-          <li className="nav-item">
-           <button className="btn btn-color mt-1"><h5>Signout</h5></button>
-          </li>
-         </ul>
-          </nav>
+            <Nav type="About"/>
 
               <div className="main-div pb-5"> 
                   
