@@ -1,147 +1,47 @@
-
-
-.section-2{
-    background: #C7D3D4FF;
-    height:14rem;
+.contact{
+    background:center rgb(62, 62, 196);
+    background-image:url('../../../../assets/Images/undraw_contact_us_15o2.svg');
+    height: 450px;
 }
 
-
-.btn-purple{
-    background: #704ca7;
- }
-
-.section-3{
-    background: #0f0c29;  
-background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-
-    position: absolute;
-    width: 28%;
-    left: 4%;
-    top: 180px;
-    border-radius: 10px;
-    border-top:0.5rem solid  rgb(1, 134, 187) ;
-
-} 
-
-.section-4{
-    background: #0f0c29;  
-background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-
-    position: absolute;
-    width: 28%;
-    left: 36%;
-    top: 178px;
-    border-radius: 10px;
-    border-top:0.5rem solid  rgb(19, 156, 156) ;
-
+.title{
+    padding: 7rem 5rem;
+    font-size: 8rem;
+    color: white;
 }
 
-.section-5{
-    background: #0f0c29;  
-background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
-background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
-
-    position: absolute;
-    width: 28%;
-    height: 340px;
-    left: 68%;
-    top: 178px;
-    border-radius: 10px;
-    border-top:0.5rem solid  #704ca7 ;
+.main-section{
+    background: rgb(62, 62, 196);
+    padding: 4rem;
+    color: white;
 }
 
-
-
-.section-6{
-    background:#563d7c;
-    height:45vh;
+.contactUs{
+    color: orangered;
+    font-weight: 700;
+}
+hr{
+    border: 2px solid white;
 }
 
-.list-group-item{
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+label{
+    color: rgba(192, 181, 180, 0.973);
+    font-weight: 700;
+    padding-top: 1rem;
 }
 
-@media(max-width: 768px) and (min-width:728px) {
-
-    .section-3{
-        width: 55%;
-        left: 20%;
-        top: 330px;
-
-    } 
-    .section-4{
-        width: 55%;
-        left: 20%;
-        top: 670px;
-    }
-
-    .section-6{
-        background:#563d7c;
-        height:160vh;
-    }
-
-    .section-5{
-        width: 55%;
-        left: 20%;
-        top:1010px;
-    }
-    
+.form-control{
+    width: 60%;
 }
 
-@media(max-width: 965px) and (min-width:768px) {
-     .section-6{
-         height: 65vh;
-     }
+textarea{
+    height: 7rem;
 }
 
-@media(max-width: 768px) and (min-width:600px) {
-    .section-3{
-        width: 80%;
-        left: 10%;
-        top: 330px;
-    } 
-    .section-4{
-        width: 80%;
-        left: 10%;
-        top: 720px;
-    }
-    .section-5{
-        width: 80%;
-        left: 10%;
-        top: 1100px;
-    }
-
-    .section-6{
-        background:#563d7c;
-        height:180vh;
-    }
-}
-
-
-@media(max-width: 600px) and (min-width:340px) {
-    .section-3{
-        width: 91%;
-        left: 5%;
-        top: 330px;
-    } 
-    .section-4{
-        width: 91%;
-        left: 5%;
-        top: 720px;
-    }
-    .section-5{
-        width: 91%;
-        left: 5%;
-        top: 1100px;
-    }
-
-    .section-6{
-        background:#563d7c;
-        height:180vh;
-    }
-
+.send{
+    color: orangered;
+    font-weight: 700;
+    border: 2px solid orangered;
+    margin-top: 1rem;
+    background: rgba(62, 62, 196, 0.466);
 }

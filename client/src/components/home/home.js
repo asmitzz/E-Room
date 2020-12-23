@@ -8,7 +8,7 @@ class Home extends Component{
         <div> 
            <Nav/>
                <div>
-                    <Link to="/newpost" className="mx-4 p-3 border border-primary rounded bg-dark">
+                    <Link to="/newpost" className="mx-4 p-3 text-white border border-light rounded">
                     <img alt="plus" src="https://img.icons8.com/emoji/48/000000/plus-emoji.png" />
                     Add Post</Link>
                </div>
