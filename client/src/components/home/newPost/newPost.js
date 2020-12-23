@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 class newPost extends Component{
 
@@ -24,22 +25,31 @@ class newPost extends Component{
     }
 
     fileHandler = (e) => {
-        this.setState({img:e.target.value})
+        this.setState({img:e.target.files[0]})
     }
 
     locationHandler = (e) => {
         this.setState({location:e.target.value})
     }
 
+    uploadHandler = () => {
+        const reader = new FileReader();
+        reader.readAsDataURL(this.state.img);
+        reader.onloadend = () => {
+        this.setState({ img:reader.result })
+        }
+    }
+
     submitHandler = () => {
         axios.post('http://localhost:8000/api/insert',this.state);
+        this.props.history.push('/');
     }
 
     render(){
         return(
             <div>
                 <h1 className="display-1 text-center">E-Room</h1>
-                <form>
+                
                     <div className="form-group">
                       <input type="text" onChange={this.nameHandler} className="form-control" placeholder="Enter your name"/>
                     </div>
@@ -53,17 +63,16 @@ class newPost extends Component{
                       <input type="text" onChange={this.locationHandler} className="form-control" placeholder="enter area"/>
                     </div>
                     <div className="form-group">
-                      <input type="text" onChange={this.fileHandler} placeholder="Enter the url of img" className="form-control"/>
+                      <input type="file" onChange={this.fileHandler} placeholder="Enter the url of img" className="form-control"/>
                     </div>
+                    <button onClick={this.uploadHandler}>upload</button>
                     <div className="form-group text-center">
                        <input type="submit" onClick={this.submitHandler} value="submit"/>
                     </div>
-                </form>
 
-                    
             </div>
         );
     };
 };
 
-export default newPost;
+export default withRouter(newPost);
