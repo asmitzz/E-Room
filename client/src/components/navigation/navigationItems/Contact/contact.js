@@ -8,28 +8,40 @@ class Contact extends Component{
     return(
         <div> 
            <Nav type="Contact"/>
+           <div className="contact">
+           </div>
+           <section className="main-section">
+               <h2 className="contactUs">CONTACT US</h2>
+               <i class="fas fa-phone-alt">&nbsp; 1-80-00330808</i>
+               <i class="pl-5 fas fa-envelope">&nbsp;brandname@gmail.com</i>
+               <hr/>
+               <strong>Fancy working together or just say hi? Drop us a message below.</strong>
+               <form className="mt-3">
+                 <div>
+                   <label>Your Name</label>
+                   <input className="form-control" type="text" placeholder="Enter your name.."/>
+                 </div>
 
-          <div className="text-white">
+                 <div>
+                   <label>Your Email</label>
+                   <input className="form-control" type="text" placeholder="Enter your email.."/>
+                 </div>
 
-           <div className="section-3 p-2 text-center"> 
-		         <h3><i className="fas fa-comments"></i></h3>
-             <h5 className="pt-5 px-2 "> For Any Query Related To Our Website Contact Us Without Any Hesitation</h5>
-             <h3 className="pt-3">Get in touch</h3>
-             <h5 className="pt-4">Want to get in touch? We'd love to hear from you. Here's how you can reach us...</h5>
-           </div>
-           <div className="section-4 text-center p-2"> 
-              <h2>Customer Support( 24x7 ) </h2>
-              <h3><i className="fas fa-phone-alt"></i></h3>
-             <ul className="list-group ">
-                <li className="list-group-item">Phone : +91 6232965440</li>
-                <li className="list-group-item">Phone : +91 7611135078</li>
-                <li className="list-group-item">Email: harsh123@gmail.com</li>
-                <li className="list-group-item">Email: akash123@gmail.com</li>
-             </ul>
-           </div>
-           <div className="section-5 text-center p-2"> </div>
-           </div>
-    
+                 <div>
+                   <label>Subject</label>
+                   <input className="form-control" type="text" placeholder="What would you like to talk us about?"/>
+                 </div>
+
+                 <div>
+                   <label>Message</label>
+                   <textarea className="form-control" type="text" placeholder="Type away :)"></textarea>
+                 </div>
+
+                 <input type="submit" className="send" value="SEND"/>
+                 
+               </form>
+           </section>
+               
       </div>
 
     );
