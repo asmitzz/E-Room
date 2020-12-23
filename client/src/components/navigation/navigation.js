@@ -2,8 +2,15 @@ import React,{ Component } from 'react';
 import { Link } from 'react-router-dom';
 import fire from '../../Authorization/auth';
 import './navigation.css';
+import {withRouter} from 'react-router-dom'
 
 class Nav extends Component{
+
+   signoutHandler = () => {
+     fire.auth().signOut();
+     this.props.history.push('/');
+   }
+
   render(){
     return(
         <div> 
@@ -22,7 +29,7 @@ class Nav extends Component{
                     <Link className="nav-link" to='/contact'>{this.props.type === 'Contact'? <h3>Contact</h3> : 'Contact' }</Link>
                   </li>
                   <li className="nav-item">
-                    <button className="btn btn-color mt-1" onClick={()=>{fire.auth().signOut()}}><h5>Signout</h5></button>
+                    <button className="btn btn-color mt-1" onClick={this.signoutHandler}><h5>Signout</h5></button>
                   </li>
               </ul>
            </nav>
@@ -32,4 +39,4 @@ class Nav extends Component{
   };
 };
 
-export default Nav;
+export default withRouter(Nav);

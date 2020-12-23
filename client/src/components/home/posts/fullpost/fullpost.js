@@ -31,7 +31,7 @@ class FullPost extends Component{
                        return (
                             <div>
                                <div className="mainDiv" key={this.state.posts[url.get('post')].Id}>
-                                  <img className="fullimg" src={this.state.posts[url.get('post')].img}/>
+                                  <img className="fullimg" alt="" src={this.state.posts[url.get('post')].img}/>
                                </div>
                                <div className="details text-secondary">
                                      <h3>Details</h3>
