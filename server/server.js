@@ -11,7 +11,7 @@ const con = mysql.createConnection({
     user:'root',
     password:'',
     host:'localhost',
-    database:'E-Room'
+    database:'roomdb'
 });
 
 con.connect( err => {
@@ -31,27 +31,28 @@ app.get('/',(req,res) => {
 })
 
 app.get('/api/get',(req,res) => {
-    const Select = "SELECT * FROM posts";
+    const Select = "SELECT * FROM room_details";
     con.query(Select,(err,result) => {
         res.send(result)
     }) 
 })
 
 app.use('/api/insert',(req,res) => {
-    const rent = req.body.rent;
     const name = req.body.name;
-    const looking = req.body.LookingFor;
-    const img1 = req.body.img1;
-    const img2 = req.body.img2;
-    const img3 = req.body.img3;
-    const img4 = req.body.img4;
-    const location = req.body.location;
-    const phone = req.body.phone;
+    const rent = req.body.rent;
+    const lookingfor = req.body.lookingfor;
+    const address = req.body.address;
+    const area = req.body.area;
     const pincode = req.body.pincode;
+    const phone = req.body.phone;
+    const image1 = req.body.image1;
+    const image2 = req.body.image2;
+    const image3 = req.body.image3;
+    const image4 = req.body.image4;
 
-    const Insert = "INSERT INTO posts ( rent,name,LookingFor,location,phone,img2,img3,img4,img1,pincode ) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    const Insert = "INSERT INTO room_details ( Id,name,rent,lookingfor,address,area,pincode,phone,image1,image2,image3,image4 ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
 
-    con.query(Insert,[rent,name,looking,location,phone,img1,img2,img3,img4,pincode]);
+    con.query(Insert,["",name,rent,lookingfor,address,area,pincode,phone,image1,image2,image3,image4]);
 })
 
 app.listen(port,() => console.log("server is running on :" ,port))

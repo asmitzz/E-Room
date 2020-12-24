@@ -30,12 +30,12 @@ class Posts extends Component{
                    return (
                          <div className="card my-5 mx-4" key={this.state.posts[posts].Id}>
                            <h6 className="text-center bg-success p-2 my-0 ">To-Let</h6>
-                           <img className="card-img-top" src={this.state.posts[posts].img} alt="Card"/>
+                           <img className="card-img-top" src={this.state.posts[posts].image1} alt="Card"/>
                            <div>
                                <h4 className="text-center">{this.state.posts[posts].name}</h4>
                                <p className="pl-3">Rent - {this.state.posts[posts].rent}<br/>
-                                Looking For -  {this.state.posts[posts].LookingFor}<br/>
-                                Location - {this.state.posts[posts].location}</p>
+                                Looking For -  {this.state.posts[posts].lookingfor}<br/>
+                                Location - {this.state.posts[posts].area}</p>
                                </div>
                                <button className="btn btn-primary w-100" onClick={() => this.btnHandler(posts)}>View post</button>
                            </div>

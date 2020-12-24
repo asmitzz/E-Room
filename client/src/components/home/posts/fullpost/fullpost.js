@@ -29,16 +29,16 @@ class FullPost extends Component{
                      
                     if(posts === url.get('post')){
                        return (
-                            <div>
-                               <div className="mainDiv" key={this.state.posts[url.get('post')].Id}>
-                                  <img className="fullimg" alt="" src={this.state.posts[url.get('post')].img}/>
+                            <div key={this.state.posts[url.get('post')].Id}>
+                               <div className="mainDiv" >
+                                  <img className="fullimg" alt="" src={this.state.posts[url.get('post')].image1}/>
                                </div>
                                <div className="details text-secondary">
                                      <h3>Details</h3>
                                      <p className="a">Name: <span>{this.state.posts[url.get('post')].name}</span> </p>
                                      <p className="b">Rent: <span>{this.state.posts[url.get('post')].rent}</span></p>
-                                     <p className="c">location: <span>{this.state.posts[url.get('post')].location}</span></p>
-                                     <p className="d">Looking-For: <span>{this.state.posts[url.get('post')].LookingFor}</span></p>
+                                     <p className="c">location: <span>{this.state.posts[url.get('post')].area}</span></p>
+                                     <p className="d">Looking-For: <span>{this.state.posts[url.get('post')].lookingfor}</span></p>
                                </div>
                             </div>
                        ); 

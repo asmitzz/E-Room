@@ -4,19 +4,24 @@ import './newPost.css';
 import {withRouter} from 'react-router-dom';
 import Nav from '../../navigation/navigation';
 
+
+let uploadBtnDisable = false;
+
 class newPost extends Component{
 
     state = {
-       rent:"",
        name:"",
-       LookingFor:"",
-       location:"",
+       rent:"",
+       lookingfor:"For Boys",
+       address:"",
+       area:"",
+       pincode:"",
        phone:"",
-       img1:"",
-       img2:"",
-       img3:"",
-       img4:"",
-       pincode:""
+       image1:"",
+       image2:"",
+       image3:"",
+       image4:"",
+       error:""
     };
 
     nameHandler = (e) => {
@@ -28,27 +33,15 @@ class newPost extends Component{
     }
 
     lookingForHandler = (e) => {
-        this.setState({LookingFor:e.target.value})
+        this.setState({lookingfor:e.target.value})
     }
 
-    fileHandler1 = (e) => {
-        this.setState({img1:e.target.files[0]})
+    addressHandler = (e) => {
+        this.setState({address:e.target.value})
     }
 
-    fileHandler2 = (e) => {
-        this.setState({img2:e.target.files[0]})
-    }
-
-    fileHandler3 = (e) => {
-        this.setState({img3:e.target.files[0]})
-    }
-
-    fileHandler4 = (e) => {
-        this.setState({img4:e.target.files[0]})
-    }
-
-    locationHandler = (e) => {
-        this.setState({location:e.target.value})
+    areaHandler = (e) => {
+        this.setState({area:e.target.value})
     }
 
     pincodeHandler = (e) => {
@@ -59,38 +52,64 @@ class newPost extends Component{
         this.setState({phone:e.target.value})
     }
 
-    uploadHandler = () => {
+    fileHandler1 = (e) => {
+        this.setState({image1:e.target.files[0]})
+    }
+
+    fileHandler2 = (e) => {
+        this.setState({image2:e.target.files[0]})
+    }
+
+    fileHandler3 = (e) => {
+        this.setState({image3:e.target.files[0]})
+    }
+
+    fileHandler4 = (e) => {
+        this.setState({image4:e.target.files[0]})
+    }
+
+    uploadHandler = (e) => {
+        if( !this.state.image1 || !this.state.image2 || !this.state.image3 || !this.state.image4 ){
+            this.setState({error:"please upload all the images correctly"});
+            return;
+        }
         const img1 = new FileReader();
-        img1.readAsDataURL(this.state.img1);
+        img1.readAsDataURL(this.state.image1);
         img1.onloadend = () => {
-        this.setState({ img:img1.result })
+        this.setState({ image1:img1.result })
         }
 
         const img2 = new FileReader();
-        img2.readAsDataURL(this.state.img2);
+        img2.readAsDataURL(this.state.image2);
         img2.onloadend = () => {
-        this.setState({ img:img2.result })
+        this.setState({ image2:img2.result })
         }
 
         const img3 = new FileReader();
-        img3.readAsDataURL(this.state.img3);
+        img3.readAsDataURL(this.state.image3);
         img3.onloadend = () => {
-        this.setState({ img:img3.result })
+        this.setState({ image3:img3.result })
         }
 
         const img4 = new FileReader();
-        img4.readAsDataURL(this.state.img4);
+        img4.readAsDataURL(this.state.image4);
         img4.onloadend = () => {
-        this.setState({ img:img4.result })
+        this.setState({ image4:img4.result })
         }
+
+        uploadBtnDisable = true;
+
     }
 
     submitHandler = () => {
         axios.post('http://localhost:8000/api/insert',this.state);
+        console.log(this.state);
         this.props.history.push('/');
     }
 
+
     render(){
+
         return(
             <div>
                 <Nav/>
@@ -118,8 +137,14 @@ class newPost extends Component{
 
                     <div className="form-group">
                       <label>Enter Address:</label>
-                      <input type="text" onChange={this.locationHandler} className="form-control" placeholder="Enter address.."/>
+                      <input type="text" onChange={this.addressHandler} className="form-control" placeholder="Enter address.."/>
                     </div>
+
+                    <div className="form-group">
+                      <label>Area:</label>
+                      <input type="text" onChange={this.areaHandler} className="form-control" placeholder="Enter area.."/>
+                    </div>
+
                     <div className="form-group">
                       <label>Enter Pincode:</label>
                       <input type="text" onChange={this.pincodeHandler} className="form-control" placeholder="Enter pincode.."/>
@@ -137,10 +162,10 @@ class newPost extends Component{
                       <input type="file" onChange={this.fileHandler4} className="form-control"/>
                     </div>
                     
-                    <button onClick={this.uploadHandler}>upload</button>
-                    <div className="form-group text-center">
-                       <input type="submit" onClick={this.submitHandler} value="submit"/>
-                    </div>
+                    <button disabled={uploadBtnDisable} className="Btn" onClick={this.uploadHandler}>upload</button>
+                       <input type="submit" className="submitBtn ml-5" onClick={this.submitHandler} value="submit"/>
+                    <p className="text-danger">{this.state.error}</p>
+                    
 
                  </div>
             </div>
