@@ -8,11 +8,6 @@
    border-radius:5px ;
 }
 
-.fullimg{
-    width: 40%;
-    height: 500px;
-}
-
 .details{
     background: white;
     width: 70%;
@@ -22,6 +17,10 @@
     border-radius:5px ;
     margin-bottom: 1rem;
     padding: 1rem;
+}
+
+.carousel-item{
+    margin-left: 12%;
 }
 
 
@@ -43,4 +42,43 @@ span{
     color: black;
     text-align: right;
     word-spacing: 0;
+}
+
+@media(max-width:768px) and (min-width:600px){
+.mainDiv{
+    width: 100%;
+   margin-left: 0;
+
+}
+
+.details{
+    width: 100%;
+    margin-left: 0;
+}
+}
+
+@media(max-width:600px) and (min-width:300px){
+.mainDiv{
+        width: 100%;
+        margin-left: 0;
+}
+    
+.details{
+        width: 100%;
+        margin-left: 0;
+}
+
+p.a{
+    word-spacing: 5rem;
+}
+p.b{
+    word-spacing: 5.6rem;
+}
+p.c{
+    word-spacing: 4.1rem;
+}
+p.d{
+    word-spacing: 2.3rem;
+}
+
 }
