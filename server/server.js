@@ -41,12 +41,17 @@ app.use('/api/insert',(req,res) => {
     const rent = req.body.rent;
     const name = req.body.name;
     const looking = req.body.LookingFor;
-    const img = req.body.img;
+    const img1 = req.body.img1;
+    const img2 = req.body.img2;
+    const img3 = req.body.img3;
+    const img4 = req.body.img4;
     const location = req.body.location;
+    const phone = req.body.phone;
+    const pincode = req.body.pincode;
 
-    const Insert = "INSERT INTO posts ( rent,name,LookingFor,img,location ) VALUES (?,?,?,?,?)";
+    const Insert = "INSERT INTO posts ( rent,name,LookingFor,location,phone,img2,img3,img4,img1,pincode ) VALUES (?,?,?,?,?,?,?,?,?,?)";
 
-    con.query(Insert,[rent,name,looking,img,location])
+    con.query(Insert,[rent,name,looking,location,phone,img1,img2,img3,img4,pincode]);
 })
 
 app.listen(port,() => console.log("server is running on :" ,port))
