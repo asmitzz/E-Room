@@ -1,0 +1,22 @@
+.contact-us{
+    color: orangered;
+    font-weight: 700;
+}
+
+.Btn{
+    color: orangered;
+    font-weight: 700;
+    border: 2px solid orangered;
+    margin-top: 1rem;
+    background: rgba(62, 62, 196, 0.466);
+    display: inline-block;
+}
+
+.submitBtn{
+    color: orangered;
+    font-weight: 700;
+    border: 2px solid orangered;
+    margin-top: 1rem;
+    background: rgba(62, 62, 196, 0.466);
+    display: inline-block;
+}
