@@ -2,12 +2,14 @@ import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import fire from '../auth';
 import './login.css';
+import logo from '../../assets/logos/login.svg';
 
 class Login extends Component{
 
     state = {
        email:"",
-       password:""
+       password:"",
+       error:""
     };
 
     emailHandler = (event) => {
@@ -19,14 +21,18 @@ class Login extends Component{
     };
 
     loginHandler = () => {
-        fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password);
+        fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).catch(err=>{
+            this.setState({ error:err.message });
+        });
     }
 
     render(){
         return(
            <div className="main-container">
-                   <div className="loginSection">
-                        <h1 className="login-heading">LOGIN</h1>
+                   <div className="loginSection">  
+                        <div className="text-center">
+                          <img className="w-50" src={logo} alt="LOGIN"/>
+                        </div>
                      <div className="formSection">
                         <div className="form-group">
                            <label>Email</label>
@@ -36,9 +42,12 @@ class Login extends Component{
                             <label>Password</label>
                             <input className="form-control" type="password" onChange={this.passwordHandler} placeholder="Enter password" />
                         </div>
-                        <button className="loginBtn mt-3 w-100" onClick={this.loginHandler}>LOGIN</button>
+                        <button className="loginBtn mt-3" onClick={this.loginHandler}>LOGIN</button>
+                        <br/>
+                        <span className="text-danger">{this.state.error}</span>
+                        <hr/>
+                       <span style={{color:'#ffb550'}}>Don't have an account? </span>  <Link className="link" to="/signup">REGISTER</Link>
                      </div>
-                        {/* <Link to="/signup">signup</Link> */}
                    </div>
            </div>
         );

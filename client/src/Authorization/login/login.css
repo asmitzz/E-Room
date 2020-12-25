@@ -1,11 +1,16 @@
+:root{
+    --primary-color:  #ffb550;
+    --secondary-color:  #283350;
+}
+
 .main-container{
-        background:#6dd47e;
-        padding: 2.2% 0;
+        background:var(--primary-color);
+        padding: 1.7% 0;
 }
 
 .loginSection{
-    background: linear-gradient(90deg, #283350 50%, #ffb550 50%);
-     width: 35%;
+    background: var(--secondary-color);
+     width: 45%;
      margin: auto;
      padding: 3rem 1rem;
      border-radius: 10px;
@@ -13,7 +18,7 @@
 }
 
 .login-heading{
-     color: white;
+     color:var(--primary-color);
     font-weight: 800;
     text-align: center;
     margin: auto;
@@ -22,7 +27,7 @@
 }
 
 label{
-    color: white;
+    color: var(--primary-color);
 }
 
 .form-control{
@@ -40,17 +45,48 @@ label{
 }
 
 .loginBtn{
-    background: linear-gradient(90deg,#ffb550  50%, #283350 50%);
+    background: var(--primary-color);
     color: white;
     font-weight: 800;
     border-radius: 10px;
-    border: none;
     padding: 0.5rem 0;
+    cursor: pointer;
+    width: 45%;
 }
 
 .formSection{
     margin: auto;
-    margin-top: 1.5rem;
     border-radius: 10px;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
+}
+
+.link{
+    color: var(--primary-color);
+}
+
+.link:hover{
+    color: var(--primary-color);
+    text-decoration: double underline;
+}
+
+@media(max-width:1024px) and (min-width:700px){
+  .loginSection{
+     width: 60%;
+}
+}
+
+@media(max-width:700px) and (min-width:550px){
+    .loginSection{
+       width: 80%;
+  }
+  }
+
+@media(max-width:550px) and (min-width:360px){
+    .loginSection{
+       width: 90%;
+}
+
+  .main-container{
+    padding: 8% 0;
+}
 }
