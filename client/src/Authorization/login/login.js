@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import fire from '../auth';
+import './login.css';
 
 class Login extends Component{
 
@@ -23,11 +24,22 @@ class Login extends Component{
 
     render(){
         return(
-           <div>
-               <input type="email" onChange={this.emailHandler} placeholder="Enter email address" />
-               <input type="password" onChange={this.passwordHandler} placeholder="Enter password" />
-               <button onClick={this.loginHandler}>login</button>
-               <Link to="/signup">signup</Link>
+           <div className="main-container">
+                   <div className="loginSection">
+                        <h1 className="login-heading">LOGIN</h1>
+                     <div className="formSection">
+                        <div className="form-group">
+                           <label>Email</label>
+                           <input className="form-control" type="email" onChange={this.emailHandler} placeholder="Enter email address" />
+                        </div>
+                        <div className="form-group">
+                            <label>Password</label>
+                            <input className="form-control" type="password" onChange={this.passwordHandler} placeholder="Enter password" />
+                        </div>
+                        <button className="loginBtn mt-3 w-100" onClick={this.loginHandler}>LOGIN</button>
+                     </div>
+                        {/* <Link to="/signup">signup</Link> */}
+                   </div>
            </div>
         );
     };

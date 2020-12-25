@@ -1,0 +1,56 @@
+.main-container{
+        background:#6dd47e;
+        padding: 2.2% 0;
+}
+
+.loginSection{
+    background: linear-gradient(90deg, #283350 50%, #ffb550 50%);
+     width: 35%;
+     margin: auto;
+     padding: 3rem 1rem;
+     border-radius: 10px;
+    border: none;
+}
+
+.login-heading{
+     color: white;
+    font-weight: 800;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+label{
+    color: white;
+}
+
+.form-control{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.form-control::placeholder{
+    color: black;
+}
+
+
+.form-group{
+    margin-bottom: 0;
+}
+
+.loginBtn{
+    background: linear-gradient(90deg,#ffb550  50%, #283350 50%);
+    color: white;
+    font-weight: 800;
+    border-radius: 10px;
+    border: none;
+    padding: 0.5rem 0;
+}
+
+.formSection{
+    margin: auto;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+}
