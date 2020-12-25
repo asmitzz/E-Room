@@ -24,8 +24,8 @@ con.connect( err => {
 } )
 
 app.use(cors());
-app.use( bodyParser.json({ limit:'50mb' }) );
-app.use( bodyParser.urlencoded({ limit:'50mb', extended:true ,parameterLimit:50000}) );
+app.use( bodyParser.json({ limit:'1024mb' }) );
+app.use( bodyParser.urlencoded({ limit:'1024mb', extended:true ,parameterLimit:50000000000}) );
 app.get('/',(req,res) => {
     res.send("server is running")
 })

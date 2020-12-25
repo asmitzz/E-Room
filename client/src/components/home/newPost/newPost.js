@@ -23,7 +23,8 @@ class newPost extends Component{
        image4:"",
        error:"",
        isphonetrue:"",
-       ispintrue:""
+       ispintrue:"",
+       success:""
     };
 
     nameHandler = (e) => {
@@ -70,9 +71,9 @@ class newPost extends Component{
         this.setState({image4:e.target.files[0]})
     }
 
-    uploadHandler = (e) => {
-        if( !this.state.image1 || !this.state.image2 || !this.state.image3 || !this.state.image4 ){
-            this.setState({error:"please upload all the images correctly"});
+    uploadHandler = () => {
+        if( !this.state.image1 || !this.state.image2 || !this.state.image3 || !this.state.image4 || !this.state.name|| !this.state.rent || !this.state.pincode || !this.state.phone || !this.state.address || !this.state.area ){
+            this.setState({ error:"" })
             return;
         }
         const img1 = new FileReader();
@@ -100,13 +101,14 @@ class newPost extends Component{
         }
 
         uploadBtnDisable = true;
-        this.setState({error:""})
+        this.setState({success:"successfully uploaded click on submit to proceed"})
 
     }
 
     submitHandler = (event) => {
         event.preventDefault();
         if(!uploadBtnDisable){
+            this.setState({ error:"please click upload button to upload all the fields correctly" })
             return;
         }
         else if( this.state.pincode.length !== 6 ){
@@ -115,6 +117,7 @@ class newPost extends Component{
         else if( this.state.phone.length === 10 ){
             axios.post('http://localhost:8000/api/insert',this.state);
             this.props.history.push('/');
+            alert("Congratulations!!your post is now live");
         }
         else{
             this.setState({ ispintrue:"" })
@@ -125,7 +128,6 @@ class newPost extends Component{
 
 
     render(){
-        console.log(this.state.pincode.length)
         return(
             <div>
                 <Nav/>
@@ -134,7 +136,7 @@ class newPost extends Component{
                  <form>
                     <div className="form-group">
                       <label>Enter Name:</label>
-                      <input type="text" onChange={this.nameHandler} className="form-control" placeholder="Enter your name.." required/>
+                      <input type="text" minLength="3" maxLength="20" onChange={this.nameHandler} className="form-control" placeholder="Enter your name.." required/>
                     </div>
 
                     <div className="form-group">
@@ -153,34 +155,35 @@ class newPost extends Component{
 
                     <div className="form-group">
                       <label>Enter Address:</label>
-                      <input type="text" onChange={this.addressHandler} className="form-control" placeholder="Enter address.." required/>
+                      <input type="text" minLength="10" maxLength="100" onChange={this.addressHandler} className="form-control" placeholder="Enter address.." required/>
                     </div>
 
                     <div className="form-group">
                       <label>Area:</label>
-                      <input type="text" onChange={this.areaHandler} className="form-control" placeholder="Enter area.." required/>
+                      <input type="text" minLength="4" maxLength="20" onChange={this.areaHandler} className="form-control" placeholder="Enter area.." required/>
                     </div>
 
                     <div className="form-group">
                       <label>Enter Pincode:</label>
-                      <input type="number" onChange={this.pincodeHandler} className="form-control" placeholder="Enter pincode.." required/>
+                      <input type="number" maxLength="6" onChange={this.pincodeHandler} className="form-control" placeholder="Enter pincode.." required/>
                       <span className="text-danger position-absolute"> { this.state.ispintrue }</span>
                     </div>
                     <div className="form-group">
                       <label>Phone Number:</label>
-                      <input type="number" onChange={this.phoneHandler} placeholder="Enter phone number.." className="form-control"/>
+                      <input type="number" maxLength="10" onChange={this.phoneHandler} placeholder="Enter phone number.." className="form-control"/>
                       <span className="text-danger position-absolute">{this.state.isphonetrue}</span>
                     </div>
                     
                     <div className="form-group">
                       <label>UPLOAD PHOTOS OF HOSTEL</label>
-                      <input type="file" onChange={this.fileHandler1} className="form-control"/>
-                      <input type="file" onChange={this.fileHandler2} className="form-control"/>
-                      <input type="file" onChange={this.fileHandler3} className="form-control"/>
-                      <input type="file" onChange={this.fileHandler4} className="form-control"/>
+                      <input type="file" onChange={this.fileHandler1} className="form-control" required/>
+                      <input type="file" onChange={this.fileHandler2} className="form-control" required/>
+                      <input type="file" onChange={this.fileHandler3} className="form-control" required/>
+                      <input type="file" onChange={this.fileHandler4} className="form-control" required/>
                     </div>
                    
                     <h6 className="position-absolute text-danger">{this.state.error}</h6>
+                    <h6 className="position-absolute text-success">{this.state.success}</h6>
                     <button disabled={uploadBtnDisable} className="Btn mt-4" onClick={this.uploadHandler}>upload</button>
                        <input type="submit" className="submitBtn ml-5" onClick={this.submitHandler} value="submit"/>
                        </form>
