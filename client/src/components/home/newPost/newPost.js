@@ -135,17 +135,17 @@ class newPost extends Component{
                 <h1 className="display-1 contact-us">E-Room</h1>
                  <form>
                     <div className="form-group">
-                      <label>Enter Name:</label>
+                      <label className="newpost-label">Enter Name:</label>
                       <input type="text" minLength="3" maxLength="20" onChange={this.nameHandler} className="form-control" placeholder="Enter your name.." required/>
                     </div>
 
                     <div className="form-group">
-                      <label>Enter Amount</label>
+                      <label className="newpost-label">Enter Amount</label>
                       <input type="number" onChange={this.rentHandler} className="form-control" placeholder="Enter rent amount.." required/>
                     </div>
 
                     <div className="form-group">
-                       <label>Choose a option:</label>
+                       <label className="newpost-label">Choose a option:</label>
                        <select onChange={this.lookingForHandler} className="form-control" >
                            <option>For Boys</option>
                            <option>For Girls</option>
@@ -154,32 +154,32 @@ class newPost extends Component{
                     </div>
 
                     <div className="form-group">
-                      <label>Enter Address:</label>
+                      <label className="newpost-label">Enter Address:</label>
                       <input type="text" minLength="10" maxLength="100" onChange={this.addressHandler} className="form-control" placeholder="Enter address.." required/>
                     </div>
 
                     <div className="form-group">
-                      <label>Area:</label>
+                      <label className="newpost-label">Area:</label>
                       <input type="text" minLength="4" maxLength="20" onChange={this.areaHandler} className="form-control" placeholder="Enter area.." required/>
                     </div>
 
                     <div className="form-group">
-                      <label>Enter Pincode:</label>
-                      <input type="number" maxLength="6" onChange={this.pincodeHandler} className="form-control" placeholder="Enter pincode.." required/>
+                      <label className="newpost-label">Enter Pincode:</label>
+                      <input type="number" onChange={this.pincodeHandler} className="form-control" placeholder="Enter pincode.." required/>
                       <span className="text-danger position-absolute"> { this.state.ispintrue }</span>
                     </div>
                     <div className="form-group">
-                      <label>Phone Number:</label>
-                      <input type="number" maxLength="10" onChange={this.phoneHandler} placeholder="Enter phone number.." className="form-control"/>
+                      <label className="newpost-label">Phone Number:</label>
+                      <input type="number" onChange={this.phoneHandler} placeholder="Enter phone number.." className="form-control"/>
                       <span className="text-danger position-absolute">{this.state.isphonetrue}</span>
                     </div>
                     
                     <div className="form-group">
-                      <label>UPLOAD PHOTOS OF HOSTEL</label>
-                      <input type="file" onChange={this.fileHandler1} className="form-control" required/>
-                      <input type="file" onChange={this.fileHandler2} className="form-control" required/>
-                      <input type="file" onChange={this.fileHandler3} className="form-control" required/>
-                      <input type="file" onChange={this.fileHandler4} className="form-control" required/>
+                      <label className="newpost-label">UPLOAD PHOTOS OF HOSTEL</label>
+                      <input type="file" onChange={this.fileHandler1} className="form-control mb-1" required/>
+                      <input type="file" onChange={this.fileHandler2} className="form-control mb-1" required/>
+                      <input type="file" onChange={this.fileHandler3} className="form-control mb-1" required/>
+                      <input type="file" onChange={this.fileHandler4} className="form-control mb-1" required/>
                     </div>
                    
                     <h6 className="position-absolute text-danger">{this.state.error}</h6>
