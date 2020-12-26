@@ -3,6 +3,10 @@
     --secondary-color:  #283350;
 }
 
+body{
+    background: var(--primary-color);
+}
+
 .main-container{
         background:var(--primary-color);
         padding: 1.7% 0;
@@ -26,8 +30,9 @@
     padding: 1rem;
 }
 
-label{
+.login-label{
     color: var(--primary-color);
+    margin-top: 10px;
 }
 
 .form-control{
@@ -46,12 +51,18 @@ label{
 
 .loginBtn{
     background: var(--primary-color);
-    color: white;
+    color: var(--secondary-color);
     font-weight: 800;
     border-radius: 10px;
     padding: 0.5rem 0;
     cursor: pointer;
     width: 45%;
+}
+
+.loginBtn:hover{
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .formSection{
@@ -84,9 +95,5 @@ label{
 @media(max-width:550px) and (min-width:360px){
     .loginSection{
        width: 90%;
-}
-
-  .main-container{
-    padding: 8% 0;
 }
 }

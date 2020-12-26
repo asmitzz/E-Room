@@ -25,8 +25,22 @@ class Signup extends Component{
          } ).catch( err => {
              this.setState({ error:err.message })
          } );
-         
      }
+     
+    keyPressHandler = (e) => {
+      this.setState({ error:"" })
+      if( e.key === 'Enter' ){
+          if( this.state.email === ""){
+              this.setState({ error:"please enter email" })
+          }
+          else if( this.state.password === "" ){
+              this.setState({ error:"please enter password" })
+          }
+          else{
+            this.signupHandler();
+          }
+      }
+  }
  
     render(){
         return(
@@ -37,12 +51,12 @@ class Signup extends Component{
                       </div>
                     <div className="formSection">
                       <div className="form-group">
-                        <label>Email</label>
-                        <input className="form-control" type="email" onChange={this.emailHandler} placeholder="Enter email address" />
+                        <label className="login-label">Email</label>
+                        <input className="form-control" onKeyPress={this.keyPressHandler}  type="email" onChange={this.emailHandler} placeholder="Enter email address" />
                       </div>
                      <div className="form-group">
-                        <label>Password</label>
-                        <input className="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        <label className="login-label">Password</label>
+                        <input className="form-control" onKeyPress={this.keyPressHandler}  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                           title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" type="password" onChange={this.passwordHandler} placeholder="Enter password" />
                      </div>
                       <button className="loginBtn mt-3" onClick={this.signupHandler}>REGISTER</button>
