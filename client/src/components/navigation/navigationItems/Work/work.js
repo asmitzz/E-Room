@@ -11,7 +11,7 @@ class Work extends Component{
     return(
         <div> 
              
-              <Nav type="Work"/>
+              <Nav/>
 
 
               <div className="main">
@@ -55,8 +55,7 @@ class Work extends Component{
                 </div>
                 
                 <h1 className="pl-3">We are looking for people who are:</h1>
-                <p>
-                   <ul className="pt-2">
+                   <ul className="pt-2 pl-5">
                      <li>Self motivated</li>
                      <li>Happy and friendly</li>
                      <li> Fun and easy-going</li>
@@ -66,9 +65,6 @@ class Work extends Component{
                      <li>Proactive and creative</li>
                      <li>Speak at least two languages (Hindi and English preferred)</li>
                    </ul>
-             
-                </p>
-
               </div>
         </div>
     );
