@@ -1,11 +1,76 @@
-.card{
-    width: 20%;
+.main-posts{
+    margin-top: 2.1rem;
+    background: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.posts-container{
+  background: white;
+  color: var(--primary-color);
+  width:75%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 25%;
+  line-height: 23px;
+} 
+
+
+.posts img{
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.col-6{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hostel-name{
+    color: black;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.room-details{
+    color: black;
+    font-size: x-large;
+    font-weight:100;
+}
+
+.address,.area{
+    color: black;
+    font-size: large;
+    font-weight:100;
+}
+
+.rent{
+    color: red;
+    font-size: x-large;
+    font-weight:800;
+    margin-top:3rem;
     display: inline-block;
 }
 
-.card-img-top{
-    height: 170px;
+.viewBtn{
+    padding: 0.5rem 1rem;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
 }
-.display-none{
-    display: none;
+
+.viewBtn:hover{
+    padding: 0.5rem 1rem;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border: 1px solid var(--secondary-color);
 }
+
+.separate{
+    border-bottom:1px solid rgb(211, 202, 202);
+    margin: 2rem 0;
+    margin-left: 25%;
+}
+

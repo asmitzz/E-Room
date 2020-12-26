@@ -6,7 +6,7 @@ class About extends Component{
   render(){
     return(
         <div> 
-            <Nav/>
+            <Nav active="about"/>
 
               <div className="main-div pb-5"> 
                   

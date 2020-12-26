@@ -31,7 +31,6 @@ class Nav extends Component{
 	               </label>
              <div className="side">
 		             <header>MY MENU</header>
-	               <Link to="/" className= "mainnav"><i className="fa fa-home"></i> HOME</Link>
 	               <Link to="/about"><i className="fa fa-info-circle"></i> ABOUT</Link>
 	               <Link to="/work"><i className="fa fa-wrench"></i> WORK WITH US</Link>
 	               <Link to="/contact"><i className="fa fa-phone"></i> CONTACT</Link>

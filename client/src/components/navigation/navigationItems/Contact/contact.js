@@ -8,7 +8,7 @@ class Contact extends Component{
   render(){
     return(
         <div> 
-           <Nav/>
+           <Nav active="contact"/>
            <img src={logo} alt="contact" className="w-100 mt-5"/>
            <section className="main-section">
                <h2 className="contactUs">CONTACT US</h2>

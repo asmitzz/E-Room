@@ -10,10 +10,7 @@ class Work extends Component{
   render(){
     return(
         <div> 
-             
-              <Nav/>
-
-
+              <Nav active="contact"/>
               <div className="main">
                  <h2 className="display-3 text-center pt-5">Work With Us</h2>
                  <p className="pt-5">

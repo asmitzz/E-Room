@@ -13,6 +13,7 @@ class newPost extends Component{
        name:"",
        rent:"",
        lookingfor:"For Boys",
+       describe:"",
        address:"",
        area:"",
        pincode:"",
@@ -37,6 +38,10 @@ class newPost extends Component{
 
     lookingForHandler = (e) => {
         this.setState({lookingfor:e.target.value})
+    }
+
+    describeHandler = (e) => {
+        this.setState({ describe: e.target.value })
     }
 
     addressHandler = (e) => {
@@ -72,7 +77,7 @@ class newPost extends Component{
     }
 
     uploadHandler = () => {
-        if( !this.state.image1 || !this.state.image2 || !this.state.image3 || !this.state.image4 || !this.state.name|| !this.state.rent || !this.state.pincode || !this.state.phone || !this.state.address || !this.state.area ){
+        if( !this.state.image1 || !this.state.image2 || !this.state.image3 || !this.state.image4 || !this.state.name|| !this.state.rent || !this.state.describe || !this.state.pincode || !this.state.phone || !this.state.address || !this.state.area ){
             this.setState({ error:"" })
             return;
         }
@@ -135,8 +140,8 @@ class newPost extends Component{
                 <h1 className="display-1 contact-us">E-Room</h1>
                  <form>
                     <div className="form-group">
-                      <label className="newpost-label">Enter Name:</label>
-                      <input type="text" minLength="3" maxLength="20" onChange={this.nameHandler} className="form-control" placeholder="Enter your name.." required/>
+                      <label className="newpost-label">Enter Hostel Name:</label>
+                      <input type="text" minLength="3" maxLength="20" onChange={this.nameHandler} className="form-control" placeholder="Enter your hostel name.." required/>
                     </div>
 
                     <div className="form-group">
@@ -151,6 +156,11 @@ class newPost extends Component{
                            <option>For Girls</option>
                            <option>Both</option>
                        </select>
+                    </div>
+
+                    <div className="form-group">
+                      <label className="newpost-label">Enter Address:</label>
+                      <input type="text" minLength="10" maxLength="500" onChange={this.describeHandler} className="form-control" placeholder="describe your room.." required/>
                     </div>
 
                     <div className="form-group">
