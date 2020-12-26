@@ -1,7 +1,6 @@
 .main-div{
-   box-shadow: 2px 2px 2px 2px black;
    padding: 1rem;
-   color: white;
+   color: var(--secondary-color);
 }
 
 .about-img{
@@ -10,11 +9,11 @@
 }
 
 .quote{
-    border-left: 5px solid #203A43;
+    border-left: 5px solid var(--secondary-color);
     padding: 1.5rem;
-    background: #FF8008;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #FF8008;
+    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  
+    background: linear-gradient(to right, #FFC837, #FF8008);
 }
 
 @media(max-width: 600px) and (min-width:340px) {
