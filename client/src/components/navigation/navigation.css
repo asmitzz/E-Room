@@ -1,34 +1,107 @@
-/* .navbar{
-   background: #563d7c;
-} */
-
-.nav-link{
-    color: white;
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
 }
 
-.btn-color{
-    background: rgb(64, 62, 196);
-    color: white;
+
+.side{
+	position: fixed;
+	background-color: #1e1e1e;
+	height: 100vh;
+	left: -250px;
+	width: 250px;
+	color: white;
+    transition: all 0.5s ease;
+    top:0;
+    z-index: 200;
 }
 
-.btn-color:hover{
-    background: white;
-    color: #0F2027;
+.side a{
+    display: block;
+	text-decoration: none;
+	padding-top: 38px;
+	padding-left: 35px;
+	padding-bottom: 15px;
+	color: white;
+	border-bottom: 1px solid grey;
+	word-spacing: 10px;
 }
 
-.nav-link:hover{
-    color: grey;
+.side a:hover{
+	color: red;
+	border-left: 5px solid red;
 }
 
-.navbar-brand{
-    color: white;
+.side header{
+	padding: 5px;
+	line-height:60px;
+	text-align: center;
+	font-family: Aerial;
+	font-size: 28px; 
+	border-bottom: 1px solid black;
+	transition: all 0.5s ease;
 }
 
-.navbar-brand:hover{
-    color: grey;
+#check{
+	display: none;
 }
 
-.nav-item{
-    padding-left: 1rem;
-    font-size: larger;
+label #btn,label #cancel
+{
+	color: white;
+	background-color: black;
+	position: fixed;
+	width: 55px;
+	height: 55px;
+	border: 1px solid black;
+	line-height: 50px;
+	font-size: 28px;
+	text-align: center;
+	transition: all 0.5s;
+	top: 0;
+    z-index: 200;
+    cursor: pointer;
 }
+
+#cancel{
+	opacity: 0;
+	visibility: hidden;
+}
+	
+#check:checked ~ label #btn{	
+	margin-left: 280px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#check:checked ~ label #cancel{
+	margin-left: 255px;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s;
+}
+
+#check:checked ~ .side{
+	left: 0px;
+}
+
+.topnav{
+	background-color: #1e1e1e;
+	padding: 8px;
+	position: fixed;
+	top: 0;
+	right:0;
+}
+.topnav a{
+	color: white;
+	font-size: 28px;
+	padding: 5px;
+	padding-left: 28px;
+	padding-right: 28px;
+}
+.topnav a:hover{
+	background-color: black;
+	color: lightgrey;
+}
+
