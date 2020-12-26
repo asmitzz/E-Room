@@ -1,9 +1,10 @@
 .main{
-    box-shadow: 2px 2px 2px 2px black;
+    box-shadow: 2px 2px 2px 2px var(--secondary-color) inset,-2px -2px 2px 2px var(--secondary-color) inset;
     padding: 1rem;
-    color: white;
+    color: var(--secondary-color);
     width: 70%;
     margin: auto;
+    margin-top: 2.5rem;
  }
  
  .work-img{
