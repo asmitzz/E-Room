@@ -1,84 +1,46 @@
-.mainDiv{
-   width: 70%;
-   margin-left: 2rem;
-   margin-top: 2rem;
-   text-align: center;
-   background: black;
-   border: 1px solid white;
-   border-radius:5px ;
+.fullpost-container{
+    padding-top: 4rem;
 }
 
-.details{
-    background: white;
-    width: 70%;
-    margin-left: 2rem;
-    margin-top: 1px;
-    border: 1px solid white;
-    border-radius:5px ;
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-.carousel-item{
-    margin-left: 12%;
-}
-
-
-p.a{
-    word-spacing: 10rem;
-}
-p.b{
-    word-spacing: 10.6rem;
-}
-p.c{
-    word-spacing: 9.1rem;
-}
-p.d{
-    word-spacing: 7.3rem;
-}
-
-
-span{
-    color: black;
-    text-align: right;
-    word-spacing: 0;
-}
-
-@media(max-width:768px) and (min-width:600px){
-.mainDiv{
+.fullpost-container .carousel-item{
+    background: #1e1e1e;
     width: 100%;
-   margin-left: 0;
+    text-align: center;
+    left: -120px;
+}
+
+.fullpost-img{
+   width: 80%;
+   height:450px;
+   border-radius: 5px;
+   margin-right: 15px;
+}
+
+.fullpost-container .carousel-inner{
+    width: 73%;
+    margin-left: 4rem;
+    border-radius: 5px;
 
 }
 
-.details{
-    width: 100%;
-    margin-left: 0;
-}
+.fullpost-container .carousel-control-prev{
+    top: 90px;
 }
 
-@media(max-width:600px) and (min-width:300px){
-.mainDiv{
-        width: 100%;
-        margin-left: 0;
-}
-    
-.details{
-        width: 100%;
-        margin-left: 0;
+.fullpost-container .carousel-control-next{
+    top: 90px;
+    right: 215px;
 }
 
-p.a{
-    word-spacing: 5rem;
-}
-p.b{
-    word-spacing: 5.6rem;
-}
-p.c{
-    word-spacing: 4.1rem;
-}
-p.d{
-    word-spacing: 2.3rem;
+.fullpost-details{
+    background: #1e1e1e;
+    width: 73%;
+    margin-left: 4rem;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: red;
+    padding: 2rem;
+    font-weight: 600;
+    font-size: large;
 }
 
-}

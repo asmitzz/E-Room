@@ -26,55 +26,69 @@ class FullPost extends Component{
                 <Nav/>
                {
                  Object.keys(this.state.posts).map( posts => {
-                     
-                    if(posts === url.get('post')){
-                       return (
-                            <div key={this.state.posts[url.get('post')].Id}>
-                               <div className="mainDiv" >
-                               <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-                                  <ol className="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                                  </ol>
-                               <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <img className="d-block w-75" src={this.state.posts[url.get('post')].image1} alt="First slide"/>
-                                    </div>
-                                    <div className="carousel-item">
-                                         <img className="d-block w-75" src={this.state.posts[url.get('post')].image2} alt="Second slide"/>
-                                    </div>
-                                    <div className="carousel-item">
-                                          <img className="d-block w-75" src={this.state.posts[url.get('post')].image3} alt="Third slide"/>
-                                    </div>
-                                    <div className="carousel-item">
-                                          <img className="d-block w-75" src={this.state.posts[url.get('post')].image4} alt="Third slide"/>
-                                    </div>
-                                    </div>
-                                      <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span className="sr-only">Previous</span>
-                                     </a>
-                                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span className="sr-only">Next</span>
-                                    </a>
+                     if( posts === url.get('post')){
+                         return (
+                           <div>  
+                             <div id="slider" className="carousel slide fullpost-container" data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
+                                 <div className="carousel-inner">
+                                     <div className="carousel-item active">
+                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image1} alt="room"/>    
+                                     </div>
+                                     <div className="carousel-item">
+                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image2} alt="room"/>    
+                                     </div>
+                                     <div className="carousel-item">
+                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image3} alt="room"/>    
+                                     </div>
+                                     <div className="carousel-item">
+                                         <img className="fullpost-img" src={this.state.posts[url.get('post')].image4} alt="room"/>    
+                                     </div>                                     
                                  </div>
-                               </div>
-                              
-                               <div className="details text-secondary">
-                                     <h3>Details</h3>
-                                     <p className="a">Name: <span>{this.state.posts[url.get('post')].name}</span> </p>
-                                     <p className="b">Rent: <span>{this.state.posts[url.get('post')].rent}</span></p>
-                                     <p className="c">location: <span>{this.state.posts[url.get('post')].area}</span></p>
-                                     <p className="d">Looking-For: <span>{this.state.posts[url.get('post')].lookingfor}</span></p>
-                               </div>
-                            </div>
-                       ); 
+                                 <a href="#slider" className="carousel-control-prev" data-slide="prev"><span className="carousel-control-prev-icon"></span></a>
+                                 <a href="#slider" className="carousel-control-next" data-slide="next"><span className="carousel-control-next-icon"></span></a>
+                             </div>
+
+                             
+                             <div className="fullpost-details">
+                                 <h1 className="text-white">DETAILS</h1>
+                              <div className="row">
+                                 <div className="col-3">
+                                     <p>Hostel name:</p> 
+                                     <p>Rent amount: </p>
+                                     <p>Room available: </p>
+                                     <p>Description: </p>
+                                </div>
+                                <div className="col-9 text-white">
+                                     <p>{this.state.posts[url.get('post')].name}</p>
+                                     <p>{this.state.posts[url.get('post')].rent}</p>
+                                     <p>{this.state.posts[url.get('post')].lookingfor}</p>
+                                     <p>{this.state.posts[url.get('post')].description}</p>
+                                </div>
+                               </div> 
+                             </div>
+
+                             <div className="fullpost-details mb-3">
+                                 <h1 className="text-white">CONTACT</h1>
+                              <div className="row">
+                                 <div className="col-3">
+                                     <p>Address:</p> 
+                                     <p>Area: </p>
+                                     <p>Pincode: </p>
+                                     <p>Phone: </p>
+                                </div>
+                                <div className="col-9 text-white">
+                                     <p>{this.state.posts[url.get('post')].address}</p>
+                                     <p>{this.state.posts[url.get('post')].area}</p>
+                                     <p>{this.state.posts[url.get('post')].pincode}</p>
+                                     <p>{this.state.posts[url.get('post')].phone}</p>
+                                </div>
+                               </div> 
+                             </div>
+                           </div>
+                         )
                      }
                      else{
-                         return "";
+                         return ""
                      }
                  })
                }

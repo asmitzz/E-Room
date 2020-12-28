@@ -52,7 +52,7 @@ class Posts extends Component{
                             
                            <div className="col-md-6 px-5 pb-0 pt-5">
                              <span className="hostel-name">{this.state.posts[posts].name.toUpperCase()}</span>
-                             <p className="room-details mt-3">ROOM AVAILABLE: {this.state.posts[posts].lookingfor.toUpperCase()}</p>
+                             <p className="room-details mt-3"><span className="text-dark">ROOM AVAILABLE:</span> {this.state.posts[posts].lookingfor.toUpperCase()}</p>
                              <p className="address" >{this.state.posts[posts].address.toUpperCase()}</p>
                              <br/>
                              <p className=".area">{this.state.posts[posts].area.toUpperCase()},
