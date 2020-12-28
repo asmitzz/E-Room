@@ -1,6 +1,15 @@
+.about-container{
+    background: var(--secondary-color);
+}
+
+.about-container h2,h1{
+    color: rgba(255, 0, 0, 0.781);
+}
+
 .main-div{
-   padding: 1rem;
-   color: var(--secondary-color);
+   padding: 2rem;
+   color: var(--primary-color);
+   font-size: larger;
 }
 
 .about-img{
@@ -9,7 +18,7 @@
 }
 
 .quote{
-    border-left: 5px solid var(--secondary-color);
+    border-left: 5px solid #1e1e1e;
     padding: 1.5rem;
     background: #FF8008;
     background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  

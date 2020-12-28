@@ -1,10 +1,13 @@
+.work-container{
+    background-color: var(--secondary-color);
+}
 .main{
-    box-shadow: 2px 2px 2px 2px var(--secondary-color) inset,-2px -2px 2px 2px var(--secondary-color) inset;
     padding: 1rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     width: 70%;
     margin: auto;
     margin-top: 2.5rem;
+    font-size: larger;
  }
  
  .work-img{

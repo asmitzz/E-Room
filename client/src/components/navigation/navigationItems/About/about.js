@@ -5,8 +5,8 @@ import Nav from '../../navigation';
 class About extends Component{
   render(){
     return(
-        <div> 
-            <Nav active="about"/>
+        <div className="about-container"> 
+            <Nav/>
 
               <div className="main-div pb-5"> 
                   

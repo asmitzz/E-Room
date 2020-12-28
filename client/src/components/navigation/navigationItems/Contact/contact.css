@@ -1,16 +1,22 @@
-.title{
-    padding: 7rem 5rem;
-    font-size: 8rem;
-    color: white;
+.contact-container{
+    background: var(--secondary-color);
+}
+
+.contact-container h2{
+    color: rgba(255, 0, 0, 0.747);
+}
+
+.contact-container .form-control{
+    width: 60%;
 }
 
 .main-section{
     padding: 4rem;
-    color:var(--secondary-color);
+    color:var(--primary-color);
 }
 
 .contactUs{
-    color:var(--secondary-color);
+    color:var(--primary-color);
     font-weight: 700;
 }
 
@@ -19,13 +25,9 @@ hr{
 }
 
 .contact-label{
-    color:var(--secondary-color);
+    color:var(--primary-color);
     font-weight: 700;
     padding-top: 1rem;
-}
-
-.form-control{
-    width: 60%;
 }
 
 textarea{
@@ -33,19 +35,19 @@ textarea{
 }
 
 .send{
-    color:var(--secondary-color);
+    color:var(--primary-color);
     font-weight: 700;
-    border: 2px solid var(--secondary-color);
+    border: 3px solid var(--primary-color);
     margin-top: 1rem;
     padding: 0.5rem 1rem ;
     cursor: pointer;
-    background: var(--primary-color);
+    background: var(--secondary-color);
 }
 
 .send:hover{
-    color: var(--primary-color);
-    background: var(--secondary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    border: 3px solid var(--secondary-color);
 }
   
 @media(max-width:550px) and (min-width:360px){

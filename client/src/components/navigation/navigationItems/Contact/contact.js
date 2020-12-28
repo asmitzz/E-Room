@@ -7,8 +7,8 @@ import logo from '../../../../assets/Images/contact.svg';
 class Contact extends Component{
   render(){
     return(
-        <div> 
-           <Nav active="contact"/>
+        <div className="contact-container"> 
+           <Nav/>
            <img src={logo} alt="contact" className="w-100 mt-5"/>
            <section className="main-section">
                <h2 className="contactUs">CONTACT US</h2>
@@ -38,7 +38,6 @@ class Contact extends Component{
                  </div>
 
                  <input type="submit" className="send" value="SEND"/>
-                 
                </form>
            </section>
                
