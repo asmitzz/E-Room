@@ -1,14 +1,14 @@
 .about-container{
-    background: var(--secondary-color);
+    background: #e9ecef;
 }
 
 .about-container h2,h1{
-    color: rgba(255, 0, 0, 0.781);
+    color: #7C3AED;
 }
 
 .main-div{
    padding: 2rem;
-   color: var(--primary-color);
+   color: black;
    font-size: larger;
 }
 
@@ -18,11 +18,9 @@
 }
 
 .quote{
-    border-left: 5px solid #1e1e1e;
+    border-left: 5px solid #7C3AED;
     padding: 1.5rem;
-    background: #FF8008;
-    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  
-    background: linear-gradient(to right, #FFC837, #FF8008);
+    background: white;
 }
 
 @media(max-width: 600px) and (min-width:340px) {

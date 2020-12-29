@@ -22,14 +22,14 @@ class FullPost extends Component{
         const url = new URLSearchParams(window.location.search);
         return(
 
-            <div>
+            <div className="fullpost-container pb-3">
                 <Nav/>
                {
                  Object.keys(this.state.posts).map( posts => {
                      if( posts === url.get('post')){
                          return (
                            <div>  
-                             <div id="slider" className="carousel slide fullpost-container" data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
+                             <div id="slider" className="carousel slide " data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
                                  <div className="carousel-inner">
                                      <div className="carousel-item active">
                                          <img className="fullpost-img" src={this.state.posts[url.get('post')].image1} alt="room"/>    
@@ -50,7 +50,7 @@ class FullPost extends Component{
 
                              
                              <div className="fullpost-details">
-                                 <h1 className="text-white">DETAILS</h1>
+                                 <h1>DETAILS</h1>
                               <div className="row">
                                  <div className="col-3">
                                      <p>Hostel name:</p> 
@@ -58,7 +58,7 @@ class FullPost extends Component{
                                      <p>Room available: </p>
                                      <p>Description: </p>
                                 </div>
-                                <div className="col-9 text-white">
+                                <div className="col-9 text-secondary">
                                      <p>{this.state.posts[url.get('post')].name}</p>
                                      <p>{this.state.posts[url.get('post')].rent}</p>
                                      <p>{this.state.posts[url.get('post')].lookingfor}</p>
@@ -68,7 +68,7 @@ class FullPost extends Component{
                              </div>
 
                              <div className="fullpost-details mb-3">
-                                 <h1 className="text-white">CONTACT</h1>
+                                 <h1>CONTACT</h1>
                               <div className="row">
                                  <div className="col-3">
                                      <p>Address:</p> 
@@ -76,7 +76,7 @@ class FullPost extends Component{
                                      <p>Pincode: </p>
                                      <p>Phone: </p>
                                 </div>
-                                <div className="col-9 text-white">
+                                <div className="col-9 text-secondary">
                                      <p>{this.state.posts[url.get('post')].address}</p>
                                      <p>{this.state.posts[url.get('post')].area}</p>
                                      <p>{this.state.posts[url.get('post')].pincode}</p>

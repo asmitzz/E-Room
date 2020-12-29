@@ -12,7 +12,7 @@ class Work extends Component{
         <div className="work-container"> 
               <Nav/>
               <div className="main">
-                 <h2 className="display-3 text-center text-danger pt-5">Work With Us</h2>
+                 <h2 className="display-3 text-center pt-5">Work With Us</h2>
                  <p className="pt-5">
                     Welcome to E-room, dedicated to the temporary accommodation of students and other guests ,
                     with the goal of providing a comprehensive accommodation service for people of all ages looking for an
@@ -37,7 +37,7 @@ class Work extends Component{
                     <img src={Image2} alt="hotel" className="img-1 my-5" />
                  </div>
 
-                 <h1 className="display-4 text-danger pt-5">For travelers</h1>
+                 <h1 className="display-4 pt-5">For travelers</h1>
                  <p className="pt-3">
                       We are always keen to hear from you. Throw your hostel question at us, 
                       we will be happy to help you to find the coolest hostel
@@ -51,7 +51,7 @@ class Work extends Component{
                     <img src={Image3} alt="hotel" className="img-1 my-5" />
                 </div>
                 
-                <h1 className="pl-3 text-danger">We are looking for people who are:</h1>
+                <h1 className="pl-3">We are looking for people who are:</h1>
                    <ul className="pt-2 pl-5">
                      <li>Self motivated</li>
                      <li>Happy and friendly</li>

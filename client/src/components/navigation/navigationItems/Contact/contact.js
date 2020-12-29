@@ -9,7 +9,7 @@ class Contact extends Component{
     return(
         <div className="contact-container"> 
            <Nav/>
-           <img src={logo} alt="contact" className="w-100 mt-5"/>
+           <img src={logo} alt="contact" style={{width:'70%'}} className="d-block m-auto mt-5"/>
            <section className="main-section">
                <h2 className="contactUs">CONTACT US</h2>
                <i className="fas fa-phone-alt">&nbsp; 1-80-00330808</i>

@@ -1,46 +1,47 @@
 .fullpost-container{
     padding-top: 4rem;
+    background: #e9ecef;
 }
 
 .fullpost-container .carousel-item{
-    background: #1e1e1e;
+    background: black;
     width: 100%;
     text-align: center;
-    left: -120px;
 }
 
 .fullpost-img{
    width: 80%;
    height:450px;
-   border-radius: 5px;
-   margin-right: 15px;
 }
 
 .fullpost-container .carousel-inner{
     width: 73%;
     margin-left: 4rem;
-    border-radius: 5px;
+    border-radius: 20px;
 
+}
+.fullpost-details h1{
+    color:#8445f1;
 }
 
 .fullpost-container .carousel-control-prev{
-    top: 90px;
+    top: 50px;
 }
 
 .fullpost-container .carousel-control-next{
-    top: 90px;
-    right: 215px;
+    top: 50px;
+    right: 240px;
 }
 
 .fullpost-details{
-    background: #1e1e1e;
+    background: white;
     width: 73%;
     margin-left: 4rem;
-    margin-top: 5px;
-    border-radius: 5px;
-    color: red;
+    margin-top: 1rem;
+    border-radius: 20px;
     padding: 2rem;
     font-weight: 600;
     font-size: large;
+    
 }
 

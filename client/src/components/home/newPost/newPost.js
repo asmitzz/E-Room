@@ -136,7 +136,7 @@ class newPost extends Component{
         return(
             <div>
                 <Nav/>
-                <div className="container my-3">
+                <div className="newpost-container mt-3">
                 <h1 className="display-1 contact-us">E-Room</h1>
                  <form>
                     <div className="form-group">
@@ -159,7 +159,7 @@ class newPost extends Component{
                     </div>
 
                     <div className="form-group">
-                      <label className="newpost-label">Enter Address:</label>
+                      <label className="newpost-label">Description:</label>
                       <input type="text" minLength="10" maxLength="500" onChange={this.describeHandler} className="form-control" placeholder="describe your room.." required/>
                     </div>
 

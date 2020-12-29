@@ -1,13 +1,14 @@
 .work-container{
-    background-color: var(--secondary-color);
+    background-color:#e9ecef;
+}
+
+.work-container h1,h2{
+    color: #8445f1;
 }
 .main{
     padding: 1rem;
-    color: var(--primary-color);
-    width: 70%;
-    margin: auto;
     margin-top: 2.5rem;
-    font-size: larger;
+    font-size: x-large;
  }
  
  .work-img{
@@ -15,8 +16,8 @@
  }
 
  .img-1{
-    height: 400px;
-    width: 80%;
+    height: 500px;
+    width: 70%;
  }
 
  @media(max-width: 600px) and (min-width:340px) {
