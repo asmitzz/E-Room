@@ -44,7 +44,7 @@ class Signup extends Component{
  
     render(){
         return(
-               <div className="main-container">
+               <div className="login-container">
                     <div className="loginSection">
                       <div className="text-center">
                         <img className="w-75" src={logo} alt="REGISTER"/>

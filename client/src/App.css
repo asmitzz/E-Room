@@ -3,6 +3,14 @@ body{
   padding: 0;
 }
 
+:root{
+  --primary-color:  #e9ecef;
+  --secondary-color: #7C3AED;
+  --tertiary-color:#8445f1;
+  --shadow-1:rgb(255, 255, 255,0.425);
+  --shadow-2:rgba(88,88,88, 0.425);
+}
+
 /* .App {
  [ text-align: center;
 }

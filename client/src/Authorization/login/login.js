@@ -46,7 +46,7 @@ class Login extends Component{
 
     render(){
         return(
-           <div className="main-container">
+           <div className="login-container">
                    <div className="loginSection">  
                         <div className="text-center">
                           <img className="w-50" src={logo} alt="LOGIN"/>
@@ -54,11 +54,11 @@ class Login extends Component{
                      <div className="formSection">
                         <div className="form-group">
                            <label className="login-label">Email</label>
-                           <input className="form-control" type="email" onKeyPress={this.keyPressHandler} onChange={this.emailHandler} placeholder="Enter email address" />
+                           <input className="form-control" type="email" onKeyPress={this.keyPressHandler} onChange={this.emailHandler} placeholder="Email Address" />
                         </div>
                         <div className="form-group">
                             <label className="login-label">Password</label>
-                            <input className="form-control" onKeyPress={this.keyPressHandler} type="password" onChange={this.passwordHandler} placeholder="Enter password" />
+                            <input className="form-control" onKeyPress={this.keyPressHandler} type="password" onChange={this.passwordHandler} placeholder="Password" />
                         </div>
                         <button className="loginBtn mt-3" onClick={this.loginHandler}>LOGIN</button>
                         <br/>

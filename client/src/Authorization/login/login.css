@@ -1,68 +1,23 @@
-:root{
-    --primary-color:  white;
-    --secondary-color:  #283350  ;
-}
-
-body{
-    background: var(--primary-color);
-}
-
-.main-container{
+.login-container{
         background:var(--primary-color);
         padding: 1.7% 0;
 }
 
 .loginSection{
     background: var(--secondary-color);
-     width: 45%;
-     margin: auto;
-     padding: 3rem 1rem;
-     border-radius: 10px;
-    border: none;
-}
-
-.login-heading{
-     color:var(--primary-color);
-    font-weight: 800;
-    text-align: center;
+    width: 45%;
     margin: auto;
-    border-radius: 10px;
-    padding: 1rem;
+    padding: 3rem 1rem;
+    border-radius: 15px;
+    border: none;
+    box-shadow: -5px -4px 5px var(--shadow-1),6px 6px 3px var(--shadow-2);
 }
 
 .login-label{
     color: var(--primary-color);
     margin-top: 10px;
-}
-
-.form-control{
-    width: 100%;
-    border-radius: 10px;
-}
-
-.form-control::placeholder{
-    color: black;
-}
-
-
-.form-group{
-    margin-bottom: 0;
-}
-
-.loginBtn{
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    font-weight: 800;
-    border-radius: 10px;
-    padding: 0.5rem 0;
-    cursor: pointer;
-    width: 45%;
-}
-
-.loginBtn:hover{
-    color: var(--primary-color);
-    background: var(--secondary-color);
-    border: 2px solid var(--primary-color);
+    font-size: large;
+    font-weight: 500;
 }
 
 .formSection{
@@ -70,6 +25,35 @@ body{
     border-radius: 10px;
     padding: 1rem 2rem;
 }
+
+.loginSection .form-control{
+    box-shadow: inset 5px 5px 8px var(--shadow-2),inset -5px -5px 5px var(--shadow-1);
+    height: 3rem;
+    background: var(--primary-color);
+    border-radius: 20px;
+    padding-left: 1.2rem;
+}
+
+.loginBtn{
+    background:#e9ecef;
+    color: var(--secondary-color);
+    font-weight: 800;
+    border-radius: 20px;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    border: none;
+    width: 45%;
+    outline: none;
+    box-shadow: -3px -3px 5px var(--shadow-1) ,3px 3px 5px var(--shadow-2);
+}
+
+.loginBtn:active{
+    box-shadow: -3px -3px 5px var(--shadow-2),
+    3px 3px 5px var(--shadow-1);
+    outline: none;
+}
+
+
 
 .link{
     color: var(--primary-color);

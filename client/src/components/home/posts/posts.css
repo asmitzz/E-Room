@@ -1,13 +1,12 @@
 .main-posts {
     margin-top: 2.6rem;
     padding-top: 1rem;
-    background: #e9ecef;
+    background: var(--primary-color);
     padding-bottom: 1rem;
 }
 
 .posts-container {
-    background: #e9ecef;
-    color: var(--primary-color);
+    background: var(--primary-color);
     width: 75%;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -17,27 +16,35 @@
 
 .posts-container img {
     height: 280px;
-    width: 485px;
-    margin-bottom: 1rem;
+    width: 96%;
+    margin:1rem 0;
     border-radius: 20px;
-    border: 2px solid #f8f9fa;
+    box-shadow:10px 10px 8px var(--shadow-2);
 }
 
 .posts-container .carousel {
-    position: relative;
-    background: #e9ecef;
+    background: var(--primary-color);
     border-radius: 20px;
     padding-top: 0.7rem;
 }
 
-.col-6{
+.posts-container .carousel-control-prev{
+    top: 25px;
+}
+
+.posts-container .carousel-control-next{
+    top: 25px;
+    right: 3%;
+}
+
+
+.posts-container .col-6{
     padding-left: 0;
     padding-right: 0;
     align-self: center;
 }
 
 .hostel-name{
-    color: black;
     font-size: xx-large;
     font-weight: 700;
 }
@@ -49,7 +56,6 @@
 }
 
 .address,.area{
-    color: black;
     font-size: large;
     font-weight:100;
 }
@@ -64,20 +70,15 @@
 
 .viewBtn{
     padding: 0.5rem 1rem;
-    
     border: 1px solid var(--primary-color);
-    color: #8445f1;
-    border: 1px solid #8445f1;
-
     background-color: var(--primary-color);
+    border-radius:20px;
+    box-shadow:-3px -3px 5px var(--shadow-1),3px 3px 5px var(--shadow-2);
+    cursor: pointer;
 }
 
-.viewBtn:hover{
-    padding: 0.5rem 1rem;
-    color: var(--primary-color);
-    background-color: #8445f1;
-    cursor: pointer;
-    border: 1px solid white;
+.viewBtn:active{
+    box-shadow:-3px -3px 5px var(--shadow-2),3px 3px 5px var(--shadow-1);
 }
 
 .separate{
@@ -100,13 +101,6 @@
 }
 
 
-@media(max-width:800px) and (min-width:600px){
-    .posts-container img{
-        height: 300px;
-        width: 520px;
-    }
-}
-
 @media(max-width:600px) and (min-width:300px){
    .posts-container{
        margin-left: 0;       
@@ -115,15 +109,18 @@
 
    .posts-container img{
     height: 300px;
+    width: 95%;
+    margin-left: 4%;
+    }
+
+    .viewBtn{
+        margin-top: 1rem;
     }
 
     .separate{
         margin-left: 0;
     }
-    .carousel-item{
-       left: -40px;
-    }
-
+    
 }
 
 
