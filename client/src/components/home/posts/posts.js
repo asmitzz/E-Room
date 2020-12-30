@@ -58,7 +58,7 @@ class Posts extends Component{
                              <p className="area"><i className="fa fa-map-marker-alt"></i> {this.state.posts[posts].area.toUpperCase()},
                              {this.state.posts[posts].pincode}</p>
                              <p className="rent col-md-7">₹{this.state.posts[posts].rent}<span className="text-dark">/month</span></p>
-                             <button className="viewBtn mb-2" onClick={() => this.btnHandler(posts)}>View Details</button>
+                             <a className="viewBtn mb-2" onClick={() => this.btnHandler(posts)}>View Details</a>
                           </div>  
                        </div>
                        <hr className="separate"/>
