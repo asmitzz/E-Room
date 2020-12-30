@@ -30,14 +30,14 @@ app.get('/',(req,res) => {
     res.send("server is running")
 })
 
-app.get('/api/get',(req,res) => {
-    const Select = "SELECT * FROM room_details";
-    con.query(Select,(err,result) => {
+app.get('/api/get/posts',(req,res) => {
+    const SelectAllPosts = "SELECT * FROM room_details";
+    con.query(SelectAllPosts,(err,result) => {
         res.send(result)
     }) 
 })
 
-app.use('/api/insert',(req,res) => {
+app.use('/api/insert/posts',(req,res) => {
     const name = req.body.name;
     const rent = req.body.rent;
     const lookingfor = req.body.lookingfor;
@@ -51,9 +51,19 @@ app.use('/api/insert',(req,res) => {
     const image3 = req.body.image3;
     const image4 = req.body.image4;
 
-    const Insert = "INSERT INTO room_details ( Id,name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4 ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    const InsertPost = "INSERT INTO room_details ( Id,name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4 ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-    con.query(Insert,["",name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4]);
+    con.query(InsertPost,["",name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4]);
+})
+
+app.use('/api/insert/feedbacks',(req,res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const subject = req.body.subject;
+    const message = req.body.message;
+
+    const InsertFeedbacks = 'INSERT INTO contact_us ( name,email,subject,message ) VALUES (?,?,?,?)';
+    con.query(InsertFeedbacks,[name,email,subject,message]);
 })
 
 app.listen(port,() => console.log("server is running on :" ,port))

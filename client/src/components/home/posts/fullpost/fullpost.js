@@ -6,7 +6,7 @@ import Nav from '../../../navigation/navigation';
 class FullPost extends Component{
 
     componentDidMount = () => {
-        axios.get('http://localhost:8000/api/get').then( res => {
+        axios.get('http://localhost:8000/api/get/posts').then( res => {
             this.setState({
                 posts: res.data
             })

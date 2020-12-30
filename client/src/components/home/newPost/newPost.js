@@ -120,7 +120,7 @@ class newPost extends Component{
             this.setState({ ispintrue:"please enter valid pincode" })
         }
         else if( this.state.phone.length === 10 ){
-            axios.post('http://localhost:8000/api/insert',this.state);
+            axios.post('http://localhost:8000/api/insert/posts',this.state);
             this.props.history.push('/');
             alert("Congratulations!!your post is now live");
         }

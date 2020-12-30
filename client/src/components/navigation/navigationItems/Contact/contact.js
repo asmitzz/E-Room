@@ -3,8 +3,39 @@ import '../../../navigation/navigation.css';
 import './contact.css';
 import Nav from '../../navigation';
 import logo from '../../../../assets/Images/contact.svg';
+import axios from 'axios';
 
 class Contact extends Component{
+
+  state = { 
+    name:"",
+    email:"",
+    subject:"",
+    message:""
+  }
+
+  nameHandler = (e) => {
+      this.setState( {name:e.target.value} )
+  };
+
+  emailHandler = (e) => {
+    this.setState( {email:e.target.value} )
+  };
+
+  subjectHandler = (e) => {
+  this.setState( {subject:e.target.value} )
+  };
+
+  messageHandler = (e) => {
+  this.setState( {message:e.target.value} )
+  };
+
+  submitHandler = () => {
+    console.log(this.state);
+    axios.post('http://localhost:8000/api/insert/feedbacks',this.state);
+    alert("Thanks for your feedback we will contact you soon.. ");
+  }
+
   render(){
     return(
         <div className="contact-container"> 
@@ -19,25 +50,25 @@ class Contact extends Component{
                <form className="mt-3">
                  <div>
                    <label className="contact-label">Your Name</label>
-                   <input className="form-control" type="text" placeholder="Enter your name.."/>
+                   <input className="form-control" onChange={this.nameHandler} type="text" placeholder="Enter your name.." required/>
                  </div>
 
                  <div>
                    <label className="contact-label">Your Email</label>
-                   <input className="form-control" type="text" placeholder="Enter your email.."/>
+                   <input className="form-control" onChange={this.emailHandler} type="text" placeholder="Enter your email.." required/>
                  </div>
 
                  <div>
                    <label className="contact-label">Subject</label>
-                   <input className="form-control" type="text" placeholder="What would you like to talk us about?"/>
+                   <input className="form-control" onChange={this.subjectHandler} type="text" placeholder="What would you like to talk us about?" required/>
                  </div>
 
                  <div>
                    <label className="contact-label">Message</label>
-                   <textarea className="form-control" type="text" placeholder="Type away :)"></textarea>
+                   <textarea className="form-control" onChange={this.messageHandler} type="text" placeholder="Type away :)" required></textarea>
                  </div>
 
-                 <input type="submit" className="send" value="SEND"/>
+                 <input type="submit" onClick={this.submitHandler} className="send" value="SEND"/>
                </form>
            </section>
                

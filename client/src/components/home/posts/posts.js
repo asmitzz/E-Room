@@ -7,7 +7,7 @@ import {withRouter} from 'react-router-dom';
 class Posts extends Component{
 
     componentDidMount = () => {
-        axios.get('http://localhost:8000/api/get').then( res => {
+        axios.get('http://localhost:8000/api/get/posts').then( res => {
             this.setState({
                 posts: res.data
             })

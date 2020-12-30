@@ -19,7 +19,7 @@
     width: 96%;
     margin:1rem 0;
     border-radius: 20px;
-    box-shadow:10px 10px 8px var(--shadow-2);
+    box-shadow:10px 11px 8px var(--shadow-2);
 }
 
 .posts-container .carousel {
@@ -73,12 +73,12 @@
     border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
     border-radius:20px;
-    box-shadow:-3px -3px 5px var(--shadow-1),3px 3px 5px var(--shadow-2);
+    box-shadow:-5px -5px 8px var(--shadow-1),5px 5px 8px var(--shadow-2);
     cursor: pointer;
 }
 
-.viewBtn:active{
-    box-shadow:-3px -3px 5px var(--shadow-2),3px 3px 5px var(--shadow-1);
+.viewBtn:hover{
+    box-shadow:-3px -3px 8px var(--shadow-2),5px 5px 8px var(--shadow-1);
 }
 
 .separate{

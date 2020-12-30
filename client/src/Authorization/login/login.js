@@ -64,7 +64,7 @@ class Login extends Component{
                         <br/>
                         <span className="text-danger">{this.state.error}</span>
                         <hr/>
-                       <span style={{color:'white'}}>Don't have an account? </span>  <Link className="link" to="/signup">REGISTER</Link>
+                       <span style={{color:'white'}}>Don't have an account? </span>  <Link className="link" to="/signup">SIGN UP</Link>
                      </div>
                    </div>
            </div>
