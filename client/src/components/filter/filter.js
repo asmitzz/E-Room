@@ -1,29 +1,40 @@
 import React,{ Component } from 'react';
 import './filter.css';
-import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 class Filter extends Component{
 
-    componentDidMount = () => {
-        axios.get('http://localhost:8000/api/get/posts').then( res => {
-            this.setState({
-                posts: res.data
-            })
-        });
+    state = {
+       location:"",
+       pincode:""
+    };
+
+    inputHandler = (e) => {
+        this.setState({ location: e.target.value})
+    }
+    pincodeHandler = (e) => {
+        this.setState({ pincode: e.target.value })
     }
 
-    state = {
-       posts: ""
-    };
+    ApplyBtnHandler = () => {
+        this.props.history.push('?location='+this.state.location.toLowerCase()+'&&pincode='+this.state.pincode)
+    }
 
     render(){
         return(
           <div className="filter-container">
-             <h4><i className="fa fa-filter"></i>Filter</h4>
+              <div className="filterDiv">
+                <h2 className="text-center"><i className="fa fa-filter"></i>Filter</h2>
+                <p className="mt-5 d-inline-block">Location: &nbsp;</p>
+                <input type="text" onChange={this.inputHandler}/>
+                <p className="d-inline-block">Pincode: &nbsp;</p>
+                <input type="number" onChange={this.pincodeHandler}/>
+                <button className="btn w-50" onClick={this.ApplyBtnHandler}>Apply</button>
+              </div>
           </div>
         );
     };
 };
 
 
-export default Filter;
+export default withRouter(Filter);

@@ -96,7 +96,6 @@ label #btn:hover{
     visibility: visible;
     transition: all 0.5s;
     border: none;
-
 }
 
 #check:checked ~ .side{
@@ -110,12 +109,12 @@ label #btn:hover{
     top: 0;
     width: 100%;
     border-radius: 20px;
-    height: 5rem;
+    height: 6rem;
     text-align: right;
     z-index: 3;
     display: block;
     padding-top: 1.3rem;
-    box-shadow: -5px -5px 8px var(--shadow-2), 5px 5px 8px var(--shadow-2);
+    box-shadow: 3px 3px 5px var(--shadow-2);
 }
 .topnav a{
 	color: var(--primary-color);

@@ -12,6 +12,9 @@ class Posts extends Component{
                 posts: res.data
             })
         });
+
+       
+
     }
 
     state = {
@@ -24,10 +27,15 @@ class Posts extends Component{
            
 
     render(){
+        let url = new URLSearchParams(window.location.search);
+        console.log(url.get('pincode'))
+
         return(
             <div className="main-posts">
                {
                Object.keys(this.state.posts).map( posts => {
+                   if( this.state.posts[posts].area.toLowerCase().includes(url.get('location')) || url.get('location') === null  ){
+                    if( this.state.posts[posts].pincode.toString().includes(url.get('pincode')) || url.get('pincode') === null  ){
                    return (
                     <div key={this.state.posts[posts].Id}>
                        <div className="posts-container d-md-flex" >
@@ -64,6 +72,8 @@ class Posts extends Component{
                        <hr className="separate"/>
                    </div>
                    )
+                }
+            }
                })
                }
            </div>
