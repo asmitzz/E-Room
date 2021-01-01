@@ -30,18 +30,18 @@ class Filter extends Component{
         this.setState({ location: e.target.value});
 
         const location =  Object.keys(this.state.posts).map((post)=>{
-          return this.state.posts[post].area
+          return this.state.posts[post].area.toLowerCase();
         });
 
         const locationWithoutRepeat = new Set(location);
            
-        const area = [...locationWithoutRepeat]
+        const area = [...locationWithoutRepeat];
 
-        const result = area.filter( area => area.includes(e.target.value));
+        const result = area.filter( area => area.includes(e.target.value.toLowerCase()));
 
         if( e.target.value ){
             this.setState({ area:result.map((area) => {
-                return <span className="highlight" onClick={()=>this.searchHandler(area)} key={area}>{area}</span>
+                return <span className="highlight" onClick={()=>this.searchHandler(area)} key={area}>{area.toUpperCase()}</span>
             } ) })
         }
         else{

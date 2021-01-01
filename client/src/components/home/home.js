@@ -7,7 +7,7 @@ class Home extends Component{
   render(){
     return(
         <div> 
-           <p className="FilterNotMatch">No Results Found!!</p>
+           <p className="FilterNotMatch">No Posts Found!!</p>
            <Filter/>
            <Nav active="home"/>
            <Posts/>
