@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
 import './posts.css';
-import {withRouter} from 'react-router-dom';
+import {withRouter,Link} from 'react-router-dom';
 
 
 class Posts extends Component{
@@ -20,11 +20,6 @@ class Posts extends Component{
     state = {
         posts:{},
     }
-
-    btnHandler = (post) =>{
-       this.props.history.push('/fullpost?post='+post)
-    }
-           
 
     render(){
         let url = new URLSearchParams(window.location.search);
@@ -66,13 +61,19 @@ class Posts extends Component{
                              <p className="area"><i className="fa fa-map-marker-alt"></i> {this.state.posts[posts].area.toUpperCase()},
                              {this.state.posts[posts].pincode}</p>
                              <p className="rent col-md-7">₹{this.state.posts[posts].rent}<span className="text-dark">/month</span></p>
-                             <a className="viewBtn mb-2" onClick={() => this.btnHandler(posts)}>View Details</a>
+                             <Link to={'/fullpost?post='+posts} className="viewBtn mb-2">View Details</Link>
                           </div>  
                        </div>
                        <hr className="separate"/>
                    </div>
                    )
                 }
+                else{
+                    return ""
+                }
+            }
+            else{
+                return ""
             }
                })
                }

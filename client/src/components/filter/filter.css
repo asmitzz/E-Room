@@ -28,13 +28,49 @@
     color: var(--secondary-color);
 }
 
-.filterDiv input{
-    width: 68%;
-}
-
 .filterDiv button{
     background: var(--secondary-color);
     color: var(--primary-color);
     display: block;
-    margin: auto;
+    box-shadow: inset 5px 5px 8px var(--shadow-1),inset -5px -5px 5px var(--shadow-2),
+    5px 5px 8px var(--shadow-1), -1px -1px 5px var(--shadow-2);
+}
+
+.filterDiv button:hover{
+    box-shadow: inset 5px 5px 8px var(--shadow-1),inset -5px -5px 5px var(--shadow-2),
+    5px 5px 8px var(--shadow-2), -5px -5px 5px var(--shadow-1);
+}
+
+.filterDiv label{
+    font-size: larger;
+}
+
+.filterDiv .form-control{
+    box-shadow: inset 5px 5px 8px var(--shadow-1),inset -5px -5px 5px var(--shadow-2);
+}
+
+.areaSuggestions{
+    position: absolute;
+    top:41%;
+    left:8.8%;
+    width: 236px;
+   
+
+    border-radius: 10px;
+}
+
+.highlight{
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 8px var(--shadow-1),inset -5px -5px 5px var(--shadow-2);
+    background: var(--primary-color);
+}
+
+.highlight:hover{
+    cursor: pointer;
+    background: var(--secondary-color);
+    border: 0.1rem solid var(--primary-color);
+    color: var(--primary-color);
 }
