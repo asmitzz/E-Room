@@ -75,10 +75,12 @@
     border-radius:20px;
     box-shadow:-5px -5px 8px var(--shadow-1),5px 5px 8px var(--shadow-2);
     cursor: pointer;
+    color: black;
 }
 
 .viewBtn:hover{
     box-shadow:-3px -3px 8px var(--shadow-2),5px 5px 8px var(--shadow-1);
+    text-decoration: none;
 }
 
 .separate{
