@@ -49,32 +49,3 @@
     box-shadow: inset 5px 5px 8px var(--shadow-1),inset -5px -5px 5px var(--shadow-2);
 }
 
-.areaSuggestions{
-    position: absolute;
-    top:40%;
-    left:8.8%;
-    width: 236px;
-    border-radius: 10px;
-}
-
-.pinSuggestions{
-    position: absolute;
-    top:53%;
-    left:8.8%;
-    width: 236px;
-    border-radius: 10px;
-}
-
-.highlight{
-    display: block;
-    padding: 0.3rem 1rem;
-    border: 1px solid black;
-    background: var(--primary-color);
-}
-
-.highlight:hover{
-    cursor: pointer;
-    background: var(--secondary-color);
-    border: 0.1rem solid var(--primary-color);
-    color: var(--primary-color);
-}

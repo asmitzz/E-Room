@@ -18,8 +18,8 @@
     height: 280px;
     width: 96%;
     margin:1rem 0;
+    box-shadow: -3px -3px 5px rgba(255,255,255, 0.432),5px 5px 8px rgba(1,1,1, 0.432);
     border-radius: 20px;
-    box-shadow:10px 11px 8px var(--shadow-2);
 }
 
 .posts-container .carousel {

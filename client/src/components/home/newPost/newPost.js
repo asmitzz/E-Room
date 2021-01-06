@@ -141,7 +141,7 @@ class newPost extends Component{
                  <form>
                     <div className="form-group">
                       <label className="newpost-label">Enter Hostel Name:</label>
-                      <input type="text" minLength="3" maxLength="20" onChange={this.nameHandler} className="form-control" placeholder="Enter your hostel name.." required/>
+                      <input type="text" minLength="3" maxLength="30" onChange={this.nameHandler} className="form-control" placeholder="Enter your hostel name.." required/>
                     </div>
 
                     <div className="form-group">

@@ -8,7 +8,7 @@ class Nav extends Component{
 
   state = {
     show: false
-  }
+  };
 
    signoutHandler = () => {
      fire.auth().signOut();
@@ -18,7 +18,6 @@ class Nav extends Component{
    toggleHandler = () => {
      this.setState({ show: !this.state.show })
    }
-  
 
   render(){
     return(
@@ -27,7 +26,7 @@ class Nav extends Component{
 	               <input type="checkbox" id="check"/>
 	               <label htmlFor="check">
 		                <i className="fa fa-bars" id="btn" onClick={this.toggleHandler}></i> 
-		                <i className="fa fa-times" id="cancel" onClick={this.toggleHandler}></i>
+		                <i className="fa fa-times  cancelclose" id="cancel" onClick={this.toggleHandler}></i>
 	               </label>
              <div className="side">
 		             <header>MY MENU</header>

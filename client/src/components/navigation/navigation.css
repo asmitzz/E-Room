@@ -16,6 +16,17 @@
 	transition: all 0.5s ease;
 }
 
+.sideclose{
+    position: fixed;
+    background-color:var(--secondary-color);
+    height: 100vh;
+    left: -250px;
+    width: 250px;
+    top: 0;
+    z-index: 200;
+	transition: all 0.5s ease;
+}
+
 
 .side a {
     display: block;
@@ -49,6 +60,24 @@
 }
 
 label #btn, label #cancel {
+    color:var(--primary-color);
+    position: fixed;
+    width: 5rem;
+    height: 4rem;
+    line-height: 50px;
+    font-size: 28px;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 500;
+    top: 0;
+    padding-top: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 0.5rem;
+}
+
+label .cancelclose {
     color:var(--primary-color);
     position: fixed;
     width: 5rem;
