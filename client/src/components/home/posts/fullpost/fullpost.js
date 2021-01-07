@@ -28,7 +28,7 @@ class FullPost extends Component{
                  Object.keys(this.state.posts).map( posts => {
                      if( posts === url.get('post')){
                          return (
-                           <div key={this.state.posts[posts].Id}>  
+                           <div key={this.state.posts[posts].Id} className="mt-4">  
                              <div id="slider" className="carousel slide " data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
                                  <div className="carousel-inner">
                                      <div className="carousel-item active">
@@ -60,7 +60,7 @@ class FullPost extends Component{
                                 </div>
                                 <div className="col-9 text-secondary">
                                      <p>{this.state.posts[url.get('post')].name}</p>
-                                     <p>{this.state.posts[url.get('post')].rent}</p>
+                                     <p>₹{this.state.posts[url.get('post')].rent}</p>
                                      <p>{this.state.posts[url.get('post')].lookingfor}</p>
                                      <p>{this.state.posts[url.get('post')].description}</p>
                                 </div>

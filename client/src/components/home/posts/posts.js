@@ -105,8 +105,8 @@ class Posts extends Component {
                         {this.state.posts[posts].pincode}
                       </p>
                       <p className="rent col-md-7">
-                        ₹{this.state.posts[posts].rent}
-                        <span className="text-dark">/month</span>
+                        <strong>₹{this.state.posts[posts].rent}</strong>
+                        <span className="text-dark"> /month</span>
                       </p>
                       <Link
                         to={"/fullpost?post=" + posts}

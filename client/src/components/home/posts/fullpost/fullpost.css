@@ -1,6 +1,6 @@
 .fullpost-container{
     padding-top: 4rem;
-    background: #e9ecef;
+    background:var(--primary-color);
 }
 
 .fullpost-container .carousel-item{
@@ -17,11 +17,11 @@
 .fullpost-container .carousel-inner{
     width: 73%;
     margin-left: 4rem;
-    border-radius: 20px;
-
+    box-shadow: -3px -3px 5px rgba(255,255,255, 0.432),5px 5px 8px rgba(1, 1, 1, 0.76);
 }
 .fullpost-details h1{
     color:#8445f1;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .fullpost-container .carousel-control-prev{
@@ -34,14 +34,13 @@
 }
 
 .fullpost-details{
-    background: white;
+    background:rgba(255, 255, 255, 0.699);
     width: 73%;
     margin-left: 4rem;
-    margin-top: 1rem;
-    border-radius: 20px;
+    margin-top: 2rem;
     padding: 2rem;
     font-weight: 600;
     font-size: large;
-    
+    box-shadow: -3px -3px 5px rgba(255,255,255, 0.432),7px 7px 10px rgba(1, 1, 1, 0.281);
 }
 

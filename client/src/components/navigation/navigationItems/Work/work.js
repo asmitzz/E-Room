@@ -21,21 +21,13 @@ class Work extends Component{
                     we highlight the finest hostels in Jabalpur(MP).
                  </p>
                  
-                 <div className="work-img">
-                    <img src={Image1} alt="hotel" className="img-1 my-5" />
-                 </div>
-
-                 <p className="pt-5">
+                 <p className="pt-2">
                  In order to keep things simple and efficient, please read our guide lines before contacting us.
                  We do not work for free.
                  We do not advertise your accommodation or product for free.
                  We never sell links on our website.
                  Please get in touch when you have a sales budget and a proposal we cannot decline.
                  </p>
-
-                 <div className="work-img">
-                    <img src={Image2} alt="hotel" className="img-1 my-5" />
-                 </div>
 
                  <h1 className="display-4 pt-5">For travelers</h1>
                  <p className="pt-3">
@@ -47,10 +39,6 @@ class Work extends Component{
                       In this way a more personalized service would be provided including individualized information and attention.
                  </p>
 
-                 <div className="work-img">
-                    <img src={Image3} alt="hotel" className="img-1 my-5" />
-                </div>
-                
                 <h1 className="pl-3">We are looking for people who are:</h1>
                    <ul className="pt-2 pl-5">
                      <li>Self motivated</li>
