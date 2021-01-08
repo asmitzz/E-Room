@@ -138,14 +138,14 @@ class newPost extends Component{
                 <Nav/>
                 <div className="newpost-container mt-3">
                 <h1 className="display-1 contact-us">E-Room</h1>
-                 <form>
+                 <form onSubmit={this.submitHandler}>
                     <div className="form-group">
                       <label className="newpost-label">Enter Hostel Name:</label>
                       <input type="text" minLength="3" maxLength="30" onChange={this.nameHandler} className="form-control" placeholder="Enter your hostel name.." required/>
                     </div>
 
                     <div className="form-group">
-                      <label className="newpost-label">Enter Amount</label>
+                      <label className="newpost-label">Enter Amount:</label>
                       <input type="number" onChange={this.rentHandler} className="form-control" placeholder="Enter rent amount.." required/>
                     </div>
 
@@ -195,7 +195,7 @@ class newPost extends Component{
                     <h6 className="position-absolute text-danger">{this.state.error}</h6>
                     <h6 className="position-absolute text-success">{this.state.success}</h6>
                     <button disabled={uploadBtnDisable} className="Btn mt-4" onClick={this.uploadHandler}>upload</button>
-                       <input type="submit" className="submitBtn ml-5" onClick={this.submitHandler} value="submit"/>
+                       <input type="submit" className="submitBtn ml-5" value="submit"/>
                        </form>
                  </div>
             </div>

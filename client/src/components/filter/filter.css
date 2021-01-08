@@ -7,7 +7,7 @@
     padding-top: 1.8rem;
     background: var(--secondary-color);
     border-left: 1.5rem solid var(--secondary-color);
-    box-shadow:inset -12px -12px 8px var(--shadow-2),inset 10px 10px 8px var(--shadow-2);
+    box-shadow:inset -12px -12px 8px var(--shadow-2),inset 3px 3px 8px var(--shadow-2);
 }
 
 .filterDiv{
@@ -16,7 +16,7 @@
     padding-top: 4rem;
     background:var(--primary-color);
     height: 100Vh;
-    box-shadow:inset -10px -10px 8px var(--shadow-2), 10px 10px 8px var(--shadow-1);
+    box-shadow:inset -5px -5px 8px var(--shadow-2), 5px 5px 8px var(--shadow-1);
 }
 
 .filterDiv h2{
@@ -45,7 +45,5 @@
     font-size: larger;
 }
 
-.filterDiv .form-control{
-    box-shadow: inset 5px 5px 8px var(--shadow-1),inset -5px -5px 5px var(--shadow-2);
-}
+
 

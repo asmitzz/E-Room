@@ -47,14 +47,11 @@
     box-shadow: -3px -3px 5px var(--shadow-1) ,3px 3px 5px var(--shadow-2);
 }
 
-.loginBtn:active{
+.loginBtn:hover{
     box-shadow: -3px -3px 5px var(--shadow-2),
     3px 3px 5px var(--shadow-1);
     outline: none;
 }
-
-
-
 
 .link{
     color: var(--primary-color);
@@ -63,6 +60,41 @@
 .link:hover{
     color: var(--primary-color);
     text-decoration: double underline;
+}
+
+.orSeperator{
+   display: flex;
+   align-items: center;
+   color: var(--primary-color);
+   justify-content: center;
+}
+
+.orSeperator hr{
+   border: none;
+   width: 40%;
+   border-top: 2px solid var(--primary-color);
+}
+
+.fbBtn{
+    background-color: rgb(66, 133, 244);
+    color: rgb(255, 255, 255);
+    height: 50px;
+    width: 240px;
+    border: none;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
+    font-size: 16px;
+    line-height: 48px;
+    border-radius: 1px;
+    transition: background-color 0.218s ease 0s, border-color 0.218s ease 0s, box-shadow 0.218s ease 0s;
+    font-family: Roboto, arial, sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fbBtn:hover{
+    box-shadow: rgb(66, 133, 244) 0px 2px 4px 0px;
+    transition: background-color 0.218s ease 0s, border-color 0.218s ease 0s, box-shadow 0.218s ease 0s;
 }
 
 @media(max-width:1024px) and (min-width:700px){

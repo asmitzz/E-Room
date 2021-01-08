@@ -2,9 +2,6 @@ import React,{ Component } from 'react';
 import '../../../navigation/navigation.css';
 import './work.css';
 import Nav from '../../navigation';
-import Image1 from '../../../../assets/Images/work-image-1.jpeg';
-import Image2 from '../../../../assets/Images/work-image-2.jpeg';
-import Image3 from '../../../../assets/Images/work-image-3.jpeg';
 
 class Work extends Component{
   render(){
