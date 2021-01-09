@@ -5,6 +5,8 @@ import axios from "axios";
 class Filter extends Component {
   state = {
     posts: "",
+    location:"",
+    pincode:""
   };
 
   componentDidMount = () => {

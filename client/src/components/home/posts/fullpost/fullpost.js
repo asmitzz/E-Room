@@ -14,7 +14,7 @@ class FullPost extends Component{
     }
 
     state = {
-        posts:{},
+        posts:null,
     }
 
     
@@ -24,11 +24,8 @@ class FullPost extends Component{
 
             <div className="fullpost-container pb-3">
                 <Nav/>
-               {
-                 Object.keys(this.state.posts).map( posts => {
-                     if( posts === url.get('post')){
-                         return (
-                           <div key={this.state.posts[posts].Id} className="mt-4">  
+                       {  this.state.posts != null ? 
+                           (<div className="mt-4">  
                              <div id="slider" className="carousel slide " data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
                                  <div className="carousel-inner">
                                      <div className="carousel-item active">
@@ -84,14 +81,10 @@ class FullPost extends Component{
                                 </div>
                                </div> 
                              </div>
-                           </div>
-                         )
-                     }
-                     else{
-                         return ""
-                     }
-                 })
-               }
+                           </div>) : ""
+                        
+                       }
+                    
             </div>
         )
     }
