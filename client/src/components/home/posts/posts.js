@@ -2,87 +2,52 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./posts.css";
 import { withRouter, Link } from "react-router-dom";
-
+import Spinner from '../../spinner/spinner';
+ 
 class Posts extends Component {
-  componentDidMount = () => {
-    axios.get("http://localhost:8000/api/get/posts").then((res) => {
+   
+
+  state = {
+    posts: null,
+  };
+
+   componentDidMount = async() => {
+    await axios.get("http://localhost:8000/api/get/posts").then((res) => {
       this.setState({
         posts: res.data,
       });
     });
   };
 
-  state = {
-    posts: {},
-  };
-
   render() {
     let url = new URLSearchParams(window.location.search);
     return (
       <div className="main-posts">
-        {Object.keys(this.state.posts).map((posts) => {
-          if (
-            this.state.posts[posts].area
-              .toLowerCase()
-              .includes(url.get("location")) ||
-            url.get("location") === null
-          ) {
-            if (
-              this.state.posts[posts].pincode
-                .toString()
-                .includes(url.get("pincode")) ||
-              url.get("pincode") === null
-            ) {
+        { this.state.posts ? Object.keys(this.state.posts).map((posts) => {
+          if ( this.state.posts[posts].area.toLowerCase().includes(url.get("location")) || url.get("location") === null) {
+            if ( this.state.posts[posts].pincode.toString().includes(url.get("pincode")) || url.get("pincode") === null) {
               return (
                 <div key={this.state.posts[posts].Id}>
                   <div className="posts-container d-md-flex">
-                    <div
-                      id={this.state.posts[posts].Id}
-                      className="carousel slide col-md-6"
-                      data-ride="carousel"
-                    >
+                    <div id={this.state.posts[posts].Id} className="carousel slide col-md-6" data-ride="carousel">
                       <div className="carousel-inner">
                         <div className="carousel-item active">
-                          <img
-                            className="d-block img-fluid"
-                            src={this.state.posts[posts].image1}
-                            alt="First Slide"
-                          />
+                          <img className="d-block img-fluid" src={this.state.posts[posts].image1} alt="First Slide" />
                         </div>
                         <div className="carousel-item">
-                          <img
-                            className="d-block img-fluid"
-                            src={this.state.posts[posts].image2}
-                            alt="Second Slide"
-                          />
+                          <img className="d-block img-fluid" src={this.state.posts[posts].image2} alt="Second Slide"/>
                         </div>
                         <div className="carousel-item">
-                          <img
-                            className="d-block img-fluid"
-                            src={this.state.posts[posts].image3}
-                            alt="Third Slide"
-                          />
+                          <img className="d-block img-fluid" src={this.state.posts[posts].image3} alt="Third Slide"/>
                         </div>
                         <div className="carousel-item">
-                          <img
-                            className="d-block img-fluid"
-                            src={this.state.posts[posts].image4}
-                            alt="Four Slide"
-                          />
+                          <img className="d-block img-fluid" src={this.state.posts[posts].image4} alt="Four Slide"/>
                         </div>
                       </div>
-                      <a
-                        href={"#" + this.state.posts[posts].Id}
-                        className="carousel-control-prev"
-                        data-slide="prev"
-                      >
+                      <a href={"#" + this.state.posts[posts].Id} className="carousel-control-prev" data-slide="prev">
                         <span className="carousel-control-prev-icon text-dark"></span>
                       </a>
-                      <a
-                        href={"#" + this.state.posts[posts].Id}
-                        className="carousel-control-next"
-                        data-slide="next"
-                      >
+                      <a href={"#" + this.state.posts[posts].Id} className="carousel-control-next" data-slide="next">
                         <span className="carousel-control-next-icon"></span>
                       </a>
                     </div>
@@ -108,10 +73,7 @@ class Posts extends Component {
                         <strong>₹{this.state.posts[posts].rent}</strong>
                         <span className="text-dark"> /month</span>
                       </p>
-                      <Link
-                        to={"/fullpost?post=" + posts}
-                        className="viewBtn mb-2"
-                      >
+                      <Link to={"/fullpost?post=" + posts} className="viewBtn mb-2">
                         View Details
                       </Link>
                     </div>
@@ -119,13 +81,17 @@ class Posts extends Component {
                   <hr className="separate" />
                 </div>
               );
-            } else {
+            } 
+            else{
               return "";
             }
-          } else {
+          } 
+          else{
             return "";
           }
-        })}
+        })
+         : (<Spinner/>)
+      }
       </div>
     );
   }

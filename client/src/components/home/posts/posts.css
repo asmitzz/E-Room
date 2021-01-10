@@ -5,6 +5,10 @@
     padding-bottom: 1rem;
 }
 
+body{
+    background-color: var(--primary-color);
+}
+
 .posts-container {
     background: var(--primary-color);
     width: 75%;

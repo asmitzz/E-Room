@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import axios from 'axios';
 import './fullpost.css';
 import Nav from '../../../navigation/navigation';
+import Spinner from '../../../spinner/spinner';
 
 class FullPost extends Component{
 
@@ -24,7 +25,7 @@ class FullPost extends Component{
 
             <div className="fullpost-container pb-3">
                 <Nav/>
-                       {  this.state.posts != null ? 
+                       {  this.state.posts ? 
                            (<div className="mt-4">  
                              <div id="slider" className="carousel slide " data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
                                  <div className="carousel-inner">
@@ -81,7 +82,7 @@ class FullPost extends Component{
                                 </div>
                                </div> 
                              </div>
-                           </div>) : ""
+                           </div>) : (<Spinner/>)
                         
                        }
                     

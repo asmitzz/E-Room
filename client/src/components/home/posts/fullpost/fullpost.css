@@ -1,6 +1,8 @@
 .fullpost-container{
     padding-top: 4rem;
     background:var(--primary-color);
+    min-height: 100vh;
+    width: 100%;
 }
 
 .fullpost-container .carousel-item{

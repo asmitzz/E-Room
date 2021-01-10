@@ -25,7 +25,8 @@ class Filter extends Component {
     this.setState({ pincode: e.target.value });
   };
 
-  ApplyBtnHandler = () => {
+  ApplyBtnHandler = (e) => {
+    e.preventDefault();
     this.props.history.push("?location=" +this.state.location.toLowerCase() +"&&pincode=" +this.state.pincode);
   };
 
@@ -41,19 +42,21 @@ class Filter extends Component {
           <h2 className="text-center">
             <i className="fa fa-filter"></i>Filter
           </h2>
+        <form onSubmit={this.ApplyBtnHandler}>
+
           <label className="mt-5 d-inline-block">Location: &nbsp;</label>
           <input
             type="text"
             list="location"
             className="form-control"
             onChange={this.areaHandler}
-          />
+            />
           <datalist id="location">
             {[...locations].map((loc) => {
               return (
                 <option key={loc}>{loc.toUpperCase()}</option>
-              );
-            })}
+                );
+              })}
           </datalist>
           <label className="mt-2 d-inline-block">Pincode: &nbsp;</label>
           <input
@@ -61,15 +64,14 @@ class Filter extends Component {
             list="pincodes"
             className="form-control"
             onChange={this.pincodeHandler}
-          />
+            />
           <datalist id="pincodes">
             {[...pincodes].map((pin) => {
               return <option key={pin}>{pin}</option>;
             })}
           </datalist>
-          <button className="btn mt-3 w-50" onClick={this.ApplyBtnHandler}>
-            Apply
-          </button>
+          <button className="btn mt-3 w-50">Apply</button>
+      </form>
         </div>
       </div>
     );
