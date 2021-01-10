@@ -50,10 +50,11 @@ app.use('/api/insert/posts',(req,res) => {
     const image2 = req.body.image2;
     const image3 = req.body.image3;
     const image4 = req.body.image4;
+    const uid = req.body.uid;
 
-    const InsertPost = "INSERT INTO room_details ( Id,name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4 ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    const InsertPost = "INSERT INTO room_details ( Id,name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-    con.query(InsertPost,["",name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4]);
+    con.query(InsertPost,["",name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid]);
 })
 
 app.use('/api/insert/feedbacks',(req,res) => {

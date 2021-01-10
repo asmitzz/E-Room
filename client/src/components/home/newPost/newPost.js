@@ -3,6 +3,7 @@ import axios from 'axios';
 import './newPost.css';
 import {withRouter} from 'react-router-dom';
 import Nav from '../../navigation/navigation';
+import fire from '../../../Authorization/auth';
 
 
 let uploadBtnDisable = false;
@@ -22,11 +23,18 @@ class newPost extends Component{
        image2:"",
        image3:"",
        image4:"",
+       uid:"",
        error:"",
        isphonetrue:"",
        ispintrue:"",
        success:""
     };
+
+    componentDidMount = () => {
+        fire.auth().onAuthStateChanged( user => {
+             this.setState({ uid: user.providerData[0].uid })
+        } )
+    }
 
     nameHandler = (e) => {
         this.setState({name:e.target.value})
@@ -130,7 +138,6 @@ class newPost extends Component{
         }
             
     }
-
 
     render(){
         return(
