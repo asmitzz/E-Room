@@ -8,15 +8,15 @@ const port = 8000;
 
 
 const con = mysql.createConnection({
-    user:'admin',
-    password:'asmit2805',
-    host:'database-2.ctav5wcvj17n.ap-south-1.rds.amazonaws.com',
-    database:'Eroom',
-    port:3399
-    // user:'root',
-    // host:'localhost',
-    // password:'',
-    // database:'roomdb'
+    // user:'admin',
+    // password:'asmit2805',
+    // host:'database-2.ctav5wcvj17n.ap-south-1.rds.amazonaws.com',
+    // database:'Eroom',
+    // port:3399
+    user:'root',
+    host:'localhost',
+    password:'',
+    database:'roomdb'
 });
 
 con.connect( err => {
@@ -40,6 +40,12 @@ app.get('/api/get/posts',(req,res) => {
     con.query(SelectAllPosts,(err,result) => {
         res.send(result)
     }) 
+})
+
+app.use('/api/delete/post',(req,res) => {
+    const post = req.body.Id;
+    const deletePost = `DELETE FROM room_details WHERE room_details.Id = ${post}`;
+    con.query(deletePost);
 })
 
 app.use('/api/insert/posts',(req,res) => {
@@ -72,4 +78,4 @@ app.use('/api/insert/feedbacks',(req,res) => {
     con.query(InsertFeedbacks,[name,email,subject,message]);
 })
 
-app.listen(port,() => console.log("server is running on :" ,port))
+app.listen(port,() => console.log(`server is running on : ` ,port))

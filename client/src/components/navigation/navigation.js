@@ -36,8 +36,9 @@ class Nav extends Component{
 	               <Link to="" onClick={this.signoutHandler}><i className="fa fa-arrow-right"></i> SIGNOUT</Link>
              </div>
               <div className="topnav">
-                	<Link to="/"><i className="fa fa-home"></i></Link>
-                	<Link to="/newpost"><i className="fa fa-plus-square"> POST</i></Link>
+                	<Link to="/" title="HOME"><i className="fa fa-home"></i></Link>
+                	<Link to="/myposts" title="MY POSTS"> <i className="fas fa-audio-description"> </i></Link>
+                	<Link to="/newpost" title="POST NEW AD"> <i className="fa fa-plus-square"> </i></Link>
              	</div> 
         </div>
     );

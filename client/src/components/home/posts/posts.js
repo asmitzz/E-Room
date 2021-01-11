@@ -74,7 +74,7 @@ class Posts extends Component {
                         <span className="text-dark"> /month</span>
                       </p>
                       <Link to={"/fullpost?post=" + posts} className="viewBtn mb-2">
-                        View Details
+                      <i className="fa fa-eye"></i> View Details
                       </Link>
                     </div>
                   </div>

@@ -10,7 +10,7 @@ import Signup from './Authorization/signup/signup';
 import fire from './Authorization/auth';
 import newPost from './components/home/newPost/newPost';
 import FullPost from './components/home/posts/fullpost/fullpost';
-
+import Myposts from './components/myposts/mypost';
 
 
 class App extends Component{
@@ -40,6 +40,7 @@ class App extends Component{
              <Route path="/contact" component={Contact}/>
              <Route path="/newpost" component={newPost}/>
              <Route path="/fullpost" component={FullPost}/>
+             <Route path="/myposts" component={Myposts}/>
        </Switch>
     );
     
