@@ -28,7 +28,8 @@ const Mypost = (props) => {
         axios.post('http://localhost:8000/api/delete/post',{Id:id});
         setShow(true);
         setTimeout(() => (
-            setShow(false)
+            setShow(false),
+            window.location.reload()
         ),1000)
     }
 
@@ -51,18 +52,18 @@ const Mypost = (props) => {
                               <h6><i className="fa fa-map-marker-alt"></i> {posts[findpost].area},{posts[findpost].pincode}</h6>
                               <p><strong className="text-danger">₹{posts[findpost].rent} </strong>/month</p>
                               <Link className="btn btn-outline-success mt-2 mr-2" to={"/fullpost?post=" + findpost}>
-                              <i className="fa fa-eye"></i> View Details
+                                <i className="fa fa-eye"></i> View Details
                               </Link>
                               <button className="btn btn-outline-danger mt-2" onClick={() => deleteHandler(posts[findpost].Id)}>
                                  <i className="fa fa-trash"></i> Delete post
                               </button>
                            </div>
-                      </div>) : ""
+                      </div>) : (<p className="p-5 text-center text-danger">NO POSTS FOUND!!</p>)
                      } 
             </div>
             <Backdrop show={show} />
                
-            <div className={show ? "deleteModal text-success modalOpen" : "deleteModal text-success modalClosed" }>
+              <div className={show ? "deleteModal text-success modalOpen" : "deleteModal text-success modalClosed" }>
                   <p><i className="fa fa-check-circle"></i> Deleted</p>
                </div>
         </div>

@@ -8,15 +8,15 @@ const port = 8000;
 
 
 const con = mysql.createConnection({
-    // user:'admin',
-    // password:'asmit2805',
-    // host:'database-2.ctav5wcvj17n.ap-south-1.rds.amazonaws.com',
-    // database:'Eroom',
-    // port:3399
-    user:'root',
-    host:'localhost',
-    password:'',
-    database:'roomdb'
+    user:'admin',
+    password:'asmit2805',
+    host:'database-2.ctav5wcvj17n.ap-south-1.rds.amazonaws.com',
+    database:'Eroom',
+    port:3399
+    // user:'root',
+    // host:'localhost',
+    // password:'',
+    // database:'roomdb'
 });
 
 con.connect( err => {

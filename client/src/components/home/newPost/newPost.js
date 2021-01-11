@@ -4,6 +4,7 @@ import './newPost.css';
 import {withRouter} from 'react-router-dom';
 import Nav from '../../navigation/navigation';
 import fire from '../../../Authorization/auth';
+import Backdrop from '../../backdrop/backdrop';
 
 
 let uploadBtnDisable = false;
@@ -27,7 +28,8 @@ class newPost extends Component{
        error:"",
        isphonetrue:"",
        ispintrue:"",
-       success:""
+       success:"",
+       show:false
     };
 
     componentDidMount = () => {
@@ -114,7 +116,8 @@ class newPost extends Component{
         }
 
         uploadBtnDisable = true;
-        this.setState({success:"successfully uploaded click on submit to proceed"})
+        this.setState({ error: "" });
+        this.setState({success:"successfully uploaded click on submit to proceed"});
 
     }
 
@@ -129,8 +132,11 @@ class newPost extends Component{
         }
         else if( this.state.phone.length === 10 ){
             axios.post('http://localhost:8000/api/insert/posts',this.state);
-            this.props.history.push('/');
-            alert("Congratulations!!your post is now live");
+            this.setState({show:true});
+            setTimeout(() => (
+                this.setState({show:false}),
+               this.props.history.push('/')
+            ),1000);
         }
         else{
             this.setState({ ispintrue:"" })
@@ -205,6 +211,11 @@ class newPost extends Component{
                        <input type="submit" className="submitBtn ml-5" value="submit"/>
                        </form>
                  </div>
+                 <Backdrop show={this.state.show} />
+               
+              <div className={this.state.show ? "uploadPost text-success uploadOpen" : "uploadPost text-success uploadClosed" }>
+                  <p><i className="fa fa-check-circle"></i> Successfully Uploaded</p>
+               </div>
             </div>
         );
     };
