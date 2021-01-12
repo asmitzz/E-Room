@@ -8,17 +8,17 @@ const port = 8000;
 
 
 const con = mysql.createConnection({
-    // user:'root',
-    // password:'',
-    // host:'localhost',
-    // database:'roomdb',
-    // port:3306
-    host:'mysql80-afe9.euw2.cloud.ametnes.com',
-    user:'RLqkAzJFxq',
-    password:'tO89jaS2z9796moVAIh8',
-    port:3316,
-    database:'3422883383',
-    ssl:true
+    user:'root',
+    password:'',
+    host:'localhost',
+    database:'phpmyadmin',
+    port:3306
+    // host:'mysql80-afe9.euw2.cloud.ametnes.com',
+    // user:'RLqkAzJFxq',
+    // password:'tO89jaS2z9796moVAIh8',
+    // port:3316,
+    // database:'3422883383',
+    // ssl:true
 });
 
 con.connect( err => {
