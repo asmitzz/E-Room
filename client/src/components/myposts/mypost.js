@@ -27,10 +27,14 @@ const Mypost = (props) => {
     const deleteHandler = (id) => {
         axios.post('http://localhost:8000/api/delete/post',{Id:id});
         setShow(true);
+
         setTimeout(() => (
-            setShow(false),
+            setShow(false)
+        ),1000);
+        
+        setTimeout(() => (
             window.location.reload()
-        ),1000)
+        ),1000);
     }
 
     const findpost = Object.keys(posts).find( post => (

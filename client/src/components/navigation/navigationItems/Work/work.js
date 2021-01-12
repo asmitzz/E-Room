@@ -10,7 +10,7 @@ class Work extends Component{
               <Nav/>
               <div className="main">
                  <h2 className="display-3 text-center pt-5">Work With Us</h2>
-                 <p className="pt-5">
+                 <p className="pt-2">
                     Welcome to E-room, dedicated to the temporary accommodation of students and other guests ,
                     with the goal of providing a comprehensive accommodation service for people of all ages looking for an
                     inexpensive place to stay in the city of Jabalpur, with good services and personalized attention.

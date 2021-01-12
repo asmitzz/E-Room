@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
 import fire from '../../Authorization/auth';
 import './navigation.css';
-import {Link, withRouter} from 'react-router-dom';
+import {NavLink, withRouter} from 'react-router-dom';
 import Backdrop from '../backdrop/backdrop'; 
 
 class Nav extends Component{
@@ -22,23 +22,22 @@ class Nav extends Component{
   render(){
     return(
         <div> 
-             <Backdrop show={this.state.show}/>
-	               <input type="checkbox" id="check"/>
+             <Backdrop show={this.state.show} onClick={this.toggleHandler}/>
+	               <input type="checkbox" checked={this.state.show} id="check"/>
 	               <label htmlFor="check">
 		                <i className="fa fa-bars" id="btn" onClick={this.toggleHandler}></i> 
-		                <i className="fa fa-times  cancelclose" id="cancel" onClick={this.toggleHandler}></i>
 	               </label>
-             <div className="side">
+             <div className="side" onClick={this.toggleHandler}>
 		             <header>MY MENU</header>
-	               <Link to="/about"><i className="fa fa-info-circle"></i> ABOUT</Link>
-	               <Link to="/work"><i className="fa fa-wrench"></i> WORK WITH US</Link>
-	               <Link to="/contact"><i className="fa fa-phone"></i> CONTACT</Link>
-	               <Link to="" onClick={this.signoutHandler}><i className="fa fa-arrow-right"></i> SIGNOUT</Link>
+	               <NavLink to="/about" exact><i className="fa fa-info-circle"></i> ABOUT</NavLink>
+	               <NavLink to="/work"><i className="fa fa-wrench"></i> WORK WITH US</NavLink>
+	               <NavLink to="/contact"><i className="fa fa-phone"></i> CONTACT</NavLink>
+	               <NavLink to="/signout" onClick={this.signoutHandler}><i className="fa fa-arrow-right"></i> SIGNOUT</NavLink>
              </div>
               <div className="topnav">
-                	<Link to="/" title="HOME"><i className="fa fa-home"></i></Link>
-                	<Link to="/myposts" title="MY POSTS"> <i className="fas fa-audio-description"> </i></Link>
-                	<Link to="/newpost" title="POST NEW AD"> <i className="fa fa-plus-square"> </i></Link>
+                	<NavLink to="/" exact><i className="fa fa-home"></i> Home</NavLink>
+                	<NavLink to="/myposts"> <i className="fas fa-audio-description"> </i> My Posts</NavLink>
+                	<NavLink to="/newpost"> <i className="fa fa-plus-square"> </i> Add Post</NavLink>
              	</div> 
         </div>
     );

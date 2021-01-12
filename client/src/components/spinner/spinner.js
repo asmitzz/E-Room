@@ -4,7 +4,7 @@ import './spinner.css';
 function Spinner() {
     return (
         <div>
-            <div class="loader">Loading...</div>
+            <div className="loader">Loading...</div>
         </div>
     )
 }

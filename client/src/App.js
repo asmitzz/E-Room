@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { Switch,Route} from 'react-router-dom';
+import { BrowserRouter as Router,Switch,Route, Redirect} from 'react-router-dom';
 import './App.css';
 import Home from './components/home/home';
 import About from './components/navigation/navigationItems/About/about';
@@ -33,22 +33,28 @@ class App extends Component{
   render(){
 
     const App = (
-       <Switch>
+      <Router>
+         <Switch>
              <Route exact path="/" component={Home}/>
-             <Route path="/about" component={About}/>
-             <Route path="/work" component={Work}/> 
-             <Route path="/contact" component={Contact}/>
-             <Route path="/newpost" component={newPost}/>
-             <Route path="/fullpost" component={FullPost}/>
-             <Route path="/myposts" component={Myposts}/>
-       </Switch>
+             <Route exact path="/about" component={About}/>
+             <Route exact path="/work" component={Work}/> 
+             <Route exact path="/contact" component={Contact}/>
+             <Route exact path="/newpost" component={newPost}/>
+             <Route exact path="/fullpost" component={FullPost}/>
+             <Route exact path="/myposts" component={Myposts}/>
+             <Redirect to="/"/>
+         </Switch>
+     </Router>
     );
     
     const auth = (
-      <Switch>
+      <Router>
+        <Switch>
            <Route exact path="/" component={Login}/>
-           <Route path="/signup" component={Signup}/>
-      </Switch>
+           <Route exact path="/signup" component={Signup}/>
+           <Redirect to="/"/>
+        </Switch>
+      </Router>
     )
 
     return(

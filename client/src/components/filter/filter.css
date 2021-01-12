@@ -29,11 +29,11 @@
 }
 
 .filterDiv button{
-    background: var(--secondary-color);
     color: var(--primary-color);
     display: block;
-    box-shadow: inset 5px 5px 8px var(--shadow-1),inset -5px -5px 5px var(--shadow-2),
-    5px 5px 8px var(--shadow-1), -1px -1px 5px var(--shadow-2);
+    box-shadow:  3px 3px 5px  rgb(140, 127, 202);
+    border-radius: 20px;
+    background: #7c30ff;
 }
 
 .filterDiv button:hover{

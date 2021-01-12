@@ -16,18 +16,6 @@
 	transition: all 0.5s ease;
 }
 
-.sideclose{
-    position: fixed;
-    background-color:var(--secondary-color);
-    height: 100vh;
-    left: -250px;
-    width: 250px;
-    top: 0;
-    z-index: 200;
-	transition: all 0.5s ease;
-}
-
-
 .side a {
     display: block;
     text-decoration: none;
@@ -50,7 +38,7 @@
     box-shadow: 0 2px 5px var(--shadow-1);
 }
 
-.side a:hover {
+.side a:hover,.side a:active,.side a.active {
     background-color: var(--tertiary-color);
     border-left: 5px solid var(--primary-color);
 }
@@ -59,25 +47,7 @@
 	display: none;
 }
 
-label #btn, label #cancel {
-    color:var(--primary-color);
-    position: fixed;
-    width: 5rem;
-    height: 4rem;
-    line-height: 50px;
-    font-size: 28px;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 500;
-    top: 0;
-    padding-top: 0.5rem;
-    margin-left: 0.5rem;
-    cursor: pointer;
-    border-radius: 20px;
-    margin-top: 0.5rem;
-}
-
-label .cancelclose {
+label #btn {
     color:var(--primary-color);
     position: fixed;
     width: 5rem;
@@ -102,29 +72,14 @@ label #btn{
 }
 
 label #btn:hover{
-    box-shadow:   -3px -3px 5px  rgb(140, 127, 202),3px 3px 5px rgb(86, 77, 133);
+    box-shadow:-3px -3px 5px  rgb(140, 127, 202),3px 3px 5px rgb(86, 77, 133);
 }
 
-#cancel{
-	opacity: 0;
-    visibility: hidden;
-}
 	
 #check:checked ~ label #btn{	
 	margin-left: 280px;
 	opacity: 0;
 	visibility: hidden;
-}
-
-#check:checked ~ label #cancel {
-    margin-left: 169px;
-    opacity: 1;
-    width: 5rem;
-    height: 5rem;
-    padding-top: 0.7rem;
-    visibility: visible;
-    transition: all 0.5s;
-    border: none;
 }
 
 #check:checked ~ .side{
@@ -142,24 +97,22 @@ label #btn:hover{
     text-align: right;
     z-index: 3;
     display: block;
-    padding-top: 1.3rem;
+    padding-top: 1.8rem;
     box-shadow: 3px 3px 5px var(--shadow-2);
 }
+
 .topnav a{
 	color: var(--primary-color);
-    margin-left: 1rem;
-    box-shadow:  -3px -3px 5px rgb(140, 127, 202), 5px 5px 5px  rgb(86, 77, 133);
-    background: #7c30ff;
-    border-radius: 20px;
+    margin: 0.6rem;
     transition: all 0.4s;
-    font-size: 2.2rem;
-    padding: 0.6rem 1.7rem;
-    padding-left: 1.3rem;
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 
-
-
-.topnav a:hover{
-    box-shadow:  -5px -5px 5px  rgb(86, 77, 133), 5px 5px 5px rgb(140, 127, 202);
+.topnav a:hover,.topnav a:active,.topnav a.active{
+    box-shadow:  -3px -3px 5px rgb(86, 77, 133), 3px 3px 5px  rgb(140, 127, 202);
+    border-radius: 20px;
+    background: #7c30ff;
 }
 

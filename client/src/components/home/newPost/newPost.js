@@ -132,11 +132,17 @@ class newPost extends Component{
         }
         else if( this.state.phone.length === 10 ){
             axios.post('http://localhost:8000/api/insert/posts',this.state);
+            
             this.setState({show:true});
+
             setTimeout(() => (
-                this.setState({show:false}),
-               this.props.history.push('/')
+                this.setState({show:false})
             ),1000);
+
+            setTimeout(() => (
+                this.props.history.push('/')
+            ),1100);
+
         }
         else{
             this.setState({ ispintrue:"" })
