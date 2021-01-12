@@ -13,15 +13,17 @@ const con = mysql.createConnection({
     // host:'eroom.ctav5wcvj17n.ap-south-1.rds.amazonaws.com',
     // database:'eroom',
     // port:3399
-    user:'root',
-    host:'localhost',
-    password:'',
-    database:'roomdb'
+    host:'mysql80-afe9.euw2.cloud.ametnes.com',
+    user:'RLqkAzJFxq',
+    password:'tO89jaS2z9796moVAIh8',
+    port:3316,
+    database:'3422883383',
+    ssl:true
 });
 
 con.connect( err => {
     if(err){
-        console.log("error connecting to db")
+        console.log("error connecting to db",err)
     }
     else{
         console.log("connection established")
