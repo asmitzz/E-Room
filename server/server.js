@@ -8,17 +8,17 @@ const port = 8000;
 
 
 const con = mysql.createConnection({
-    user:'root',
-    password:'',
-    host:'localhost',
-    database:'roomdb',
-    port:3306
-    // host:'mysql80-afe9.euw2.cloud.ametnes.com',
-    // user:'RLqkAzJFxq',
-    // password:'tO89jaS2z9796moVAIh8',
-    // port:3316,
-    // database:'3422883383',
-    // ssl:true
+    // user:'admin',
+    // password:'asmit2805',
+    // host:'eroom.ctav5wcvj17n.ap-south-1.rds.amazonaws.com',
+    // database:'eroom',
+    // port:3399
+    host:'mysql80-afe9.euw2.cloud.ametnes.com',
+    user:'RLqkAzJFxq',
+    password:'tO89jaS2z9796moVAIh8',
+    port:3316,
+    database:'3422883383',
+    ssl:true
 });
 
 con.connect( err => {
@@ -65,9 +65,9 @@ app.use('/api/insert/posts',(req,res) => {
     const image4 = req.body.image4;
     const uid = req.body.uid;
 
-    const InsertPost = "INSERT INTO room_details ( name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    const InsertPost = "INSERT INTO room_details ( Id,name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-    con.query(InsertPost,[name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid]);
+    con.query(InsertPost,["",name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid]);
 })
 
 app.use('/api/insert/feedbacks',(req,res) => {
