@@ -18,7 +18,7 @@ const con = mysql.createConnection({
     // password:'tO89jaS2z9796moVAIh8',
     // port:3316,
     // database:'3422883383',
-    // ssl:true
+    // ssl:true 
 });
 
 con.connect( err => {
