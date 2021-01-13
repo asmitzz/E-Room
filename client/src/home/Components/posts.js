@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./posts.css";
 import { withRouter, Link } from "react-router-dom";
-import Spinner from '../../spinner/spinner';
+import Spinner from '../../Shared/Components/UIElements/spinner';
  
 class Posts extends Component {
    

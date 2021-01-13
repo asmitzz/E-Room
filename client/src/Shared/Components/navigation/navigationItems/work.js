@@ -1,7 +1,8 @@
 import React,{ Component } from 'react';
-import '../../../navigation/navigation.css';
+
+import '../navigation.css';
 import './work.css';
-import Nav from '../../navigation';
+import Nav from '../navigation';
 
 class Work extends Component{
   render(){

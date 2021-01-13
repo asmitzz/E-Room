@@ -1,8 +1,8 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
 import './fullpost.css';
-import Nav from '../../../navigation/navigation';
-import Spinner from '../../../spinner/spinner';
+import Nav from '../../Shared/Components/navigation/navigation';
+import Spinner from '../../Shared/Components/UIElements/spinner';
 
 class FullPost extends Component{
 

@@ -1,8 +1,8 @@
 import React,{ Component } from 'react';
-import fire from '../../Authorization/auth';
+import fire from '../../../Authorization/auth';
 import './navigation.css';
 import {NavLink, withRouter} from 'react-router-dom';
-import Backdrop from '../backdrop/backdrop'; 
+import Backdrop from '../UIElements/backdrop'; 
 
 class Nav extends Component{
 

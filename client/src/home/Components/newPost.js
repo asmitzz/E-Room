@@ -2,10 +2,9 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import './newPost.css';
 import {withRouter} from 'react-router-dom';
-import Nav from '../../navigation/navigation';
-import fire from '../../../Authorization/auth';
-import Backdrop from '../../backdrop/backdrop';
-
+import Nav from '../../Shared/Components/navigation/navigation';
+import fire from '../../Authorization/auth';
+import Backdrop from '../../Shared/Components/UIElements/backdrop';
 
 let uploadBtnDisable = false;
 

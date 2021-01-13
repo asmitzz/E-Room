@@ -1,16 +1,16 @@
 import React,{ Component } from 'react';
 import { BrowserRouter as Router,Switch,Route, Redirect} from 'react-router-dom';
 import './App.css';
-import Home from './components/home/home';
-import About from './components/navigation/navigationItems/About/about';
-import Work from './components/navigation/navigationItems/Work/work';
-import Contact from './components/navigation/navigationItems/Contact/contact';
+import Home from './home/Pages/home';
+import About from './Shared/Components/navigation/navigationItems/about';
+import Work from './Shared/Components/navigation/navigationItems/work';
+import Contact from './Shared/Components/navigation/navigationItems/contact';
 import Login from './Authorization/login/login';
 import Signup from './Authorization/signup/signup';
 import fire from './Authorization/auth';
-import newPost from './components/home/newPost/newPost';
-import FullPost from './components/home/posts/fullpost/fullpost';
-import Myposts from './components/myposts/mypost';
+import newPost from './home/Components/newPost';
+import FullPost from './home/Components/fullpost';
+import Myposts from './home/Components/mypost';
 
 
 class App extends Component{

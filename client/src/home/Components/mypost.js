@@ -1,10 +1,10 @@
 import React, { useEffect,useState } from 'react';
-import Nav from '../navigation/navigation';
+import Nav from '../../Shared/Components/navigation/navigation';
 import axios from 'axios';
 import './mypost.css';
 import { Link, withRouter } from 'react-router-dom';
 import fire from '../../Authorization/auth';
-import Backdrop from '../backdrop/backdrop';
+import Backdrop from '../../Shared/Components/UIElements/backdrop';
 
 const Mypost = (props) => {
 

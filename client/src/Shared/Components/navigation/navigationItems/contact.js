@@ -1,7 +1,8 @@
 import React,{ Component } from 'react';
-import '../../../navigation/navigation.css';
+
+import '../navigation.css';
 import './contact.css';
-import Nav from '../../navigation';
+import Nav from '../navigation';
 import logo from '../../../../assets/Images/contact.svg';
 import axios from 'axios';
 
