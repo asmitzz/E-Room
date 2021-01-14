@@ -23,7 +23,7 @@ class Nav extends Component{
     return(
         <div> 
              <Backdrop show={this.state.show} onClick={this.toggleHandler}/>
-	               <input type="checkbox" checked={this.state.show} id="check"/>
+	               <input type="checkbox" checked={this.state.show} onChange={()=>this.setState({show:this.state.show})} id="check"/>
 	               <label htmlFor="check">
 		                <i className="fa fa-bars" id="btn" onClick={this.toggleHandler}></i> 
 	               </label>
