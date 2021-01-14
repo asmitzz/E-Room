@@ -4,7 +4,7 @@
 
 .mypost-container .post{
     display: flex;
-    border: 2px solid black;
+    border: 2px solid var(--font-color);
     width: 75%;
     margin: 2rem 2rem;
     border-radius: 20px;
@@ -27,7 +27,7 @@
 }
 
 .deleteModal{
-    background-color: white;
+    background-color: var(--primary-color);
     width: 600px;
     height: 100px;
     position: absolute;

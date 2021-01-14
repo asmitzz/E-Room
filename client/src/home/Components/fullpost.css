@@ -19,10 +19,10 @@
 .fullpost-container .carousel-inner{
     width: 73%;
     margin-left: 4rem;
-    box-shadow: -3px -3px 5px rgba(255,255,255, 0.432),5px 5px 8px rgba(1, 1, 1, 0.76);
+    box-shadow: -3px -3px 5px var(--shadow-1),5px 5px 8px var(--shadow-4);
 }
 .fullpost-details h1{
-    color:#8445f1;
+    color:var(--secondary-color);
     font-family:'Courier New', Courier, monospace;
 }
 
@@ -36,13 +36,15 @@
 }
 
 .fullpost-details{
-    background:rgba(255, 255, 255, 0.699);
+    background:var(--shadow-1);
     width: 73%;
     margin-left: 4rem;
     margin-top: 2rem;
     padding: 2rem;
     font-weight: 600;
     font-size: large;
-    box-shadow: -3px -3px 5px rgba(255,255,255, 0.432),7px 7px 10px rgba(1, 1, 1, 0.281);
+    box-shadow: -3px -3px 5px var(--shadow-1),7px 7px 10px var(--shadow-2);
 }
+
+
 

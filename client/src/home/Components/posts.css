@@ -22,7 +22,7 @@ body{
     height: 280px;
     width: 96%;
     margin:1rem 0;
-    box-shadow: -3px -3px 5px rgba(255,255,255, 0.432),5px 5px 8px rgba(1,1,1, 0.432);
+    box-shadow: -3px -3px 5px var(--shadow-1),5px 5px 8px var(--shadow-4);
     border-radius: 20px;
 }
 
@@ -54,7 +54,7 @@ body{
 }
 
 .room-details{
-    color: rgba(0, 0, 0, 0.623);
+    color: var(--font-color);
     font-size: x-large;
     font-weight:700;
 }
@@ -79,7 +79,7 @@ body{
     border-radius:20px;
     box-shadow:-5px -5px 8px var(--shadow-1),5px 5px 8px var(--shadow-2);
     cursor: pointer;
-    color: black;
+    color: var(--font-color);
 }
 
 .viewBtn:hover{

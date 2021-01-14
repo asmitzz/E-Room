@@ -1,15 +1,21 @@
 .about-container{
-    background: #e9ecef;
+    background:var(--primary-color);
 }
 
 .about-container h2,h1{
-    color: #7C3AED;
+    color: var(--tertiary-color);
 }
 
 .main-div{
    padding: 2rem;
-   color: black;
+   color: var(--font-color);
    font-size: larger;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bolder;
 }
 
 .about-img{
@@ -18,9 +24,9 @@
 }
 
 .quote{
-    border-left: 5px solid #7C3AED;
+    border-left: 5px solid var(--tertiary-color);
     padding: 1.5rem;
-    background: white;
+    background: var(--primary-color);
 }
 
 @media(max-width: 600px) and (min-width:340px) {

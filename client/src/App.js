@@ -11,6 +11,7 @@ import fire from './Authorization/auth';
 import newPost from './home/Components/newPost';
 import FullPost from './home/Components/fullpost';
 import Myposts from './home/Components/mypost';
+import Nav from './Shared/Components/navigation/navigation';
 
 
 class App extends Component{
@@ -34,6 +35,8 @@ class App extends Component{
 
     const App = (
       <Router>
+         <Nav/>
+         <main>
          <Switch>
              <Route exact path="/" component={Home}/>
              <Route exact path="/about" component={About}/>
@@ -44,6 +47,7 @@ class App extends Component{
              <Route exact path="/myposts" component={Myposts}/>
              <Redirect to="/"/>
          </Switch>
+         </main>
      </Router>
     );
     

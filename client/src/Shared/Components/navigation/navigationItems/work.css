@@ -1,9 +1,9 @@
 .work-container{
-    background-color:#e9ecef;
+    background-color:var(--primary-color);
 }
 
 .work-container h1,h2{
-    color: #8445f1;
+    color: var(--secondary-color);
 }
 .main{
     padding: 1rem;

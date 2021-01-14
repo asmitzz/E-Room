@@ -62,14 +62,15 @@ class Login extends Component{
                         </div>
                         <div className="form-group">
                             <label className="login-label">Password</label>
-                            <input className="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type={this.state.show?"text":"password"} title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={this.passwordHandler} placeholder="Password" />
+                            <input className="form-control" type={this.state.show?"text":"password"} title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" onChange={this.passwordHandler} placeholder="Password" />
                             <input type="checkbox" className="mt-3" onChange={()=>{this.setState({show:!this.state.show})}}/> <span className="text-white">show password</span>
                         </div>
                         <input type="submit" className="loginBtn mt-2" value="LOGIN"/>
                       </form>
-                        <br/>
+
                         <span className="text-danger">{this.state.error}</span>
-                       <span style={{color:'white'}}>Don't have an account? </span>  <Link className="link" to="/signup">SIGN UP</Link>
+                        <br/>
+                       <span className="primary-color">Don't have an account? </span>  <Link className="link" to="/signup">SIGN UP</Link>
                      </div>
                      <p className="orSeperator"><hr/>&nbsp;OR&nbsp;<hr/></p>
                      <GoogleBtn className="d-inline-block mr-3 ml-5" onClick={this.signInWithGoogle}/>

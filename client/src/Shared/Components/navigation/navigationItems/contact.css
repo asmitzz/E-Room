@@ -1,5 +1,5 @@
 .contact-container{
-    background:#e9ecef;
+    background:var(--primary-color);
     margin-top: 5rem;
 }
 
@@ -14,11 +14,11 @@
 
 .contactUs h2{
     font-weight: 700;
-    color: #8445f1;
+    color: var(--secondary-color);
 }
 
 hr{
-    border: 2px solid white;
+    border: 2px solid var(--primary-color);
 }
 
 .contact-label{
@@ -36,15 +36,15 @@ textarea{
     margin-top: 1rem;
     padding: 0.5rem 1rem ;
     cursor: pointer;
-    border: 2px solid #8445f1;
-    color: #8445f1;
+    border: 2px solid var(--secondary-color);
+    color:var(--secondary-color);
     background: var(--primary-color);
 }
 
 .send:hover{
     color:var(--primary-color);
-    background: #8445f1;
-    border: 2px solid white;
+    background:var(--secondary-color);
+    border: 2px solid var(--primary-color);
 }
   
 @media(max-width:550px) and (min-width:360px){

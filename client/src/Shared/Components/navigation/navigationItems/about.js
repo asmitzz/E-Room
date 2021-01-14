@@ -1,17 +1,15 @@
 import React,{ Component } from 'react';
-import '../navigation.css';
+
 import './about.css';
-import Nav from '../navigation';
 
 class About extends Component{
   render(){
     return(
         <div className="about-container"> 
-            <Nav/>
 
               <div className="main-div pb-5"> 
                   
-                  <h1 className="display-3 pt-5 text-center">About Us</h1>
+                  <h1 className="heading pt-5">About Us</h1>
                   <h2 className="mt-5">What is E-Room?</h2>
                   <p>
                   For bachelors and working professionals, a fully furnished house and privacy at an affordable rent might seem like too much to ask in a city like Bangalore. Even if you and your friends finally land an apartment, the problem almost never ends there. There is the constant hassle of buying or renting appliances and furniture, splitting bills, looking for domestic help at reasonable prices, dealing with suspicion from neighbours and so on. Ultimately, most youngsters just give up on their dreams of a home in the city and hole themselves up in PGs and hostels that are bad in terms of food and worse in terms of privacy.

@@ -67,9 +67,9 @@ class Signup extends Component{
                      
                       <input type="submit" value="REGISTER" className="loginBtn mt-2"/>
                   </form>
-                      <br/>
                       <span className="text-danger">{this.state.error}</span>
-                       <span style={{color:'white'}}>Already have an account? </span>  <Link className="link" to="/">LOGIN</Link>
+                      <br/>
+                       <span className="primary-color">Already have an account? </span>  <Link className="link" to="/">LOGIN</Link>
                      </div>
                      <p className="orSeperator"><hr/>&nbsp;OR&nbsp;<hr/></p>
                      <GoogleBtn className="d-inline-block mr-3 ml-5" onClick={this.signInWithGoogle}/>

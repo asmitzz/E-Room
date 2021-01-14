@@ -1,10 +1,8 @@
 import React,{ Component } from 'react';
 
-import '../navigation.css';
-import './contact.css';
-import Nav from '../navigation';
 import logo from '../../../../assets/Images/contact.svg';
 import axios from 'axios';
+import './contact.css';
 
 class Contact extends Component{
 
@@ -40,7 +38,6 @@ class Contact extends Component{
   render(){
     return(
         <div className="contact-container"> 
-           <Nav/>
            <img src={logo} alt="contact" style={{width:'70%'}} className="d-block m-auto mt-5"/>
            <section className="main-section">
                <h2 className="contactUs">CONTACT US</h2>

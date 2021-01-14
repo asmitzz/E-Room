@@ -9,7 +9,6 @@ class Home extends Component{
         <div> 
            <p className="FilterNotMatch">No Posts Found!!</p>
            <Filter/>
-           <Nav active="home"/>
            <Posts/>
         </div>
     );

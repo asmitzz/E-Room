@@ -20,7 +20,7 @@
 }
 
 .filterDiv h2{
-    color: black;
+    color: var(--font-color);
     font-weight: 700;
 }
 
@@ -31,9 +31,9 @@
 .filterDiv button{
     color: var(--primary-color);
     display: block;
-    box-shadow:  3px 3px 5px  rgb(140, 127, 202);
+    box-shadow:  3px 3px 5px  var(--shadow-3);
     border-radius: 20px;
-    background: #7c30ff;
+    background: var(--tertiary-color);
 }
 
 .filterDiv button:hover{

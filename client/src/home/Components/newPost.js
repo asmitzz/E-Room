@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import './newPost.css';
 import {withRouter} from 'react-router-dom';
-import Nav from '../../Shared/Components/navigation/navigation';
 import fire from '../../Authorization/auth';
 import Backdrop from '../../Shared/Components/UIElements/backdrop';
 
@@ -153,7 +152,6 @@ class newPost extends Component{
     render(){
         return(
             <div>
-                <Nav/>
                 <div className="newpost-container mt-3">
                 <h1 className="display-1 contact-us">E-Room</h1>
                  <form onSubmit={this.submitHandler}>

@@ -45,7 +45,7 @@ class Posts extends Component {
                         </div>
                       </div>
                       <a href={"#" + this.state.posts[posts].Id} className="carousel-control-prev" data-slide="prev">
-                        <span className="carousel-control-prev-icon text-dark"></span>
+                        <span className="carousel-control-prev-icon font-color-2"></span>
                       </a>
                       <a href={"#" + this.state.posts[posts].Id} className="carousel-control-next" data-slide="next">
                         <span className="carousel-control-next-icon"></span>
@@ -57,7 +57,7 @@ class Posts extends Component {
                         {this.state.posts[posts].name.toUpperCase()}
                       </span>
                       <p className="room-details mt-3">
-                        <span className="text-dark">ROOM AVAILABLE:</span>{" "}
+                        <span className="font-color-2">ROOM AVAILABLE:</span>{" "}
                         {this.state.posts[posts].lookingfor.toUpperCase()}
                       </p>
                       <p className="address">
@@ -71,7 +71,7 @@ class Posts extends Component {
                       </p>
                       <p className="rent col-md-7">
                         <strong>₹{this.state.posts[posts].rent}</strong>
-                        <span className="text-dark"> /month</span>
+                        <span className="font-color-2"> /month</span>
                       </p>
                       <Link to={"/fullpost?post=" + posts} className="viewBtn mb-2">
                       <i className="fa fa-eye"></i> View Details

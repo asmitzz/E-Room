@@ -1,14 +1,11 @@
 import React,{ Component } from 'react';
 
-import '../navigation.css';
 import './work.css';
-import Nav from '../navigation';
 
 class Work extends Component{
   render(){
     return(
         <div className="work-container"> 
-              <Nav/>
               <div className="main">
                  <h2 className="display-3 text-center pt-5">Work With Us</h2>
                  <p className="pt-2">

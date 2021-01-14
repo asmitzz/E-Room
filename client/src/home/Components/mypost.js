@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import Nav from '../../Shared/Components/navigation/navigation';
+
 import axios from 'axios';
 import './mypost.css';
 import { Link, withRouter } from 'react-router-dom';
@@ -22,7 +22,7 @@ const Mypost = (props) => {
                 setUser(user.providerData[0].uid)
             }
        } )
-    }, [] )
+    }, [posts] )
 
     const deleteHandler = (id) => {
         axios.post('http://localhost:8000/api/delete/post',{Id:id});
@@ -32,9 +32,7 @@ const Mypost = (props) => {
             setShow(false)
         ),1000);
         
-        setTimeout(() => (
-            window.location.reload()
-        ),1000);
+        setPosts(posts);
     }
 
     const findpost = Object.keys(posts).find( post => (
@@ -44,14 +42,13 @@ const Mypost = (props) => {
 
     return (
         <div>
-            <Nav/>
             <div className="mypost-container">
-                     <h1 className="text-center text-secondary display-3">My Posts</h1>     
+                     <h1 className="text-center font-color-1 display-3">My Posts</h1>     
                     { posts && findpost ? (<div className="post">
                            <img alt="hostel" src={posts[findpost].image1}/>
                            <div className="post-body">
                               <h2 className="text-dark"><strong>{posts[findpost].name.toUpperCase()}</strong></h2>
-                              <p>Room Available: <span className="text-secondary">{posts[findpost].lookingfor}</span></p>
+                              <p>Room Available: <span className="font-color-1">{posts[findpost].lookingfor}</span></p>
                               <p>{posts[findpost].address}</p>
                               <h6><i className="fa fa-map-marker-alt"></i> {posts[findpost].area},{posts[findpost].pincode}</h6>
                               <p><strong className="text-danger">₹{posts[findpost].rent} </strong>/month</p>

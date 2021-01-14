@@ -1,7 +1,7 @@
 import React,{ Component } from 'react';
+
 import axios from 'axios';
 import './fullpost.css';
-import Nav from '../../Shared/Components/navigation/navigation';
 import Spinner from '../../Shared/Components/UIElements/spinner';
 
 class FullPost extends Component{
@@ -24,7 +24,6 @@ class FullPost extends Component{
         return(
 
             <div className="fullpost-container pb-3">
-                <Nav/>
                        {  this.state.posts ? 
                            (<div className="mt-4">  
                              <div id="slider" className="carousel slide " data-ride="carousel" key={this.state.posts[url.get('post')].Id}>
@@ -56,7 +55,7 @@ class FullPost extends Component{
                                      <p>Room available: </p>
                                      <p>Description: </p>
                                 </div>
-                                <div className="col-9 text-secondary">
+                                <div className="col-9 font-color-1">
                                      <p>{this.state.posts[url.get('post')].name}</p>
                                      <p>₹{this.state.posts[url.get('post')].rent}</p>
                                      <p>{this.state.posts[url.get('post')].lookingfor}</p>
@@ -74,7 +73,7 @@ class FullPost extends Component{
                                      <p>Pincode: </p>
                                      <p>Phone: </p>
                                 </div>
-                                <div className="col-9 text-secondary">
+                                <div className="col-9 font-color-1">
                                      <p>{this.state.posts[url.get('post')].address}</p>
                                      <p>{this.state.posts[url.get('post')].area}</p>
                                      <p>{this.state.posts[url.get('post')].pincode}</p>
