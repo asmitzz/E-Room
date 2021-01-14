@@ -7,7 +7,7 @@ class Work extends Component{
     return(
         <div className="work-container"> 
               <div className="main">
-                 <h2 className="display-3 text-center pt-5">Work With Us</h2>
+                 <h2 className="heading text-center ">Work With Us</h2>
                  <p className="pt-2">
                     Welcome to E-room, dedicated to the temporary accommodation of students and other guests ,
                     with the goal of providing a comprehensive accommodation service for people of all ages looking for an
@@ -24,7 +24,7 @@ class Work extends Component{
                  Please get in touch when you have a sales budget and a proposal we cannot decline.
                  </p>
 
-                 <h1 className="display-4 pt-5">For travelers</h1>
+                 <h1 className="display-5 pt-5">For travelers</h1>
                  <p className="pt-3">
                       We are always keen to hear from you. Throw your hostel question at us, 
                       we will be happy to help you to find the coolest hostel

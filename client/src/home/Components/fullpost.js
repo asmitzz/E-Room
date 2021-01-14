@@ -55,7 +55,7 @@ class FullPost extends Component{
                                      <p>Room available: </p>
                                      <p>Description: </p>
                                 </div>
-                                <div className="col-9 font-color-1">
+                                <div className="col-9">
                                      <p>{this.state.posts[url.get('post')].name}</p>
                                      <p>₹{this.state.posts[url.get('post')].rent}</p>
                                      <p>{this.state.posts[url.get('post')].lookingfor}</p>
@@ -73,7 +73,7 @@ class FullPost extends Component{
                                      <p>Pincode: </p>
                                      <p>Phone: </p>
                                 </div>
-                                <div className="col-9 font-color-1">
+                                <div className="col-9">
                                      <p>{this.state.posts[url.get('post')].address}</p>
                                      <p>{this.state.posts[url.get('post')].area}</p>
                                      <p>{this.state.posts[url.get('post')].pincode}</p>

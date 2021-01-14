@@ -39,15 +39,14 @@
 }
 
 input:checked + .slider {
-  background-color: var(--secondary-color);
-  box-shadow: inset 4px 4px 4px var(--tertiary-color),inset -4px -4px 4px var(--tertiary-color);
+  background: white;
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 /* Rounded sliders */

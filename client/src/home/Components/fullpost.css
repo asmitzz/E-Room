@@ -6,7 +6,8 @@
 }
 
 .fullpost-container .carousel-item{
-    background: black;
+    background:var(--shadow-1);
+
     width: 100%;
     text-align: center;
 }
@@ -22,8 +23,12 @@
     box-shadow: -3px -3px 5px var(--shadow-1),5px 5px 8px var(--shadow-4);
 }
 .fullpost-details h1{
-    color:var(--secondary-color);
+    color:var(--font-color-4);
     font-family:'Courier New', Courier, monospace;
+}
+
+.fullpost-details .col-9{
+    color: grey;
 }
 
 .fullpost-container .carousel-control-prev{
@@ -44,6 +49,7 @@
     font-weight: 600;
     font-size: large;
     box-shadow: -3px -3px 5px var(--shadow-1),7px 7px 10px var(--shadow-2);
+    color:var(--font-color);
 }
 
 

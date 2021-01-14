@@ -153,7 +153,7 @@ class newPost extends Component{
         return(
             <div>
                 <div className="newpost-container mt-3">
-                <h1 className="display-1 contact-us">E-Room</h1>
+                <h1 className="heading text-left">E-Room</h1>
                  <form onSubmit={this.submitHandler}>
                     <div className="form-group">
                       <label className="newpost-label">Enter Hostel Name:</label>

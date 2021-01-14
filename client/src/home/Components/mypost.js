@@ -43,7 +43,6 @@ const Mypost = (props) => {
     return (
         <div>
             <div className="mypost-container">
-                     <h1 className="text-center font-color-1 display-3">My Posts</h1>     
                     { posts && findpost ? (<div className="post">
                            <img alt="hostel" src={posts[findpost].image1}/>
                            <div className="post-body">
@@ -59,7 +58,7 @@ const Mypost = (props) => {
                                  <i className="fa fa-trash"></i> Delete post
                               </button>
                            </div>
-                      </div>) : (<p className="p-5 text-center text-danger">NO POSTS FOUND!!</p>)
+                      </div>) : (<p className="p-5 text-center text-danger"><strong>NO POSTS FOUND!!</strong></p>)
                      } 
             </div>
             <Backdrop show={show} />

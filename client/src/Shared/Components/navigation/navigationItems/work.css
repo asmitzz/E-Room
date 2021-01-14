@@ -1,9 +1,11 @@
 .work-container{
     background-color:var(--primary-color);
+    color: var(--font-color);
+
 }
 
 .work-container h1,h2{
-    color: var(--secondary-color);
+    color: var(--font-color-4);
 }
 .main{
     padding: 1rem;

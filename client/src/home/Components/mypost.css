@@ -4,11 +4,10 @@
 
 .mypost-container .post{
     display: flex;
-    border: 2px solid var(--font-color);
     width: 75%;
     margin: 2rem 2rem;
-    border-radius: 20px;
     padding: 2rem;
+    box-shadow:inset -12px -12px 10px var(--shadow-5),inset 12px 12px 10px var(--shadow-5);
 }
 
 .mypost-container .post img{

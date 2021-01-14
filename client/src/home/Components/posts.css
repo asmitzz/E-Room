@@ -23,7 +23,7 @@ body{
     width: 96%;
     margin:1rem 0;
     box-shadow: -3px -3px 5px var(--shadow-1),5px 5px 8px var(--shadow-4);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .posts-container .carousel {
@@ -49,24 +49,26 @@ body{
 }
 
 .hostel-name{
-    font-size: xx-large;
+    font-size: 36px;
     font-weight: 700;
+    color: var(--font-color);
 }
 
 .room-details{
     color: var(--font-color);
-    font-size: x-large;
+    font-size: 26px;
     font-weight:700;
 }
 
 .address,.area{
-    font-size: large;
+    font-size:16px;
     font-weight:100;
+    color: var(--font-color);
 }
 
 .rent{
     color: rgba(255, 0, 0, 0.829);
-    font-size: x-large;
+    font-size: 26px;
     font-weight:bolder;
     display: inline-block;
     padding-left: 0;
@@ -74,21 +76,21 @@ body{
 
 .viewBtn{
     padding: 1rem 1rem;
-    border: 1px solid var(--primary-color);
     background-color: var(--primary-color);
     border-radius:20px;
-    box-shadow:-5px -5px 8px var(--shadow-1),5px 5px 8px var(--shadow-2);
+    box-shadow:5px 5px 8px var(--shadow-2);
     cursor: pointer;
-    color: var(--font-color);
+    color: var(--font-color-4);
 }
 
 .viewBtn:hover{
-    box-shadow:-3px -3px 8px var(--shadow-2),5px 5px 8px var(--shadow-1);
+    box-shadow:-3px -3px 8px var(--shadow-2);
     text-decoration: none;
+    color: var(--font-color-4);
 }
 
 .separate{
-    border-bottom:1px solid rgb(211, 202, 202);
+    border-bottom:2px solid var(--font-color);
     margin: 2rem 0;
     margin-left: 25%;
 }

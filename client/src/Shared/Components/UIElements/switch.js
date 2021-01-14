@@ -8,15 +8,36 @@ const Switch = () => {
 
     const switchHandler = () => {
         if(!toggler){
-            document.documentElement.style.setProperty('--primary-color', '#6dd47e');
-            document.documentElement.style.setProperty('--secondary-color', '#293250 ');
-            document.documentElement.style.setProperty('--tertiary-color', '#ffd55a');
+            document.documentElement.style.setProperty('--primary-color', '#1e1e1e');
+            document.documentElement.style.setProperty('--secondary-color', '#212121');
+            document.documentElement.style.setProperty('--tertiary-color', '#1e1e1e');
+            document.documentElement.style.setProperty('--hover', '#616161');
+            document.documentElement.style.setProperty('--shadow-3', '#616161');
+            document.documentElement.style.setProperty('--font-color', 'aliceblue');
+            document.documentElement.style.setProperty('--font-color-1', 'black');
+            document.documentElement.style.setProperty('--font-color-4', 'aliceblue');
+            document.documentElement.style.setProperty('--font-color-2', 'white');
+            document.documentElement.style.setProperty('--font-color-3', 'white');
+            document.documentElement.style.setProperty('--shadow-1', 'rgba(0, 0, 0, 0.5)');
+            document.documentElement.style.setProperty('--shadow-2', 'rgba(0, 0, 0, 0.5)');
+            document.documentElement.style.setProperty('--shadow-4', 'rgba(88,88,88, 0.425)');
+
         }
         else
         {
             document.documentElement.style.setProperty('--primary-color', 'aliceblue');
             document.documentElement.style.setProperty('--secondary-color', '#7C3AED');
             document.documentElement.style.setProperty('--tertiary-color', '#8445f1');
+            document.documentElement.style.setProperty('--hover', '#e0e0d6');
+            document.documentElement.style.setProperty('--shadow-3', 'rgb(140, 127, 202)');
+            document.documentElement.style.setProperty('--font-color', 'black');
+            document.documentElement.style.setProperty('--font-color-1', 'white');
+            document.documentElement.style.setProperty('--font-color-2', '#343a40');
+            document.documentElement.style.setProperty('--font-color-3', 'white');
+            document.documentElement.style.setProperty('--font-color-4', '#8445f1');
+            document.documentElement.style.setProperty('--shadow-1', 'rgb(255, 255, 255,0.425)');
+            document.documentElement.style.setProperty('--shadow-2', 'rgba(0, 0, 0, 0.5)');
+            document.documentElement.style.setProperty('--shadow-4', 'rgba(0, 0, 0, 0.5)');
         }
         setToggler(!toggler);
     }

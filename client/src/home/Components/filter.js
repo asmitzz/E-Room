@@ -70,7 +70,7 @@ class Filter extends Component {
               return <option key={pin}>{pin}</option>;
             })}
           </datalist>
-          <button className="btn mt-3 w-50">Apply</button>
+          <button className="btn mt-3 w-50"><strong>Apply</strong></button>
       </form>
         </div>
       </div>

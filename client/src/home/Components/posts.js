@@ -66,8 +66,8 @@ class Posts extends Component {
                       <br />
                       <p className="area">
                         <i className="fa fa-map-marker-alt"></i>{" "}
-                        {this.state.posts[posts].area.toUpperCase()},
-                        {this.state.posts[posts].pincode}
+                        {this.state.posts[posts].area.toUpperCase()} , 
+                        {" "+ this.state.posts[posts].pincode}
                       </p>
                       <p className="rent col-md-7">
                         <strong>₹{this.state.posts[posts].rent}</strong>
