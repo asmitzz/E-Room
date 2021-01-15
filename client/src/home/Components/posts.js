@@ -26,6 +26,7 @@ class Posts extends Component {
         { this.state.posts ? Object.keys(this.state.posts).map((posts) => {
           if ( this.state.posts[posts].area.toLowerCase().includes(url.get("location")) || url.get("location") === null) {
             if ( this.state.posts[posts].pincode.toString().includes(url.get("pincode")) || url.get("pincode") === null) {
+              if( this.state.posts[posts].name.toLowerCase().includes(url.get("hostel")) || url.get("hostel") === null ){
               return (
                 <div key={this.state.posts[posts].Id}>
                   <div className="posts-container d-md-flex">
@@ -53,9 +54,9 @@ class Posts extends Component {
                     </div>
 
                     <div className="col-md-6 px-5 pb-0 pt-5">
-                      <span className="hostel-name">
+                      <h3 className="hostel-name">
                         {this.state.posts[posts].name.toUpperCase()}
-                      </span>
+                      </h3>
                       <p className="room-details mt-3">
                         ROOM AVAILABLE:{" "}
                         <span className="font-color-2">{this.state.posts[posts].lookingfor.toUpperCase()}</span>
@@ -81,6 +82,9 @@ class Posts extends Component {
                   <hr className="separate" />
                 </div>
               );
+              }else{
+                return ""
+              }
             } 
             else{
               return "";
