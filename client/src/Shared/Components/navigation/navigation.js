@@ -28,6 +28,7 @@ const Nav = (props) => {
 	               </label>
              <div className="side" onClick={toggleHandler}>
 		             <header>MY MENU</header>
+                 <NavLink to="/profile"><i className="fa fa-user"></i> Profile</NavLink>
 	               <NavLink to="/about" exact><i className="fa fa-info-circle"></i> ABOUT</NavLink>
 	               <NavLink to="/work"><i className="fa fa-wrench"></i> WORK WITH US</NavLink>
 	               <NavLink to="/contact"><i className="fa fa-phone"></i> CONTACT</NavLink>

@@ -22,7 +22,7 @@ const Mypost = (props) => {
                 setUser(user.providerData[0].uid)
             }
        } )
-    }, [posts] )
+    },[posts] )
 
     const deleteHandler = (id) => {
         axios.post('http://localhost:8000/api/delete/post',{Id:id});
@@ -35,31 +35,36 @@ const Mypost = (props) => {
         setPosts(posts);
     }
 
-    const findpost = Object.keys(posts).find( post => (
+    const findpost = Object.keys(posts).filter( post => (
         posts[post].uid === user
-    ) ) 
-
+    ) );
 
     return (
         <div>
             <div className="mypost-container">
-                    { posts && findpost ? (<div className="post">
-                           <img alt="hostel" src={posts[findpost].image1}/>
+                    { findpost.length > 0 && findpost.map( post => {
+                        return (
+                        <div className="post" key={post}>
+                           <img alt="hostel" src={posts[post].image1}/>
                            <div className="post-body">
-                              <h2 className="text-dark"><strong>{posts[findpost].name.toUpperCase()}</strong></h2>
-                              <p>Room Available: <span className="font-color-1">{posts[findpost].lookingfor}</span></p>
-                              <p>{posts[findpost].address}</p>
-                              <h6><i className="fa fa-map-marker-alt"></i> {posts[findpost].area},{posts[findpost].pincode}</h6>
-                              <p><strong className="text-danger">₹{posts[findpost].rent} </strong>/month</p>
-                              <Link className="btn btn-outline-success mt-2 mr-2" to={"/fullpost?post=" + findpost}>
+                              <h2 className="text-dark"><strong>{posts[post].name}</strong></h2>
+                              <p>Room Available: <span className="font-color-1">{posts[post].lookingfor}</span></p>
+                              <p>{posts[post].address}</p>
+                              <h6><i className="fa fa-map-marker-alt"></i> {posts[post].area},{posts[post].pincode}</h6>
+                              <p><strong className="text-danger">₹{posts[post].rent} </strong>/month</p>
+                              <Link className="btn btn-outline-success mt-2 mr-2" to={"/fullpost?post=" + post}>
                                 <i className="fa fa-eye"></i> View Details
                               </Link>
-                              <button className="btn btn-outline-danger mt-2" onClick={() => deleteHandler(posts[findpost].Id)}>
+                              <button className="btn btn-outline-danger mt-2" onClick={() => deleteHandler(posts[post].Id)}>
                                  <i className="fa fa-trash"></i> Delete post
                               </button>
                            </div>
-                      </div>) : (<p className="p-5 text-center text-danger"><strong>NO POSTS FOUND!!</strong></p>)
-                     } 
+                      </div>
+                        )
+                    } )
+                
+            }
+                     { findpost.length > 0 ? "" : (<p className="p-5 text-center text-danger"><strong>NO POSTS FOUND!!</strong></p>) } 
             </div>
             <Backdrop show={show} />
                

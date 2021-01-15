@@ -11,7 +11,7 @@ const con = mysql.createConnection({
     user:'root',
     password:'',
     host:'localhost',
-    database:'phpmyadmin',
+    database:'test',
     port:3306
     // host:'mysql80-afe9.euw2.cloud.ametnes.com',
     // user:'RLqkAzJFxq',
@@ -78,6 +78,18 @@ app.use('/api/insert/feedbacks',(req,res) => {
 
     const InsertFeedbacks = 'INSERT INTO contact_us ( name,email,subject,message ) VALUES (?,?,?,?)';
     con.query(InsertFeedbacks,[name,email,subject,message]);
-})
+});
+
+app.use('/api/insert/users',(req,res) => {
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const gender = req.body.gender;
+    const pic = req.body.pic;
+    const uid = req.body.uid;
+
+
+    const InsertUsers = 'INSERT INTO user_details ( firstName,lastName,gender,pic,uid ) VALUES (?,?,?,?,?)';
+    con.query(InsertUsers,[firstname,lastname,gender,pic,uid]);
+});
 
 app.listen(port,() => console.log(`server is running on : ` ,port))

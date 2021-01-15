@@ -47,6 +47,30 @@ textarea{
     text-decoration: none;
     color: var(--font-color-1);
 }
+
+.feedModal{
+    background-color: var(--primary-color);
+    width: 600px;
+    position: absolute;
+    top: 130%;
+    left: 30%;
+    padding:1rem 2rem;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 100;
+    transition: all 0.5s ease-out;
+    color: #00F2B8;
+}
+
+.feedClosed{
+    opacity: 1;
+    transform: translateY(-1000px);
+}
+
+.feedOpen{
+    opacity: 1;
+    transform: translateY(0);
+}
   
 @media(max-width:550px) and (min-width:360px){
     .main-section{

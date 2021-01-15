@@ -1,0 +1,47 @@
+.profile-container{
+    margin: auto;
+    margin-top: 5rem;
+    width: 45%;
+    background: white;
+    height: 58vh;
+    color: white;
+}
+
+.img-container{
+    height:150px;
+    width: 100%;
+   background:#FEE715FF
+}
+
+.profile-container img{
+    width: 120px;
+    height: 120px;
+    margin: 5rem 2rem;
+    border: 4px solid black;
+    border-radius: 50%;
+}
+
+.profile-container__content{
+    height: 100%;
+    padding: 2rem ;
+    padding-top: 5rem;
+    background: #101820FF;
+}
+
+.profile-container__content input{
+    margin-left: 1rem;
+    margin-bottom: 1rem ;
+}
+
+.profile-container button{
+    margin-top: 2rem;
+    cursor: pointer;
+    background: rgb(38, 84, 209);
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+}
+
+.profile-container button:hover{
+    background: rgb(22, 73, 214);
+}
