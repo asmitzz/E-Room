@@ -57,8 +57,8 @@ class Posts extends Component {
                         {this.state.posts[posts].name.toUpperCase()}
                       </span>
                       <p className="room-details mt-3">
-                        <span className="font-color-2">ROOM AVAILABLE:</span>{" "}
-                        {this.state.posts[posts].lookingfor.toUpperCase()}
+                        ROOM AVAILABLE:{" "}
+                        <span className="font-color-2">{this.state.posts[posts].lookingfor.toUpperCase()}</span>
                       </p>
                       <p className="address">
                         {this.state.posts[posts].address.toUpperCase()}

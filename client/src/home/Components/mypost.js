@@ -63,7 +63,7 @@ const Mypost = (props) => {
             </div>
             <Backdrop show={show} />
                
-              <div className={show ? "deleteModal text-success modalOpen" : "deleteModal text-success modalClosed" }>
+              <div className={show ? "deleteModal modalOpen" : "deleteModal modalClosed" }>
                   <p><i className="fa fa-check-circle"></i> Deleted</p>
                </div>
         </div>

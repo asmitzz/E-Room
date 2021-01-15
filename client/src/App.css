@@ -6,13 +6,13 @@ body{
 }
 
 :root{
-  --primary-color: aliceblue;
+  --primary-color: #F0F7FF;
   --secondary-color: #7C3AED;
   --tertiary-color:#8445f1;
   --font-color:black;
-  --font-color-1:#616161;
+  --font-color-1:#F0F7FF;
   --font-color-2:#343a40;
-  --font-color-3:aliceblue;
+  --font-color-3:#F0F7FF;
   --font-color-4:#8445f1;
   --shadow-1:rgb(255, 255, 255,0.425);
   --shadow-2:rgba(88,88,88, 0.425);
@@ -44,7 +44,7 @@ h1{
 }
 
 .font-color-2{
-  color: var(--font-color-2);
+  color: rgb(73, 70, 70);
 }
 
 /* .App {

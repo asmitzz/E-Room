@@ -4,6 +4,7 @@ import './navigation.css';
 import {NavLink, withRouter} from 'react-router-dom';
 import Backdrop from '../UIElements/backdrop';
 import Switch from './../UIElements/switch';
+import SearchBar from '../UIElements/SearchBar';
 
 const Nav = (props) => {
 
@@ -32,11 +33,27 @@ const Nav = (props) => {
 	               <NavLink to="/contact"><i className="fa fa-phone"></i> CONTACT</NavLink>
 	               <NavLink to="/signout" onClick={signoutHandler}><i className="fa fa-arrow-right"></i> SIGNOUT</NavLink>
              </div>
+             
               <div className="topnav">
-                	<NavLink to="/" exact><i className="fa fa-home"></i> Home</NavLink>
-                	<NavLink to="/myposts"> <i className="fas fa-audio-description"> </i> My Posts</NavLink>
-                	<NavLink to="/newpost"> <i className="fa fa-plus-square"> </i> Add Post</NavLink>
-                  <Switch/>
+                  <nav>
+                     <ul>
+                        <li>
+                           <SearchBar/>
+                        </li>
+                        <li>
+                        	<NavLink to="/" exact><i className="fa fa-home"></i> Home</NavLink>
+                        </li>
+                        <li>
+                         	<NavLink to="/myposts"> <i className="fas fa-audio-description"> </i> My Posts</NavLink>
+                        </li>
+                        <li>
+                	         <NavLink to="/newpost"> <i className="fa fa-plus-square"> </i> Add Post</NavLink>
+                        </li>
+                        <li>
+                          <Switch/>
+                        </li>
+                     </ul>
+                  </nav>
              	</div> 
         </div>
     );

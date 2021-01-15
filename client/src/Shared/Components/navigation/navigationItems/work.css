@@ -1,7 +1,5 @@
 .work-container{
-    background-color:var(--primary-color);
-    color: var(--font-color);
-
+    color: rgb(73, 70, 70);
 }
 
 .work-container h1,h2{
@@ -11,6 +9,7 @@
     padding: 1rem;
     margin-top: 2.5rem;
     font-size: larger;
+    background:var(--primary-color);
  }
  
  .work-img{

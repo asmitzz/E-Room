@@ -10,7 +10,6 @@ body{
 }
 
 .posts-container {
-    background: var(--primary-color);
     width: 75%;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -27,7 +26,6 @@ body{
 }
 
 .posts-container .carousel {
-    background: var(--primary-color);
     border-radius: 20px;
     padding-top: 0.7rem;
 }
@@ -51,23 +49,20 @@ body{
 .hostel-name{
     font-size: 36px;
     font-weight: 700;
-    color: var(--font-color);
 }
 
 .room-details{
-    color: var(--font-color);
     font-size: 26px;
     font-weight:700;
 }
 
 .address,.area{
     font-size:16px;
-    font-weight:100;
-    color: var(--font-color);
+    font-weight:600;
 }
 
 .rent{
-    color: rgba(255, 0, 0, 0.829);
+    color: red;
     font-size: 26px;
     font-weight:bolder;
     display: inline-block;
@@ -76,17 +71,17 @@ body{
 
 .viewBtn{
     padding: 1rem 1rem;
-    background-color: var(--primary-color);
     border-radius:20px;
-    box-shadow:5px 5px 8px var(--shadow-2);
     cursor: pointer;
-    color: var(--font-color-4);
+    color: var(--font-color-1);
+    background: var(--font-color-4);
+    box-shadow:  3px 3px 5px  var(--shadow-3);
 }
 
 .viewBtn:hover{
-    box-shadow:-3px -3px 8px var(--shadow-2);
+    box-shadow:  -3px -3px 5px  var(--shadow-3);
     text-decoration: none;
-    color: var(--font-color-4);
+    color: var(--font-color-1);
 }
 
 .separate{

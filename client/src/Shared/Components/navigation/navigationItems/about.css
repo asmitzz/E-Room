@@ -4,11 +4,12 @@
 
 .about-container h2,h1{
     color: var(--tertiary-color);
+    font-weight: bolder;
 }
 
 .main-div{
    padding: 2rem;
-   color: var(--font-color);
+   color: rgb(73, 70, 70);
    font-size: larger;
 }
 
@@ -16,7 +17,7 @@
     text-align: center;
     font-size: 4rem;
     font-weight: bolder;
-    color: var(--font-color-4);
+    color: var(--secondary-color);
 }
 
 .about-img{
@@ -25,9 +26,10 @@
 }
 
 .quote{
-    border-left: 5px solid var(--font-color-4);
+    border-left: 5px solid var(--font-color);
     padding: 1.5rem;
-    background: var(--font-color-1);
+    background: var(--font-color-4);
+    color:var(--font-color-3) ;
 }
 
 @media(max-width: 600px) and (min-width:340px) {

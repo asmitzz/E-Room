@@ -27,7 +27,7 @@
 }
 
 .loginSection .form-control{
-    box-shadow: inset 5px 5px 8px var(--shadow-2),inset -5px -5px 5px var(--shadow-1);
+    box-shadow: inset -5px -5px 13px var(--shadow-2);
     height: 3rem;
     background: var(--primary-color);
     border-radius: 20px;

@@ -216,7 +216,7 @@ class newPost extends Component{
                  </div>
                  <Backdrop show={this.state.show} />
                
-              <div className={this.state.show ? "uploadPost text-success uploadOpen" : "uploadPost text-success uploadClosed" }>
+              <div className={this.state.show ? "uploadPost uploadOpen" : "uploadPost uploadClosed" }>
                   <p><i className="fa fa-check-circle"></i> Successfully Uploaded</p>
                </div>
             </div>
