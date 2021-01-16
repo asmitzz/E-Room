@@ -53,7 +53,7 @@ class Posts extends Component {
                       </a>
                     </div>
 
-                    <div className="col-md-6 px-5 pb-0 pt-5">
+                    <div className="col-md-6">
                       <h3 className="hostel-name">
                         {this.state.posts[posts].name.toUpperCase()}
                       </h3>
@@ -70,7 +70,7 @@ class Posts extends Component {
                         {this.state.posts[posts].area.toUpperCase()} , 
                         {" "+ this.state.posts[posts].pincode}
                       </p>
-                      <p className="rent col-md-7">
+                      <p className="rent col-md-6 mt-2">
                         <strong>₹{this.state.posts[posts].rent}</strong>
                         <span className="font-color-2"> /month</span>
                       </p>

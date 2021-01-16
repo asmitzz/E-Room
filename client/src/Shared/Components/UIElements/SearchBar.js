@@ -15,7 +15,7 @@ const SearchBar = (props) => {
 
      const SubmitHandler = (e) => {
          e.preventDefault();
-         props.history.push("?hostel="+hostel.toLowerCase());
+         props.history.push("/?hostel="+hostel.toLowerCase());
      }
        
     return (

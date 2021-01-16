@@ -16,8 +16,8 @@
 .example button{
   padding: 0.5rem 0.8rem;  
   cursor: pointer;
+  color: var(--secondary-color);
   border-radius: 15px;
-  background: var(--primary-color); 
   border: 1px solid var(--secondary-color); 
 }
 

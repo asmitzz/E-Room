@@ -2,10 +2,11 @@ import React,{useState,useEffect} from 'react';
 
 import axios from 'axios';
 import './EditProfile.css';
+import './ViewProfile.css';
 import fire from '../Authorization/auth';
 import { withRouter } from 'react-router';
 
-const EditProfile = (props) => {
+const ViewProfile = (props) => {
 
     const [uid,setUid] = useState("");
     const [users,setUsers] = useState("");
@@ -73,7 +74,7 @@ const EditProfile = (props) => {
                    </div>
 
                    <div>
-                       <button>edit info</button>
+                       <button className="viewprofile-button">Edit info</button>
                    </div>
 
                </form>
@@ -82,4 +83,4 @@ const EditProfile = (props) => {
     );
 };
 
-export default withRouter(EditProfile);
+export default withRouter(ViewProfile);
