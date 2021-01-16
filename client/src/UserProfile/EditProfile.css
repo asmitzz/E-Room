@@ -10,12 +10,12 @@
 .img-container{
     height:150px;
     width: 100%;
-   background:#FEE715FF
+   background:var(--font-color-4);
 }
 
 .profile-container img{
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     margin: 5rem 2rem;
     border: 4px solid black;
     border-radius: 50%;
@@ -24,24 +24,32 @@
 .profile-container__content{
     height: 100%;
     padding: 2rem ;
-    padding-top: 5rem;
+    padding-top: 6rem;
     background: #101820FF;
 }
 
 .profile-container__content input{
     margin-left: 1rem;
     margin-bottom: 1rem ;
+    padding-left: 0.5rem;
 }
+
+input[type="text"][disabled]{background-color:white;}
 
 .profile-container button{
     margin-top: 2rem;
     cursor: pointer;
-    background: rgb(38, 84, 209);
     padding: 0.5rem 1rem;
     border: none;
-    color: white;
+    margin-right: 4rem;
+    color: var(--font-color-1);
+    background: var(--font-color-4);
+}
+
+.profile-container button:focus{
+  outline: none;
 }
 
 .profile-container button:hover{
-    background: rgb(22, 73, 214);
+    background: var(--secondary-color);
 }

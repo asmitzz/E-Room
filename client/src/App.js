@@ -12,8 +12,8 @@ import newPost from './home/Components/newPost';
 import FullPost from './home/Components/fullpost';
 import Myposts from './home/Components/mypost';
 import Nav from './Shared/Components/navigation/navigation';
-import UserProfile from './UserProfile/UserProfile';
-
+import EditProfile from './UserProfile/EditProfile';
+import ViewProfile from './UserProfile/ViewProfile';
 
 class App extends Component{
 
@@ -46,7 +46,8 @@ class App extends Component{
              <Route exact path="/newpost" component={newPost}/>
              <Route exact path="/fullpost" component={FullPost}/>
              <Route exact path="/myposts" component={Myposts}/>
-             <Route exact path="/profile" component={UserProfile}/>
+             <Route exact path="/editprofile" component={EditProfile}/>
+             <Route exact path="/viewprofile" component={ViewProfile}/>
              {/* <Redirect to="/"/> */}
          </Switch>
          </main>

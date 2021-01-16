@@ -1,10 +1,11 @@
 import React,{useState} from 'react';
 
 import axios from 'axios';
-import './UserProfile.css';
+import './EditProfile.css';
 import fire from '../Authorization/auth';
+import { withRouter } from 'react-router';
 
-const UserProfile = () => {
+const EditProfile = (props) => {
 
     const [firstName,setFirstName] = useState("");
     const [lastName,setLastName] = useState("");
@@ -25,7 +26,7 @@ const UserProfile = () => {
          };
     };
 
-    const checkgender = () => {
+    const checkgender = (props) => {
         if( male === "" ){
             return "female";
         }
@@ -38,7 +39,8 @@ const UserProfile = () => {
     const submitHandler = (e) => {
        e.preventDefault();
        let gender = checkgender();
-       axios.post('http://localhost:8000/api/insert/posts',{firstName,lastName,gender,pic,uid});
+       axios.post('http://localhost:8000/api/insert/users',{firstName,lastName,gender,pic,uid});
+       props.history.push('/viewprofile');
     };
 
 
@@ -46,20 +48,18 @@ const UserProfile = () => {
     
         <div className="profile-container">
             <div className="img-container">
-              <img src="https://source.unsplash.com/random" alt="profile"/>
+              <img src={ pic ? pic : "https://st3.depositphotos.com/4111759/13425/v/1600/depositphotos_134255710-stock-illustration-avatar-vector-male-profile-gray.jpg"} alt="profile"/>
             </div>
             <div className="profile-container__content">
                <form onSubmit={submitHandler}>
                    <div>
                       <label>FirstName :</label>
-                      <input type="text" onChange={(e) => setFirstName(e.target.value)} />
-                      &nbsp; <i className="fa fa-edit"></i>
+                      <input type="text" onChange={(e) => setFirstName(e.target.value)} required />
                    </div>
                   
                    <div>
                      <label>LastName : </label>
-                     <input type="text" onChange={(e) => setLastName(e.target.value)}/>
-                     &nbsp; <i className="fa fa-edit"></i>
+                     <input type="text" onChange={(e) => setLastName(e.target.value)} required/>
                    </div>
 
                    <div>
@@ -69,24 +69,25 @@ const UserProfile = () => {
                             (e) => {
                              setMale(e.target.value)
                              setFemale("") 
-                            }}/>
+                            }} required/>
                      <label>&nbsp; Male</label>
 
                      <input type="radio" value="Female" name="gender" onChange={(e) => {
                         setFemale(e.target.value)
                         setMale("")
                      }
-                        }/>
+                        } required/>
                      <label>&nbsp; Female</label>
                    </div>
 
                    <div>
-                       <label>Update Photo :</label>
-                       <input type="file" onChange={picHandler}/>
+                       <label>Change Photo :</label>
+                       <input type="file" onChange={picHandler} required/>
                    </div>
 
                    <div>
-                       <button>save info</button>
+                       <button type="submit">save info</button>
+                       <button type="button" onClick={()=>props.history.push('/viewprofile')}>discard</button>
                    </div>
 
                </form>
@@ -95,4 +96,4 @@ const UserProfile = () => {
     );
 };
 
-export default UserProfile;
+export default withRouter(EditProfile);

@@ -44,6 +44,13 @@ app.get('/api/get/posts',(req,res) => {
     }) 
 })
 
+app.get('/api/get/users',(req,res) => {
+    const GetUsers = "SELECT * FROM user_details";
+    con.query(GetUsers,(err,result) => {
+        res.send(result)
+    }) 
+})
+
 app.use('/api/delete/post',(req,res) => {
     const post = req.body.Id;
     const deletePost = `DELETE FROM room_details WHERE room_details.Id = ${post}`;
@@ -81,15 +88,15 @@ app.use('/api/insert/feedbacks',(req,res) => {
 });
 
 app.use('/api/insert/users',(req,res) => {
-    const firstname = req.body.firstname;
-    const lastname = req.body.lastname;
+    const firstname = req.body.firstName;
+    const lastname = req.body.lastName;
     const gender = req.body.gender;
     const pic = req.body.pic;
     const uid = req.body.uid;
 
 
-    const InsertUsers = 'INSERT INTO user_details ( firstName,lastName,gender,pic,uid ) VALUES (?,?,?,?,?)';
-    con.query(InsertUsers,[firstname,lastname,gender,pic,uid]);
+    const InsertUsers = 'REPLACE INTO user_details VALUES (?,?,?,?,?)';
+    con.query(InsertUsers,[firstname,lastname,pic,gender,uid]);
 });
 
 app.listen(port,() => console.log(`server is running on : ` ,port))
