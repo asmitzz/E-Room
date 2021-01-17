@@ -40,7 +40,7 @@ const Mypost = (props) => {
                         <div className="post" key={posts[post].Id}>
                            <img alt="hostel" src={posts[post].image1}/>
                            <div className="post-body">
-                              <h2 className="text-dark"><strong>{posts[post].name}</strong></h2>
+                              <h2 className="text-dark"><strong>{posts[post].name.toUpperCase()}</strong></h2>
                               <p>Room Available: <span className="font-color-2">{posts[post].lookingfor}</span></p>
                               <p>{posts[post].address}</p>
                               <h6><i className="fa fa-map-marker-alt"></i> {posts[post].area},{posts[post].pincode}</h6>
