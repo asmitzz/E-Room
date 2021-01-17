@@ -1,21 +1,12 @@
 import React,{ Component } from 'react';
 
-import axios from 'axios';
 import './fullpost.css';
 import Spinner from '../../Shared/Components/UIElements/spinner';
 
 class FullPost extends Component{
 
-    componentDidMount = () => {
-        axios.get('http://localhost:8000/api/get/posts').then( res => {
-            this.setState({
-                posts: res.data
-            })
-        });
-    }
-
     state = {
-        posts:null,
+        posts:this.props.postdb,
     }
 
     

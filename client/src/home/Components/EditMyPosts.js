@@ -1,14 +1,29 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import './NewPost.css';
+import './fullpost.css';
 import {withRouter} from 'react-router-dom';
 import Backdrop from '../../Shared/Components/UIElements/backdrop';
 
-let uploadBtnDisable = false;
+class EditMyPost extends Component{
 
-class NewPost extends Component{
+    componentDidMount = () =>{
+       const url = new URLSearchParams(window.location.search);
+        axios.get('http://localhost:8000/api/get/posts').then( res => {
+            this.setState({
+                Id:res.data[url.get('post')].Id,
+                name:res.data[url.get('post')].name,
+                rent:res.data[url.get('post')].rent,
+                describe:res.data[url.get('post')].description,
+                address:res.data[url.get('post')].address,
+                area:res.data[url.get('post')].area,
+                pincode:res.data[url.get('post')].pincode,
+                phone:res.data[url.get('post')].phone
+            })
+        } );
+    }
 
     state = {
+       Id:"",
        name:"",
        rent:"",
        lookingfor:"For Boys",
@@ -89,7 +104,6 @@ class NewPost extends Component{
         img4.onloadend = () => {
         this.setState({ image4:img4.result })
         }
-
     }
 
     submitHandler = (event) => {
@@ -126,12 +140,12 @@ class NewPost extends Component{
                  <form onSubmit={this.submitHandler}>
                     <div className="form-group">
                       <label className="newpost-label">Enter Hostel Name:</label>
-                      <input type="text" minLength="3" maxLength="30" onChange={this.nameHandler} className="form-control" placeholder="Enter your hostel name.." required/>
+                      <input type="text" minLength="3" value={this.state.name} maxLength="30" onChange={this.nameHandler} className="form-control" placeholder="Enter your hostel name.." required/>
                     </div>
 
                     <div className="form-group">
                       <label className="newpost-label">Enter Amount:</label>
-                      <input type="number" onChange={this.rentHandler} className="form-control" placeholder="Enter rent amount.." required/>
+                      <input type="number" value={this.state.rent} onChange={this.rentHandler} className="form-control" placeholder="Enter rent amount.." required/>
                     </div>
 
                     <div className="form-group">
@@ -145,27 +159,27 @@ class NewPost extends Component{
 
                     <div className="form-group">
                       <label className="newpost-label">Description:</label>
-                      <input type="text" minLength="10" maxLength="500" onChange={this.describeHandler} className="form-control" placeholder="describe your room.." required/>
+                      <input type="text" value={this.state.describe} minLength="10" maxLength="500" onChange={this.describeHandler} className="form-control" placeholder="describe your room.." required/>
                     </div>
 
                     <div className="form-group">
                       <label className="newpost-label">Enter Address:</label>
-                      <input type="text" minLength="10" maxLength="100" onChange={this.addressHandler} className="form-control" placeholder="Enter address.." required/>
+                      <input type="text" value={this.state.address} minLength="10" maxLength="100" onChange={this.addressHandler} className="form-control" placeholder="Enter address.." required/>
                     </div>
 
                     <div className="form-group">
                       <label className="newpost-label">Area:</label>
-                      <input type="text" minLength="4" maxLength="20" onChange={this.areaHandler} className="form-control" placeholder="Enter area.." required/>
+                      <input type="text" value={this.state.area} minLength="4" maxLength="20" onChange={this.areaHandler} className="form-control" placeholder="Enter area.." required/>
                     </div>
 
                     <div className="form-group">
                       <label className="newpost-label">Enter Pincode:</label>
-                      <input type="number" onChange={this.pincodeHandler} className="form-control" placeholder="Enter pincode.." required/>
+                      <input type="number" value={this.state.pincode} onChange={this.pincodeHandler} className="form-control" placeholder="Enter pincode.." required/>
                       <span className="text-danger position-absolute"> { this.state.ispintrue }</span>
                     </div>
                     <div className="form-group">
                       <label className="newpost-label">Phone Number:</label>
-                      <input type="number" onChange={this.phoneHandler} placeholder="Enter phone number.." className="form-control"/>
+                      <input type="number" value={this.state.phone} onChange={this.phoneHandler} placeholder="Enter phone number.." className="form-control"/>
                       <span className="text-danger position-absolute">{this.state.isphonetrue}</span>
                     </div>
                     
@@ -183,11 +197,11 @@ class NewPost extends Component{
                  <Backdrop show={this.state.show} />
                
               <div className={this.state.show ? "uploadPost uploadOpen" : "uploadPost uploadClosed" }>
-                  <p><i className="fa fa-check-circle"></i> Successfully Uploaded</p>
+                  <p><i className="fa fa-check-circle"></i> Successfully Updated</p>
                </div>
             </div>
         );
     };
 };
 
-export default withRouter(NewPost);
+export default withRouter(EditMyPost);

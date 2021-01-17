@@ -1,20 +1,11 @@
 import React, { Component } from "react";
 import "./filter.css";
 import { withRouter } from "react-router-dom";
-import axios from "axios";
 class Filter extends Component {
   state = {
-    posts: "",
+    posts: this.props.postdb,
     location:"",
     pincode:""
-  };
-
-  componentDidMount = () => {
-    axios.get("http://localhost:8000/api/get/posts").then((res) => {
-      this.setState({
-        posts: res.data,
-      });
-    });
   };
 
   areaHandler = (e) => {

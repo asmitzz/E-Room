@@ -3,21 +3,16 @@ import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 import './EditProfile.css';
 import './ViewProfile.css';
-import fire from '../Authorization/auth';
 import { withRouter } from 'react-router';
 
 const ViewProfile = (props) => {
 
-    const [uid,setUid] = useState("");
+    const [uid,setUid] = useState(props.uid);
     const [users,setUsers] = useState("");
    
     useEffect(() => {
         axios.get('http://localhost:8000/api/get/users').then( res => setUsers(res.data) )
     }, []);
-
-    fire.auth().onAuthStateChanged( user => {
-        setUid(user.providerData[0].uid)
-    } );
 
     const submitHandler = (e) => {
        e.preventDefault();

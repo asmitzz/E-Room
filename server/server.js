@@ -58,6 +58,7 @@ app.use('/api/delete/post',(req,res) => {
 })
 
 app.use('/api/insert/posts',(req,res) => {
+    const id = req.body.Id;
     const name = req.body.name;
     const rent = req.body.rent;
     const lookingfor = req.body.lookingfor;
@@ -72,9 +73,9 @@ app.use('/api/insert/posts',(req,res) => {
     const image4 = req.body.image4;
     const uid = req.body.uid;
 
-    const InsertPost = "INSERT INTO room_details ( name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    const InsertPost = "REPLACE INTO room_details ( Id,name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-    con.query(InsertPost,[name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid]);
+    con.query(InsertPost,[id,name,rent,lookingfor,description,address,area,pincode,phone,image1,image2,image3,image4,uid]);
 })
 
 app.use('/api/insert/feedbacks',(req,res) => {

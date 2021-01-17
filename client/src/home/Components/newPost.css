@@ -8,24 +8,6 @@
     width: 70%;
 }
 
-.Btn{
-    font-weight: 700;
-    margin-top: 1rem;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0.6rem 1.5rem;
-    color: var(--font-color-1);
-    background: var(--font-color-4);
-    border: none;
-    box-shadow:  3px 3px 5px  var(--shadow-3);
-}
-
-.Btn:hover{
-    box-shadow:  -3px -3px 5px  var(--shadow-3);
-    text-decoration: none;
-    color: var(--font-color-1);
-}
-
 .submitBtn{
     font-weight: 700;
     border: 2px solid var(--font-color-4);

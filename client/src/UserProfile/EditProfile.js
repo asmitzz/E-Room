@@ -2,7 +2,6 @@ import React,{useState} from 'react';
 
 import axios from 'axios';
 import './EditProfile.css';
-import fire from '../Authorization/auth';
 import { withRouter } from 'react-router';
 
 const EditProfile = (props) => {
@@ -12,11 +11,7 @@ const EditProfile = (props) => {
     const [male,setMale] = useState("");
     const [female,setFemale] = useState("");
     const [pic,setPic] = useState("");
-    const [uid,setUid] = useState("");
-
-    fire.auth().onAuthStateChanged( user => {
-        setUid(user.providerData[0].uid)
-    } )
+    const [uid,setUid] = useState(props.uid);
 
     const picHandler= (e) => {
         const uploadpic = new FileReader();
