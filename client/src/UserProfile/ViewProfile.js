@@ -51,11 +51,11 @@ const ViewProfile = (props) => {
             <div className="profile-container__content">
             <form onSubmit={submitHandler}>
                    <div>
-                      <label>FirstName :</label>
+                      <label>First name :</label>
                       <input type="text" value={FindUserProfile ? FindUserProfile.firstName: ""} disabled/>
                    </div>
                    <div>
-                     <label>LastName : </label>
+                     <label>Last name : </label>
                      <input type="text" value={FindUserProfile ? FindUserProfile.lastName: ""} disabled />
                    </div>
 
