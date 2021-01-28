@@ -42,7 +42,7 @@ const Nav = (props) => {
                      <ul>
                        <li>
                           <Link to="/" style={{border:'none'}}>
-                            <img src={logo} alt="logo" width="150" style={{marginRight:'17rem'}} />
+                            <img src={logo} alt="logo" width="150" style={{marginRight:'8rem'}} />
                           </Link>
                        </li>
                         <li>
